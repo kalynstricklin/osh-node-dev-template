@@ -1,45 +1,28 @@
-rootProject.name = 'osh-node'
+rootProject.name = 'my- osh-node-template'
 def includeDir = "$rootDir/include"
 def sensorDir = "$includeDir/osh-addons/sensors"
 def persistenceDir = "$includeDir/osh-addons/persistence"
 def processDir = "$includeDir/osh-addons/processing"
 def serviceDir = "$includeDir/osh-addons/services"
 
+// osh addons comm module
+//def commDir = "$includeDir/osh-addons/comm"
+gradle.ext.oshCommDir = "$includeDir/osh-addons/comm"
+
 // osh-core
 gradle.ext.oshCoreDir = "$includeDir/osh-core"
-includeBuild gradle.oshCoreDir
+//includeBuild gradle.oshCoreDir
 
-// osh-storage
-//include '[storage-module-name]'
-//project(':[storage-module-name]').projectDir = "$persistenceDir/[path]/[storage-module-name]" as File
-//
-// Ex:
-//
-//include 'sensorhub-storage-compat'
-//project(':sensorhub-storage-compat').projectDir = "$persistenceDir/sensorhub-storage-compat" as File
-//
-//include 'sensorhub-storage-h2'
-//project(':sensorhub-storage-h2').projectDir = "$persistenceDir/sensorhub-storage-h2" as File
+if (gradle.parent == null) {
+    includeBuild gradle.oshCoreDir
+    includeBuild gradle.oshCommDir
+}
 
-// osh-services
-//include '[service-name]'
-//project(':[service-name]').projectDir = "$serviceDir/[path]/[service-name]" as File
-//
-// Ex:
-//
-//include 'sensorhub-service-video'
-//project(':sensorhub-service-video').projectDir = "$serviceDir/sensorhub-service-video" as File
-
-// osh-sensor-drivers
-//include '[driver-name]'
-//project(':[driver-name]').projectDir = "$sensorDir/[path]/[driver-name]" as File
-//
-// Ex:
-//
-//include 'sensorhub-driver-videocam'
-//project(':sensorhub-driver-videocam').projectDir = "$sensorDir/video/sensorhub-driver-videocam" as File
+//includeBuild gradle.oshCommDir
 
 // Project modules
+
+
 
 // Include all folders with build.gradle as subprojects
 
