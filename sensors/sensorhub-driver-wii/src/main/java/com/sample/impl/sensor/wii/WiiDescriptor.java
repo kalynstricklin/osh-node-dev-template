@@ -24,7 +24,7 @@ import org.sensorhub.impl.module.JarModuleProvider;
  * @author your_name
  * @since date
  */
-public class Descriptor extends JarModuleProvider implements IModuleProvider {
+public class WiiDescriptor extends JarModuleProvider implements IModuleProvider {
 
     /**
      * Retrieves the class implementing the OpenSensorHub interface necessary to
@@ -34,7 +34,7 @@ public class Descriptor extends JarModuleProvider implements IModuleProvider {
      */
     public Class<? extends IModule<?>> getModuleClass() {
 
-        return WiiSensor.class;
+        return com.sample.impl.sensor.wii.WiiSensor.class;
     }
 
     /**

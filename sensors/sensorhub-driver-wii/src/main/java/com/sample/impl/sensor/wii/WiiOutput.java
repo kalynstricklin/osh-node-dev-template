@@ -50,30 +50,20 @@ public class WiiOutput extends AbstractSensorOutput<WiiSensor>  {
 
     private Thread worker;
 
+    boolean d_left;
+    boolean d_right;
+    boolean d_up;
+    boolean d_down;
+    boolean power;
+    boolean home;
+    boolean button_a;
+    boolean button_b;
+    boolean button_minus;
+    boolean button_plus;
+    boolean button_two;
+    boolean button_one;
 
-
-    public static final int D_PAD_LEFT = 0;
-    public static final int  D_PAD_RIGHT = 0;
-    public static final int D_PAD_UP = 0;
-    public static final int D_PAD_DOWN = 0;
-    public static final int BUTTON_ONE = 0;
-    public static final int BUTTON_TWO = 0;
-    public static final int BUTTON_A = 0;
-    public static final int BUTTON_B = 0;
-    public static final int BUTTON_PLUS = 0;
-    public static final int BUTTON_MINUS = 0;
-    public static final int BUTTON_HOME = 0;
-    public static final int BUTTON_POWER = 0;
-
-//    Bit	Mask	First Byte	Second Byte
-        //0	0x01	D-Pad Left	Two
-        //1	0x02	D-Pad Right	One
-        //2	0x04	D-Pad Down	B
-        //3	0x08	D-Pad Up	A
-        //4	0x10	Plus	Minus
-        //5	0x20	Other uses	Other uses
-        //6	0x40	Other uses	Other uses
-        //7	0x80	Unknown	Home
+    private int[] accel_data;
 
     /**
      * Constructor
@@ -112,52 +102,52 @@ public class WiiOutput extends AbstractSensorOutput<WiiSensor>  {
                             .addField("D_PAD_UP",sweFactory.createBoolean()
                                     .label("D-Pad Up Button")
                                     .value(false)
-                                    .definition("0x08 first byte"))
+                                    .definition("firorward"))
                             .addField("D_PAD_DOWN", sweFactory.createBoolean()
                                     .value(false)
-                                    .label("D-Pad down button"))
-                                .definition("0x04 first byte")
+                                    .label("D-Pad down button move backwards"))
+                                .definition("firsbyte")
                             .addField("D_PAD_LEFT", sweFactory.createBoolean()
                                     .label("D-Pad left button")
                                     .value(false)
-                                    .definition("0x01 first byte"))
+                                    .definition("firstleft"))
                             .addField("D_PAD_RIGHT", sweFactory.createBoolean()
-                                    .label("D-Pad right button")
+                                    .label("D-Pad right button :: turns right")
                                     .value(false)
-                                    .definition("0x02 first byte")))
+                                    .definition("firstbyte")))
                         .addField("POWER_BUTTON", sweFactory.createBoolean()
                                 .label("Power button pressed")
                                 .value(false))
                         .addField("HOME_BUTTON", sweFactory.createBoolean()
                                 .value(false)
                                 .label("Home button pressed")
-                                .definition("0x80 second byte"))
+                                .definition("secondbyte"))
                         .addField("BUTTON_ONE", sweFactory.createBoolean()
                                 .value(false)
                                 .label("Button One pressed")
-                                .definition("0x02 second byte"))
+                                .definition("secondbyte"))
                         .addField("BUTTON_TWO", sweFactory.createBoolean()
                                 .value(false)
                                 .label("Button Two pressed")
-                                .definition("0x01 second byte"))
+                                .definition("secondbyte"))
                         .addField("BUTTON_A", sweFactory.createBoolean()
                                 .value(false)
                                 .label("Button A pressed")
-                                .definition("0x08 second byte"))
+                                .definition("secondbyte"))
                         .addField("BUTTON_B", sweFactory.createBoolean()
                                 .value(false)
                                 .label("Button B pressed")
-                                .definition("0x04 second byte"))
+                                .definition("secondbyte"))
                         .addField("PLUS_BUTTON", sweFactory.createBoolean()
                                 .value(false)
                                 .label("Plus button pressed")
-                                .definition("0x10 first byte"))
+                                .definition("firstbyte"))
                         .addField("MINUS_BUTTON", sweFactory.createBoolean()
                                 .value(false)
                                 .label("Minus button pressed")
-                                .definition("0x10 second byte"))
-                        .addField("Motion_Accelerometer", sweFactory.createAccelerationVector("xyz")
-                                .definition("Measures linear acceleration in a free fall frame of reference")
+                                .definition("secondbyte"))
+                        .addField("Motion_Accelerometer", sweFactory.createUnitVectorXYZ()
+                                .definition("Measu")
                                 .label("Accelerometer"))
                         //https://wiibrew.org/wiki/Wiimote#Core_Buttons
                         .addField("Tilt_Accelerometer", sweFactory.createRecord()
@@ -170,8 +160,8 @@ public class WiiOutput extends AbstractSensorOutput<WiiSensor>  {
                                         .label("accelerometer down"))
                                 .addField("RIGHT", sweFactory.createUnitVectorXYZ()
                                         .label("accelerometer right"))
-                                .addField("FORWARD", sweFactory.createAccelerationVector("TODO:THIS"))
-                                .addField("BACKWARD", sweFactory.createAccelerationVector("TODO:THIS"))) //TODO: put uom codes
+                                .addField("FORWARD", sweFactory.createAccelerationVector("m/s"))
+                                .addField("BACKWARD", sweFactory.createAccelerationVector("m/s"))) //TODO: put uom codes
 
                         .addField("Gyroscope", sweFactory.createRecord()
                                 .label("Rotation and Orientation")
@@ -186,7 +176,7 @@ public class WiiOutput extends AbstractSensorOutput<WiiSensor>  {
                         .addField("Rumble_Motor", sweFactory.createRecord()) //0x10 RR -> setting RR to 1 enables rumble, where 0 disables it
                         .addField("Battery_Status", sweFactory.createRecord()
                                 .label("Battery Level")
-                                .definition("The current battery level recorded by Wii remote"))
+                                .definition("Theremote"))
                         .addField("Speaker", sweFactory.createRecord()) //0x14 used to enable/disable speaker setting bit 2 will enable and clearing will disable & 0x19 is used to mute/unmute
                             //0x18 is used to send speaker data 1-20 bytes can be sent at once
 
@@ -228,7 +218,11 @@ public class WiiOutput extends AbstractSensorOutput<WiiSensor>  {
         // TODO: Populate data block
         dataBlock.setDoubleValue(0, System.currentTimeMillis()/1000.0);
 
+        int pressed;
+        boolean isPressed;
         //TODO ADD DATA BLOCK!!!!!!!!!!!!!!!
+
+
 
         latestRecord = dataBlock;
 
@@ -237,6 +231,39 @@ public class WiiOutput extends AbstractSensorOutput<WiiSensor>  {
         eventHandler.publish(new DataEvent(latestRecordTime, WiiOutput.this, dataBlock));
 
 
+    }
+    // data will be [0-1] for buttons [2-4] for accel data
+    public void readButtonData(byte[] data){
+        if (data == null || data.length != 2){
+
+        }
+        d_left = (data[0] & 0x01) == 0x01;
+        d_right = (data[0] & 0x02) == 0x02;
+        d_down = (data[0] & 0x04) == 0x04;
+        d_up = (data[0] & 0x08) == 0x08;
+        button_plus = (data[0] & 0x10) == 0x10;
+        button_two = (data[1] & 0x01) == 0x01;
+        button_one = (data[1] & 0x02) == 0x02;
+        button_b = (data[1] & 0x04) == 0x04;
+        button_a = (data[1] & 0x08) == 0x08;
+        button_minus = (data[1] & 0x10) == 0x10;
+        home = (data[1] & 0x80) == 0x80;
+    }
+
+    //read raw accelerometer data
+    public void readAccelData(byte[] data){
+//        if (data == null || data.length !=5){
+//
+//        }
+
+    }
+
+    //read raw battery level
+    public void readBatteryLevel(byte[] data){}
+
+
+    public void processData(){
+        
     }
 
     /**
@@ -289,6 +316,47 @@ public class WiiOutput extends AbstractSensorOutput<WiiSensor>  {
 
         return accumulator / (double) MAX_NUM_TIMING_SAMPLES;
     }
+//    public void onButtonsEvent(WiiRemoteButtonsEvent wbe){
+//        if(wbe.isButtonAPressed()){
+//
+//        }
+//        if(wbe.isButtonBPressed()){
+//
+//        }
+//        if(wbe.isButtonOnePressed()){
+//
+//        }
+//        if(wbe.isButtonTwoPressed()){
+//
+//        }
+//        if(wbe.isButtonPowerPressed()){
+//
+//        }
+//        if(wbe.isButtonHomePressed()){
+//
+//        }
+//        if(wbe.isButtonPlusPressed()){
+//
+//        }
+//        if(wbe.isButtonMinusPressed()){
+//
+//        }
+//        if(wbe.isButtonDownPressed()){
+//
+//        }
+//        if(wbe.isButtonLeftPressed()){
+//
+//        }
+//        if(wbe.isButtonRightPressed()){
+//
+//        }
+//        if(wbe.isButtonUpPressed()){
+//
+//        }
+//        if(wbe.isButtonLeftPressed()){
+//
+//        }
+//    }
 
 //    @Override
 //    public void run() {

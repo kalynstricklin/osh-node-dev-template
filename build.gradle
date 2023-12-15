@@ -2,7 +2,7 @@ apply from: gradle.oshCoreDir + '/common.gradle'
 description = ''
 
 allprojects {
-  version = '0.0.0'
+  version = '0.0.1'
 }
 
 subprojects {
@@ -17,7 +17,9 @@ dependencies {
   implementation 'org.sensorhub:sensorhub-datastore-h2'
   implementation 'org.sensorhub:sensorhub-service-sweapi:' + oshCoreVersion
 
+  implementation project(':sensorhub-driver-simulation')
   implementation project(':sensorhub-driver-wii')
+
 }
 
 // create one configuration for each distribution

@@ -1,16 +1,12 @@
-description = 'Wii Remote Driver'
-ext.details = "Driver to read Wii remote inputs"
+description = 'Simulated Sensor Driver'
+ext.details = "Driver simulation - OSH Driver dev labs"
 version = '1.0.0'
 
 dependencies {
     implementation 'org.sensorhub:sensorhub-core:' + oshCoreVersion
-
-    implementation group: 'io.ultreia', name: 'bluecove', version: '2.1.1'
-    // use ble modules to connect wii remote via Bluetooth
-    embeddedImpl fileTree(dir: 'lib', include: ['*.jar', '*.lib', '*.dll'])
-
+//    implementation project(':sensorhub-service-video')
+//    implementation project(':sensorhub-driver-videocam')
     testImplementation('junit:junit:4.13.1')
-
 }
 
 // exclude tests requiring connection to the sensor
@@ -25,7 +21,7 @@ test {
 osgi {
     manifest {
         attributes ('Bundle-Vendor': 'Botts Inc')
-        attributes ('Bundle-Activator': 'com.sample.impl.sensor.wii.Activator')
+        attributes ('Bundle-Activator': 'com.sample.impl.sensor.drivername.Activator')
     }
 }
 
@@ -34,8 +30,8 @@ ext.pom >>= {
     developers {
         developer {
             id 'KalynStricklin'
-            name 'KalynStricklin'
-            organization 'Botts Inc'
+            name 'Your name'
+            organization ''
             organizationUrl ''
         }
     }
