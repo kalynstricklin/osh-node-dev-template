@@ -13,11 +13,12 @@
 ******************************* END LICENSE BLOCK ***************************/
 package com.sample.impl.sensor.wii;
 
+
 import org.sensorhub.api.config.DisplayInfo;
 import org.sensorhub.api.sensor.SensorConfig;
 
 /**
- * Configuration settings for the {@link WiiSensor} driver exposed via the OpenSensorHub Admin panel.
+ * Configuration settings for the {@link WiiDriver} driver exposed via the OpenSensorHub Admin panel.
  * <p>
  * Configuration settings take the form of
  * <code>
@@ -39,6 +40,10 @@ public class WiiConfig extends SensorConfig {
     @DisplayInfo.Required
     @DisplayInfo(desc = "Serial number or unique identifier")
     public String serialNumber = "wii001";
-    public String bluetoothAddress;
+
+    @DisplayInfo.Required
+    @DisplayInfo(desc = "Bluetooth address of Wii Remote")
+    public String bluetoothAddress = "0021BD7981C0";
+
 
 }

@@ -13,6 +13,7 @@
  ******************************* END LICENSE BLOCK ***************************/
 package com.sample.impl.sensor.wii;
 
+
 import org.sensorhub.api.module.IModule;
 import org.sensorhub.api.module.IModuleProvider;
 import org.sensorhub.api.module.ModuleConfig;
@@ -34,7 +35,7 @@ public class WiiDescriptor extends JarModuleProvider implements IModuleProvider 
      */
     public Class<? extends IModule<?>> getModuleClass() {
 
-        return com.sample.impl.sensor.wii.WiiSensor.class;
+        return WiiDriver.class;
     }
 
     /**
