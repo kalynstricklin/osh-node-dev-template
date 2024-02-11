@@ -1,9 +1,12 @@
-rootProject.name = 'my- osh-node'
+rootProject.name = 'my-osh-node'
 def includeDir = "$rootDir/include"
 def sensorDir = "$includeDir/osh-addons/sensors"
 def persistenceDir = "$includeDir/osh-addons/persistence"
 def processDir = "$includeDir/osh-addons/processing"
 def serviceDir = "$includeDir/osh-addons/services"
+
+def toolsDir ="$rootDir/tools"
+
 
 // osh addons comm module
 //def commDir = "$includeDir/osh-addons/comm"
@@ -23,6 +26,11 @@ if (gradle.parent == null) {
 // Project modules
 //include 'sensorhub-comm-ble'
 //project(':sensorhub-comm-ble').projectDir = "$sensorDir/comm/sensorhub-comm-ble" as File
+
+
+//sensor hub test debugging module
+include 'sensorhub-test'
+project(':sensorhub-test').projectDir = "$toolsDir/sensorhub-test" as File
 
 
 

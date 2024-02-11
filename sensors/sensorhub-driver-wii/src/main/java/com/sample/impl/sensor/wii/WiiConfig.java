@@ -43,7 +43,7 @@ public class WiiConfig extends SensorConfig {
 
     @DisplayInfo.Required
     @DisplayInfo(desc = "Bluetooth address of Wii Remote")
-    public String bluetoothAddress = "0021BD7981C0";
+    public String bluetoothAddress = "00:21:BD:79:81:C0";
 
 
 }

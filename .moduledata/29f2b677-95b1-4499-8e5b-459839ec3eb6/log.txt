@@ -1,0 +1,454 @@
+2024-02-10 16:08:23.389 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 16:08:23.393 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 16:08:23.395 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 16:08:23.420 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 16:08:23.424 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 16:08:23.425 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 16:08:24.048 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 16:08:24.049 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 16:22:38.794 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 16:22:38.797 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 16:22:38.798 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 16:22:38.872 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 16:22:38.886 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 16:22:38.886 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 16:22:39.280 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 16:22:39.281 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 16:24:15.782 INFO  [ModuleRegistry-7] - Module STOPPING
+2024-02-10 16:24:15.785 INFO  [ModuleRegistry-7] - Module STOPPING
+2024-02-10 16:24:15.801 DEBUG [ModuleRegistry-7] - H2 debug info for 'System Driver Database':
+Created: 2024-02-03 19:59:27 (+0 s)
+Last modified: 2024-02-03 19:59:54 (+27 s)
+File length: 12288
+The last chunk is not listed
+Chunk length: 0
+Chunk count: 0
+Used space: 0%
+Chunk fill rate: 100%
+Chunk fill rate excluding empty chunks: 100%
+
+
+2024-02-10 16:24:15.802 INFO  [ModuleRegistry-7] - Module STOPPED
+2024-02-10 16:24:15.802 INFO  [ModuleRegistry-7] - Module STOPPED
+2024-02-10 16:25:11.649 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 16:25:11.652 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 16:25:11.653 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 16:25:11.695 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 16:25:11.700 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 16:25:11.700 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 16:25:12.224 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 16:25:12.228 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 16:25:14.764 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 16:25:14.768 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 16:25:14.769 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 16:25:14.793 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 16:25:14.798 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 16:25:14.798 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 16:25:14.834 ERROR [ModuleRegistry-1] - Cannot start module 
+org.sensorhub.api.datastore.DataStoreException: Error while starting MVStore
+	at org.sensorhub.impl.datastore.h2.MVObsSystemDatabase.doStart(MVObsSystemDatabase.java:156)
+	at org.sensorhub.impl.module.AbstractModule.start(AbstractModule.java:492)
+	at org.sensorhub.impl.database.system.SystemDriverDatabase.doStart(SystemDriverDatabase.java:70)
+	at org.sensorhub.impl.module.AbstractModule.start(AbstractModule.java:492)
+	at org.sensorhub.impl.module.ModuleRegistry.lambda$startModuleAsync$1(ModuleRegistry.java:670)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.IllegalStateException: The file is locked: nio:data.dat [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.sensorhub.impl.datastore.h2.MVObsSystemDatabase.doStart(MVObsSystemDatabase.java:105)
+	... 9 common frames omitted
+	Suppressed: java.lang.NullPointerException: null
+		at org.sensorhub.impl.datastore.h2.MVObsSystemDatabase.lambda$doStart$0(MVObsSystemDatabase.java:87)
+		at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+		at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+		at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+		... 11 common frames omitted
+2024-02-10 16:25:14.835 INFO  [ModuleRegistry-1] - Module STOPPING
+2024-02-10 16:25:14.856 ERROR [ModuleRegistry-1] - Cannot stop module 
+java.lang.IllegalStateException: The file is locked: nio:data.dat [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.MVStoreTool.info(MVStoreTool.java:348)
+	at org.sensorhub.impl.datastore.h2.MVObsSystemDatabase.doStop(MVObsSystemDatabase.java:194)
+	at org.sensorhub.impl.module.AbstractModule.stop(AbstractModule.java:569)
+	at org.sensorhub.impl.module.AbstractModule.start(AbstractModule.java:501)
+	at org.sensorhub.impl.database.system.SystemDriverDatabase.doStart(SystemDriverDatabase.java:70)
+	at org.sensorhub.impl.module.AbstractModule.start(AbstractModule.java:492)
+	at org.sensorhub.impl.module.ModuleRegistry.lambda$startModuleAsync$1(ModuleRegistry.java:670)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2024-02-10 16:25:14.861 ERROR [ModuleRegistry-1] - Cannot start module 
+org.sensorhub.api.datastore.DataStoreException: Cannot instantiate underlying database org.sensorhub.impl.datastore.h2.MVObsSystemDatabase
+	at org.sensorhub.impl.database.system.SystemDriverDatabase.doStart(SystemDriverDatabase.java:81)
+	at org.sensorhub.impl.module.AbstractModule.start(AbstractModule.java:492)
+	at org.sensorhub.impl.module.ModuleRegistry.lambda$startModuleAsync$1(ModuleRegistry.java:670)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.sensorhub.api.common.SensorHubException: Cannot stop module 
+	at org.sensorhub.impl.module.AbstractModule.reportError(AbstractModule.java:287)
+	at org.sensorhub.impl.module.AbstractModule.reportError(AbstractModule.java:271)
+	at org.sensorhub.impl.module.AbstractModule.stop(AbstractModule.java:581)
+	at org.sensorhub.impl.module.AbstractModule.start(AbstractModule.java:501)
+	at org.sensorhub.impl.database.system.SystemDriverDatabase.doStart(SystemDriverDatabase.java:70)
+	... 7 common frames omitted
+Caused by: java.lang.IllegalStateException: The file is locked: nio:data.dat [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.MVStoreTool.info(MVStoreTool.java:348)
+	at org.sensorhub.impl.datastore.h2.MVObsSystemDatabase.doStop(MVObsSystemDatabase.java:194)
+	at org.sensorhub.impl.module.AbstractModule.stop(AbstractModule.java:569)
+	... 9 common frames omitted
+2024-02-10 16:25:14.864 INFO  [ModuleRegistry-1] - Module STOPPING
+2024-02-10 16:25:14.869 INFO  [ModuleRegistry-1] - Module STOPPED
+2024-02-10 16:25:32.107 INFO  [ModuleRegistry-6] - Module STOPPING
+2024-02-10 16:25:32.109 INFO  [ModuleRegistry-6] - Module STOPPING
+2024-02-10 16:25:32.131 DEBUG [ModuleRegistry-6] - H2 debug info for 'System Driver Database':
+Created: 2024-02-03 19:59:27 (+0 s)
+Last modified: 2024-02-03 19:59:54 (+27 s)
+File length: 12288
+The last chunk is not listed
+Chunk length: 0
+Chunk count: 0
+Used space: 0%
+Chunk fill rate: 100%
+Chunk fill rate excluding empty chunks: 100%
+
+
+2024-02-10 16:25:32.138 INFO  [ModuleRegistry-6] - Module STOPPED
+2024-02-10 16:25:32.138 INFO  [ModuleRegistry-6] - Module STOPPED
+2024-02-10 16:26:38.808 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 16:26:38.814 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 16:26:38.816 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 16:26:38.842 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 16:26:38.847 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 16:26:38.847 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 16:26:39.216 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 16:26:39.218 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 16:31:22.107 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 16:31:22.116 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 16:31:22.118 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 16:31:22.147 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 16:31:22.153 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 16:31:22.154 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 16:31:22.508 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 16:31:22.517 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 16:35:36.538 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 16:35:36.543 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 16:35:36.545 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 16:35:36.573 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 16:35:36.577 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 16:35:36.578 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 16:35:37.037 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 16:35:37.038 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 16:41:34.951 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 16:41:34.954 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 16:41:34.956 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 16:41:35.003 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 16:41:35.007 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 16:41:35.008 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 16:41:35.350 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 16:41:35.351 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 16:55:22.551 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 16:55:22.554 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 16:55:22.556 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 16:55:22.585 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 16:55:22.589 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 16:55:22.590 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 16:55:23.009 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 16:55:23.011 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 16:56:46.115 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 16:56:46.118 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 16:56:46.119 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 16:56:46.154 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 16:56:46.167 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 16:56:46.168 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 16:56:46.613 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 16:56:46.614 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 17:01:36.869 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 17:01:36.872 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 17:01:36.873 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 17:01:36.899 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 17:01:36.904 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 17:01:36.904 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 17:01:37.298 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 17:01:37.301 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 17:13:02.289 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 17:13:02.369 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 17:13:02.371 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 17:13:02.398 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 17:13:02.401 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 17:13:02.402 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 17:13:02.721 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 17:13:02.722 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 17:18:58.604 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 17:18:58.615 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 17:18:58.617 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 17:18:58.667 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 17:18:58.673 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 17:18:58.676 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 17:18:59.046 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 17:18:59.048 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 17:21:42.371 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 17:21:42.376 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 17:21:42.378 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 17:21:42.419 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 17:21:42.427 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 17:21:42.428 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 17:21:42.838 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 17:21:42.839 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 17:32:13.948 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 17:32:13.952 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 17:32:13.954 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 17:32:13.974 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 17:32:13.978 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 17:32:13.979 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 17:32:14.447 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 17:32:14.448 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 17:43:00.285 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 17:43:00.293 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 17:43:00.296 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 17:43:00.349 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 17:43:00.354 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 17:43:00.355 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 17:43:00.844 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 17:43:00.845 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 17:44:19.545 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 17:44:19.550 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 17:44:19.551 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 17:44:19.589 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 17:44:19.604 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 17:44:19.607 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 17:44:19.960 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 17:44:19.961 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 17:49:56.088 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 17:49:56.091 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 17:49:56.092 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 17:49:56.116 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 17:49:56.120 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 17:49:56.120 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 17:49:56.521 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 17:49:56.522 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 18:07:24.568 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 18:07:24.573 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 18:07:24.578 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 18:07:24.610 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 18:07:24.614 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 18:07:24.615 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 18:07:25.023 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 18:07:25.024 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 18:12:21.631 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 18:12:21.636 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 18:12:21.638 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 18:12:21.664 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 18:12:21.668 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 18:12:21.669 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 18:12:22.024 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 18:12:22.025 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 18:18:18.928 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 18:18:18.934 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 18:18:18.936 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 18:18:18.977 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 18:18:18.982 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 18:18:18.983 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 18:18:19.422 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 18:18:19.423 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 18:22:18.800 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 18:22:18.836 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 18:22:18.838 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 18:22:18.867 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 18:22:18.872 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 18:22:18.872 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 18:22:19.488 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 18:22:19.489 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 18:28:21.088 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 18:28:21.090 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 18:28:21.091 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 18:28:21.114 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 18:28:21.120 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 18:28:21.120 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 18:28:21.505 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 18:28:21.506 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 18:32:35.175 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 18:32:35.178 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 18:32:35.181 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 18:32:35.208 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 18:32:35.212 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 18:32:35.212 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 18:32:35.657 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 18:32:35.658 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 18:36:02.789 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 18:36:02.793 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 18:36:02.795 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 18:36:02.819 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 18:36:02.824 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 18:36:02.824 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 18:36:03.312 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 18:36:03.314 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 18:40:29.035 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 18:40:29.039 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 18:40:29.041 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 18:40:29.070 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 18:40:29.075 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 18:40:29.076 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 18:40:29.463 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 18:40:29.465 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 18:41:49.563 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 18:41:49.565 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 18:41:49.567 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 18:41:49.589 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 18:41:49.593 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 18:41:49.594 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 18:41:49.949 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 18:41:49.951 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 18:44:17.046 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 18:44:17.056 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 18:44:17.058 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 18:44:17.083 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 18:44:17.087 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 18:44:17.088 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 18:44:17.534 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 18:44:17.535 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 18:47:46.189 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 18:47:46.191 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 18:47:46.193 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 18:47:46.217 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 18:47:46.222 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 18:47:46.222 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 18:47:46.589 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 18:47:46.590 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 19:00:44.256 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 19:00:44.266 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 19:00:44.269 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 19:00:44.300 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 19:00:44.309 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 19:00:44.310 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 19:00:44.688 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 19:00:44.690 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 19:08:48.997 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 19:08:48.999 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 19:08:49.000 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 19:08:49.022 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 19:08:49.026 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 19:08:49.026 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 19:08:49.584 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 19:08:49.585 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 19:12:16.197 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 19:12:16.200 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 19:12:16.202 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 19:12:16.227 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 19:12:16.232 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 19:12:16.232 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 19:12:16.640 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 19:12:16.641 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 19:16:58.304 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 19:16:58.308 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 19:16:58.309 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 19:16:58.334 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 19:16:58.339 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 19:16:58.339 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 19:16:58.697 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 19:16:58.699 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 19:17:47.592 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 19:17:47.594 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 19:17:47.595 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 19:17:47.618 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 19:17:47.622 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 19:17:47.623 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 19:17:48.007 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 19:17:48.008 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 19:19:12.355 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 19:19:12.357 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 19:19:12.358 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 19:19:12.379 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 19:19:12.384 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 19:19:12.385 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 19:19:12.776 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 19:19:12.778 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 19:19:57.972 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 19:19:57.978 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 19:19:57.981 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 19:19:58.014 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 19:19:58.018 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 19:19:58.019 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 19:19:58.415 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 19:19:58.417 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 19:21:45.345 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 19:21:45.347 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 19:21:45.348 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 19:21:45.372 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 19:21:45.377 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 19:21:45.377 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 19:21:45.749 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 19:21:45.751 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 19:23:15.187 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 19:23:15.191 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 19:23:15.193 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 19:23:15.223 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 19:23:15.229 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 19:23:15.230 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 19:23:15.652 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 19:23:15.654 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 19:26:11.056 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 19:26:11.062 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 19:26:11.065 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 19:26:11.107 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 19:26:11.112 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 19:26:11.113 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 19:26:11.520 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 19:26:11.521 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 19:30:09.596 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 19:30:09.599 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 19:30:09.600 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 19:30:09.632 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 19:30:09.637 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 19:30:09.638 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 19:30:09.983 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 19:30:10.007 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 19:39:12.570 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 19:39:12.575 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 19:39:12.578 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 19:39:12.616 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 19:39:12.621 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 19:39:12.622 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 19:39:13.020 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 19:39:13.029 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 20:04:31.408 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 20:04:31.411 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 20:04:31.412 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 20:04:31.441 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 20:04:31.445 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 20:04:31.446 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 20:04:31.785 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 20:04:31.786 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 20:07:03.272 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 20:07:03.274 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 20:07:03.275 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 20:07:03.296 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 20:07:03.301 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 20:07:03.301 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 20:07:03.663 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 20:07:03.664 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 20:08:30.006 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 20:08:30.010 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 20:08:30.011 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 20:08:30.039 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-10 20:08:30.043 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-10 20:08:30.044 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-10 20:08:30.390 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-10 20:08:30.392 INFO  [ModuleRegistry-1] - Module STARTED

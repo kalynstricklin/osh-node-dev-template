@@ -1,0 +1,14 @@
+{
+  "admin": {
+    "allow": [],
+    "deny": []
+  },
+  "anon": {
+    "allow": [],
+    "deny": []
+  },
+  "sost": {
+    "allow": [],
+    "deny": []
+  }
+}

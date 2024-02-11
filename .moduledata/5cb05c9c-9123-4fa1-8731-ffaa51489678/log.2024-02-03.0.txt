@@ -1,0 +1,60 @@
+2024-02-03 19:44:59.825 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-03 19:44:59.832 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-03 19:44:59.835 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-03 19:45:06.250 INFO  [ModuleRegistry-2] - Module STARTED
+2024-02-03 19:53:03.793 INFO  [ModuleRegistry-3] - Module INITIALIZING
+2024-02-03 19:53:03.800 INFO  [ModuleRegistry-3] - Module INITIALIZED
+2024-02-03 19:53:03.802 INFO  [ModuleRegistry-3] - Module STARTING
+2024-02-03 19:53:39.799 INFO  [ModuleRegistry-2] - Module STOPPED
+2024-02-03 19:54:38.560 INFO  [ModuleRegistry-4] - Module INITIALIZING
+2024-02-03 19:54:38.581 INFO  [ModuleRegistry-4] - Module INITIALIZED
+2024-02-03 19:54:38.583 INFO  [ModuleRegistry-4] - Module STARTING
+2024-02-03 19:54:48.516 INFO  [ModuleRegistry-2] - Module STOPPED
+2024-02-03 19:59:27.872 INFO  [ModuleRegistry-3] - Module INITIALIZING
+2024-02-03 19:59:27.892 INFO  [ModuleRegistry-3] - Module INITIALIZED
+2024-02-03 19:59:27.895 INFO  [ModuleRegistry-3] - Module STARTING
+2024-02-03 19:59:39.212 INFO  [qtp712502306-41] - New connection to admin UI (from ip=127.0.0.1, user=admin)
+2024-02-03 19:59:55.612 INFO  [ModuleRegistry-1] - Module STOPPED
+2024-02-03 20:01:00.534 INFO  [qtp712502306-38] - New UI action: Remove Module 'New Wii Remote Driver' [d57d8faf-bbe7-446b-8949-d24769829761] (from ip=127.0.0.1, user=admin)
+2024-02-03 20:01:03.551 INFO  [qtp712502306-40] - New UI action: save_config (from ip=127.0.0.1, user=admin)
+2024-02-03 20:01:23.919 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-03 20:01:23.929 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-03 20:01:23.931 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-03 20:01:25.173 INFO  [ModuleRegistry-2] - Module STOPPED
+2024-02-03 20:03:18.920 INFO  [qtp712502306-38] - New UI action: shutdown (from ip=127.0.0.1, user=admin)
+2024-02-03 20:03:19.930 INFO  [ModuleRegistry-9] - Module STOPPING
+2024-02-03 20:03:20.133 INFO  [ModuleRegistry-9] - Module STOPPED
+2024-02-03 20:03:46.888 INFO  [ModuleRegistry-3] - Module INITIALIZING
+2024-02-03 20:03:46.908 INFO  [ModuleRegistry-3] - Module INITIALIZED
+2024-02-03 20:03:46.910 INFO  [ModuleRegistry-3] - Module STARTING
+2024-02-03 20:03:48.460 INFO  [ModuleRegistry-2] - Module STARTED
+2024-02-03 20:04:26.118 INFO  [qtp308035875-25] - New connection to admin UI (from ip=127.0.0.1, user=admin)
+2024-02-03 20:04:29.011 INFO  [qtp308035875-27] - New connection to admin UI (from ip=127.0.0.1, user=admin)
+2024-02-03 20:04:36.329 INFO  [qtp308035875-29] - New UI action: Add New Module com.sample.impl.sensor.wii.WiiDriver (from ip=127.0.0.1, user=admin)
+2024-02-03 20:04:39.926 INFO  [qtp308035875-27] - New UI action: Update Config 'New Wii Remote Driver' [ca84ed44-b26d-4980-971e-8430ee29b83b] (from ip=127.0.0.1, user=admin)
+2024-02-03 20:04:52.466 INFO  [qtp308035875-31] - New UI action: Start 'New Wii Remote Driver' [ca84ed44-b26d-4980-971e-8430ee29b83b] (from ip=127.0.0.1, user=admin)
+2024-02-03 20:05:52.271 INFO  [ModuleRegistry-3] - Module INITIALIZING
+2024-02-03 20:05:52.281 INFO  [ModuleRegistry-3] - Module INITIALIZED
+2024-02-03 20:05:52.282 INFO  [ModuleRegistry-3] - Module STARTING
+2024-02-03 20:05:53.266 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-03 20:05:55.732 INFO  [qtp1403546115-24] - New connection to admin UI (from ip=127.0.0.1, user=admin)
+2024-02-03 20:06:00.711 INFO  [qtp1403546115-31] - New UI action: Add New Module com.sample.impl.sensor.wii.WiiDriver (from ip=127.0.0.1, user=admin)
+2024-02-03 20:06:03.924 INFO  [qtp1403546115-28] - New UI action: Update Config 'New Wii Remote Driver' [bd3500d5-3350-4b62-9c8a-61e47c1e1d19] (from ip=127.0.0.1, user=admin)
+2024-02-03 20:06:10.452 INFO  [qtp1403546115-28] - New UI action: Start 'New Wii Remote Driver' [bd3500d5-3350-4b62-9c8a-61e47c1e1d19] (from ip=127.0.0.1, user=admin)
+2024-02-03 20:06:42.498 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-03 20:06:42.541 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-03 20:06:42.542 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-03 20:06:43.748 INFO  [ModuleRegistry-2] - Module STARTED
+2024-02-03 20:06:46.239 INFO  [qtp1257779954-24] - New connection to admin UI (from ip=127.0.0.1, user=admin)
+2024-02-03 20:06:55.627 INFO  [qtp1257779954-29] - New UI action: Add New Module com.sample.impl.sensor.wii.WiiDriver (from ip=127.0.0.1, user=admin)
+2024-02-03 20:06:57.340 INFO  [qtp1257779954-30] - New UI action: Update Config 'New Wii Remote Driver' [c5f291b3-7bd9-430c-8d02-28f9d299e97d] (from ip=127.0.0.1, user=admin)
+2024-02-03 20:07:01.980 INFO  [qtp1257779954-30] - New UI action: Start 'New Wii Remote Driver' [c5f291b3-7bd9-430c-8d02-28f9d299e97d] (from ip=127.0.0.1, user=admin)
+2024-02-03 20:21:10.384 INFO  [ModuleRegistry-3] - Module INITIALIZING
+2024-02-03 20:21:10.396 INFO  [ModuleRegistry-3] - Module INITIALIZED
+2024-02-03 20:21:10.397 INFO  [ModuleRegistry-3] - Module STARTING
+2024-02-03 20:21:11.784 INFO  [ModuleRegistry-2] - Module STARTED
+2024-02-03 20:21:22.492 INFO  [qtp2003440264-24] - New connection to admin UI (from ip=127.0.0.1, user=admin)
+2024-02-03 20:21:26.787 INFO  [qtp2003440264-28] - New connection to admin UI (from ip=127.0.0.1, user=admin)
+2024-02-03 20:21:32.366 INFO  [qtp2003440264-29] - New UI action: Add New Module com.sample.impl.sensor.wii.WiiDriver (from ip=127.0.0.1, user=admin)
+2024-02-03 20:21:34.351 INFO  [qtp2003440264-30] - New UI action: Update Config 'New Wii Remote Driver' [3be3dece-80a7-407c-a0f2-e3c973d188ae] (from ip=127.0.0.1, user=admin)
+2024-02-03 20:21:40.815 INFO  [qtp2003440264-31] - New UI action: Start 'New Wii Remote Driver' [3be3dece-80a7-407c-a0f2-e3c973d188ae] (from ip=127.0.0.1, user=admin)

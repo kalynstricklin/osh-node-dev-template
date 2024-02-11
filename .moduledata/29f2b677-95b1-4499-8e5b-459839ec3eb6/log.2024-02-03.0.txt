@@ -1,0 +1,292 @@
+2024-02-03 19:44:58.583 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-03 19:44:58.589 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-03 19:44:58.617 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-03 19:44:58.649 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-03 19:44:58.653 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-03 19:44:58.653 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-03 19:44:59.705 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-03 19:44:59.710 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-03 19:46:38.613 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-03 19:46:38.661 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-03 19:46:38.662 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-03 19:46:38.695 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-03 19:46:38.700 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-03 19:46:38.700 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-03 19:46:38.797 ERROR [ModuleRegistry-1] - Cannot start module 
+org.sensorhub.api.datastore.DataStoreException: Error while starting MVStore
+	at org.sensorhub.impl.datastore.h2.MVObsSystemDatabase.doStart(MVObsSystemDatabase.java:156)
+	at org.sensorhub.impl.module.AbstractModule.start(AbstractModule.java:492)
+	at org.sensorhub.impl.database.system.SystemDriverDatabase.doStart(SystemDriverDatabase.java:70)
+	at org.sensorhub.impl.module.AbstractModule.start(AbstractModule.java:492)
+	at org.sensorhub.impl.module.ModuleRegistry.lambda$startModuleAsync$1(ModuleRegistry.java:670)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.IllegalStateException: The file is locked: nio:data.dat [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.sensorhub.impl.datastore.h2.MVObsSystemDatabase.doStart(MVObsSystemDatabase.java:105)
+	... 9 common frames omitted
+	Suppressed: java.lang.NullPointerException: null
+		at org.sensorhub.impl.datastore.h2.MVObsSystemDatabase.lambda$doStart$0(MVObsSystemDatabase.java:87)
+		at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+		at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+		at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+		... 11 common frames omitted
+2024-02-03 19:46:38.798 INFO  [ModuleRegistry-1] - Module STOPPING
+2024-02-03 19:46:38.806 ERROR [ModuleRegistry-1] - Cannot stop module 
+java.lang.IllegalStateException: The file is locked: nio:data.dat [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.MVStoreTool.info(MVStoreTool.java:348)
+	at org.sensorhub.impl.datastore.h2.MVObsSystemDatabase.doStop(MVObsSystemDatabase.java:194)
+	at org.sensorhub.impl.module.AbstractModule.stop(AbstractModule.java:569)
+	at org.sensorhub.impl.module.AbstractModule.start(AbstractModule.java:501)
+	at org.sensorhub.impl.database.system.SystemDriverDatabase.doStart(SystemDriverDatabase.java:70)
+	at org.sensorhub.impl.module.AbstractModule.start(AbstractModule.java:492)
+	at org.sensorhub.impl.module.ModuleRegistry.lambda$startModuleAsync$1(ModuleRegistry.java:670)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2024-02-03 19:46:38.808 ERROR [ModuleRegistry-1] - Cannot start module 
+org.sensorhub.api.datastore.DataStoreException: Cannot instantiate underlying database org.sensorhub.impl.datastore.h2.MVObsSystemDatabase
+	at org.sensorhub.impl.database.system.SystemDriverDatabase.doStart(SystemDriverDatabase.java:81)
+	at org.sensorhub.impl.module.AbstractModule.start(AbstractModule.java:492)
+	at org.sensorhub.impl.module.ModuleRegistry.lambda$startModuleAsync$1(ModuleRegistry.java:670)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.sensorhub.api.common.SensorHubException: Cannot stop module 
+	at org.sensorhub.impl.module.AbstractModule.reportError(AbstractModule.java:287)
+	at org.sensorhub.impl.module.AbstractModule.reportError(AbstractModule.java:271)
+	at org.sensorhub.impl.module.AbstractModule.stop(AbstractModule.java:581)
+	at org.sensorhub.impl.module.AbstractModule.start(AbstractModule.java:501)
+	at org.sensorhub.impl.database.system.SystemDriverDatabase.doStart(SystemDriverDatabase.java:70)
+	... 7 common frames omitted
+Caused by: java.lang.IllegalStateException: The file is locked: nio:data.dat [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.MVStoreTool.info(MVStoreTool.java:348)
+	at org.sensorhub.impl.datastore.h2.MVObsSystemDatabase.doStop(MVObsSystemDatabase.java:194)
+	at org.sensorhub.impl.module.AbstractModule.stop(AbstractModule.java:569)
+	... 9 common frames omitted
+2024-02-03 19:46:38.809 INFO  [ModuleRegistry-1] - Module STOPPING
+2024-02-03 19:46:38.817 INFO  [ModuleRegistry-1] - Module STOPPED
+2024-02-03 19:51:24.735 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-03 19:51:24.744 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-03 19:51:24.748 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-03 19:51:24.786 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-03 19:51:24.790 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-03 19:51:24.791 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-03 19:51:24.826 ERROR [ModuleRegistry-1] - Cannot start module 
+org.sensorhub.api.datastore.DataStoreException: Error while starting MVStore
+	at org.sensorhub.impl.datastore.h2.MVObsSystemDatabase.doStart(MVObsSystemDatabase.java:156)
+	at org.sensorhub.impl.module.AbstractModule.start(AbstractModule.java:492)
+	at org.sensorhub.impl.database.system.SystemDriverDatabase.doStart(SystemDriverDatabase.java:70)
+	at org.sensorhub.impl.module.AbstractModule.start(AbstractModule.java:492)
+	at org.sensorhub.impl.module.ModuleRegistry.lambda$startModuleAsync$1(ModuleRegistry.java:670)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.IllegalStateException: The file is locked: nio:data.dat [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.sensorhub.impl.datastore.h2.MVObsSystemDatabase.doStart(MVObsSystemDatabase.java:105)
+	... 9 common frames omitted
+	Suppressed: java.lang.NullPointerException: null
+		at org.sensorhub.impl.datastore.h2.MVObsSystemDatabase.lambda$doStart$0(MVObsSystemDatabase.java:87)
+		at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+		at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+		at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+		... 11 common frames omitted
+2024-02-03 19:51:24.827 INFO  [ModuleRegistry-1] - Module STOPPING
+2024-02-03 19:51:24.834 ERROR [ModuleRegistry-1] - Cannot stop module 
+java.lang.IllegalStateException: The file is locked: nio:data.dat [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.MVStoreTool.info(MVStoreTool.java:348)
+	at org.sensorhub.impl.datastore.h2.MVObsSystemDatabase.doStop(MVObsSystemDatabase.java:194)
+	at org.sensorhub.impl.module.AbstractModule.stop(AbstractModule.java:569)
+	at org.sensorhub.impl.module.AbstractModule.start(AbstractModule.java:501)
+	at org.sensorhub.impl.database.system.SystemDriverDatabase.doStart(SystemDriverDatabase.java:70)
+	at org.sensorhub.impl.module.AbstractModule.start(AbstractModule.java:492)
+	at org.sensorhub.impl.module.ModuleRegistry.lambda$startModuleAsync$1(ModuleRegistry.java:670)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2024-02-03 19:51:24.836 ERROR [ModuleRegistry-1] - Cannot start module 
+org.sensorhub.api.datastore.DataStoreException: Cannot instantiate underlying database org.sensorhub.impl.datastore.h2.MVObsSystemDatabase
+	at org.sensorhub.impl.database.system.SystemDriverDatabase.doStart(SystemDriverDatabase.java:81)
+	at org.sensorhub.impl.module.AbstractModule.start(AbstractModule.java:492)
+	at org.sensorhub.impl.module.ModuleRegistry.lambda$startModuleAsync$1(ModuleRegistry.java:670)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.sensorhub.api.common.SensorHubException: Cannot stop module 
+	at org.sensorhub.impl.module.AbstractModule.reportError(AbstractModule.java:287)
+	at org.sensorhub.impl.module.AbstractModule.reportError(AbstractModule.java:271)
+	at org.sensorhub.impl.module.AbstractModule.stop(AbstractModule.java:581)
+	at org.sensorhub.impl.module.AbstractModule.start(AbstractModule.java:501)
+	at org.sensorhub.impl.database.system.SystemDriverDatabase.doStart(SystemDriverDatabase.java:70)
+	... 7 common frames omitted
+Caused by: java.lang.IllegalStateException: The file is locked: nio:data.dat [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.MVStoreTool.info(MVStoreTool.java:348)
+	at org.sensorhub.impl.datastore.h2.MVObsSystemDatabase.doStop(MVObsSystemDatabase.java:194)
+	at org.sensorhub.impl.module.AbstractModule.stop(AbstractModule.java:569)
+	... 9 common frames omitted
+2024-02-03 19:51:24.838 INFO  [ModuleRegistry-1] - Module STOPPING
+2024-02-03 19:51:24.845 INFO  [ModuleRegistry-1] - Module STOPPED
+2024-02-03 19:53:03.052 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-03 19:53:03.066 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-03 19:53:03.075 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-03 19:53:03.101 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-03 19:53:03.106 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-03 19:53:03.108 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-03 19:53:03.666 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-03 19:53:03.667 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-03 19:54:37.712 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-03 19:54:37.715 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-03 19:54:37.717 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-03 19:54:37.740 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-03 19:54:37.744 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-03 19:54:37.745 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-03 19:54:38.389 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-03 19:54:38.391 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-03 19:55:29.637 INFO  [ModuleRegistry-9] - Module STOPPING
+2024-02-03 19:55:29.655 INFO  [ModuleRegistry-9] - Module STOPPING
+2024-02-03 19:55:29.667 DEBUG [ModuleRegistry-9] - H2 debug info for 'System Driver Database':
+Created: 2024-02-03 19:53:03 (+0 s)
+Last modified: 2024-02-03 19:53:28 (+25 s)
+File length: 12288
+The last chunk is not listed
+Chunk length: 0
+Chunk count: 0
+Used space: 0%
+Chunk fill rate: 100%
+Chunk fill rate excluding empty chunks: 100%
+
+
+2024-02-03 19:55:29.668 INFO  [ModuleRegistry-9] - Module STOPPED
+2024-02-03 19:55:29.668 INFO  [ModuleRegistry-9] - Module STOPPED
+2024-02-03 19:59:27.025 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-03 19:59:27.036 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-03 19:59:27.040 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-03 19:59:27.074 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-03 19:59:27.081 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-03 19:59:27.081 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-03 19:59:27.781 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-03 19:59:27.782 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-03 20:00:36.234 INFO  [ModuleRegistry-7] - Module STOPPING
+2024-02-03 20:00:36.254 INFO  [ModuleRegistry-7] - Module STOPPING
+2024-02-03 20:00:36.392 DEBUG [ModuleRegistry-7] - H2 debug info for 'System Driver Database':
+Created: 2024-02-03 19:59:27 (+0 s)
+Last modified: 2024-02-03 19:59:54 (+27 s)
+File length: 12288
+The last chunk is not listed
+Chunk length: 0
+Chunk count: 0
+Used space: 0%
+Chunk fill rate: 100%
+Chunk fill rate excluding empty chunks: 100%
+
+
+2024-02-03 20:00:36.393 INFO  [ModuleRegistry-7] - Module STOPPED
+2024-02-03 20:00:36.393 INFO  [ModuleRegistry-7] - Module STOPPED
+2024-02-03 20:01:23.119 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-03 20:01:23.124 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-03 20:01:23.126 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-03 20:01:23.152 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-03 20:01:23.156 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-03 20:01:23.157 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-03 20:01:23.850 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-03 20:01:23.852 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-03 20:01:35.196 INFO  [ModuleRegistry-6] - Module STOPPING
+2024-02-03 20:01:35.198 INFO  [ModuleRegistry-6] - Module STOPPING
+2024-02-03 20:01:35.301 DEBUG [ModuleRegistry-6] - H2 debug info for 'System Driver Database':
+Created: 2024-02-03 19:59:27 (+0 s)
+Last modified: 2024-02-03 19:59:54 (+27 s)
+File length: 12288
+The last chunk is not listed
+Chunk length: 0
+Chunk count: 0
+Used space: 0%
+Chunk fill rate: 100%
+Chunk fill rate excluding empty chunks: 100%
+
+
+2024-02-03 20:01:35.301 INFO  [ModuleRegistry-6] - Module STOPPED
+2024-02-03 20:01:35.301 INFO  [ModuleRegistry-6] - Module STOPPED
+2024-02-03 20:03:20.166 INFO  [ModuleRegistry-7] - Module STOPPING
+2024-02-03 20:03:20.167 INFO  [ModuleRegistry-7] - Module STOPPING
+2024-02-03 20:03:20.187 DEBUG [ModuleRegistry-7] - H2 debug info for 'System Driver Database':
+Created: 2024-02-03 19:59:27 (+0 s)
+Last modified: 2024-02-03 19:59:54 (+27 s)
+File length: 12288
+The last chunk is not listed
+Chunk length: 0
+Chunk count: 0
+Used space: 0%
+Chunk fill rate: 100%
+Chunk fill rate excluding empty chunks: 100%
+
+
+2024-02-03 20:03:20.188 INFO  [ModuleRegistry-7] - Module STOPPED
+2024-02-03 20:03:20.188 INFO  [ModuleRegistry-7] - Module STOPPED
+2024-02-03 20:03:46.488 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-03 20:03:46.491 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-03 20:03:46.492 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-03 20:03:46.515 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-03 20:03:46.521 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-03 20:03:46.521 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-03 20:03:46.844 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-03 20:03:46.846 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-03 20:05:51.477 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-03 20:05:51.479 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-03 20:05:51.480 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-03 20:05:51.510 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-03 20:05:51.514 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-03 20:05:51.514 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-03 20:05:52.060 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-03 20:05:52.064 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-03 20:06:41.876 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-03 20:06:41.885 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-03 20:06:41.886 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-03 20:06:41.916 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-03 20:06:41.920 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-03 20:06:41.920 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-03 20:06:42.381 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-03 20:06:42.382 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-03 20:21:09.719 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-03 20:21:09.724 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-03 20:21:09.726 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-03 20:21:09.757 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-03 20:21:09.762 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-03 20:21:09.763 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-03 20:21:10.276 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-03 20:21:10.277 INFO  [ModuleRegistry-1] - Module STARTED

@@ -1,0 +1,192 @@
+2024-02-03 19:44:59.800 INFO  [ModuleRegistry-2] - Module INITIALIZING
+2024-02-03 19:44:59.821 INFO  [ModuleRegistry-2] - Module INITIALIZED
+2024-02-03 19:44:59.822 INFO  [ModuleRegistry-2] - Module STARTING
+2024-02-03 19:45:02.273 INFO  [ModuleRegistry-2] - Static resources root is /
+2024-02-03 19:45:02.413 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
+2024-02-03 19:45:05.256 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
+2024-02-03 19:45:05.257 INFO  [ModuleRegistry-2] - Module STARTED
+2024-02-03 19:45:06.249 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-57f933ce
+2024-02-03 19:45:06.424 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-1abd4705
+2024-02-03 19:45:07.703 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-10a072bf
+2024-02-03 19:53:03.800 INFO  [ModuleRegistry-2] - Module INITIALIZING
+2024-02-03 19:53:03.808 INFO  [ModuleRegistry-2] - Module INITIALIZED
+2024-02-03 19:53:03.810 INFO  [ModuleRegistry-2] - Module STARTING
+2024-02-03 19:53:04.710 INFO  [ModuleRegistry-2] - Static resources root is /
+2024-02-03 19:53:04.818 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
+2024-02-03 19:53:39.727 ERROR [ModuleRegistry-2] - Cannot start module 
+org.sensorhub.api.common.SensorHubException: Cannot start embedded HTTP server
+	at org.sensorhub.impl.service.HttpServer.doStart(HttpServer.java:299)
+	at org.sensorhub.impl.module.AbstractModule.start(AbstractModule.java:492)
+	at org.sensorhub.impl.module.ModuleRegistry.lambda$startModuleAsync$1(ModuleRegistry.java:670)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.io.IOException: Failed to bind to 0.0.0.0/0.0.0.0:8282
+	at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:349)
+	at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:310)
+	at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)
+	at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:234)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:401)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+	at org.sensorhub.impl.service.HttpServer.doStart(HttpServer.java:291)
+	... 7 common frames omitted
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:459)
+	at java.base/sun.nio.ch.Net.bind(Net.java:448)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:344)
+	... 14 common frames omitted
+2024-02-03 19:53:39.729 INFO  [ModuleRegistry-2] - Module STOPPING
+2024-02-03 19:53:39.798 INFO  [ModuleRegistry-2] - Module STOPPED
+2024-02-03 19:54:38.454 INFO  [ModuleRegistry-2] - Module INITIALIZING
+2024-02-03 19:54:38.471 INFO  [ModuleRegistry-2] - Module INITIALIZED
+2024-02-03 19:54:38.472 INFO  [ModuleRegistry-2] - Module STARTING
+2024-02-03 19:54:39.401 INFO  [ModuleRegistry-2] - Static resources root is /
+2024-02-03 19:54:39.526 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
+2024-02-03 19:54:48.493 ERROR [ModuleRegistry-2] - Cannot start module 
+org.sensorhub.api.common.SensorHubException: Cannot start embedded HTTP server
+	at org.sensorhub.impl.service.HttpServer.doStart(HttpServer.java:299)
+	at org.sensorhub.impl.module.AbstractModule.start(AbstractModule.java:492)
+	at org.sensorhub.impl.module.ModuleRegistry.lambda$startModuleAsync$1(ModuleRegistry.java:670)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.io.IOException: Failed to bind to 0.0.0.0/0.0.0.0:8282
+	at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:349)
+	at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:310)
+	at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)
+	at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:234)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:401)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+	at org.sensorhub.impl.service.HttpServer.doStart(HttpServer.java:291)
+	... 7 common frames omitted
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:459)
+	at java.base/sun.nio.ch.Net.bind(Net.java:448)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:344)
+	... 14 common frames omitted
+2024-02-03 19:54:48.494 INFO  [ModuleRegistry-2] - Module STOPPING
+2024-02-03 19:54:48.511 INFO  [ModuleRegistry-2] - Module STOPPED
+2024-02-03 19:59:27.848 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-03 19:59:27.917 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-03 19:59:27.918 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-03 19:59:29.081 INFO  [ModuleRegistry-1] - Static resources root is /
+2024-02-03 19:59:29.273 INFO  [ModuleRegistry-1] - Servlets root is /sensorhub
+2024-02-03 19:59:55.423 ERROR [ModuleRegistry-1] - Cannot start module 
+org.sensorhub.api.common.SensorHubException: Cannot start embedded HTTP server
+	at org.sensorhub.impl.service.HttpServer.doStart(HttpServer.java:299)
+	at org.sensorhub.impl.module.AbstractModule.start(AbstractModule.java:492)
+	at org.sensorhub.impl.module.ModuleRegistry.lambda$startModuleAsync$1(ModuleRegistry.java:670)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.io.IOException: Failed to bind to 0.0.0.0/0.0.0.0:8282
+	at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:349)
+	at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:310)
+	at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)
+	at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:234)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:401)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+	at org.sensorhub.impl.service.HttpServer.doStart(HttpServer.java:291)
+	... 7 common frames omitted
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:459)
+	at java.base/sun.nio.ch.Net.bind(Net.java:448)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:344)
+	... 14 common frames omitted
+2024-02-03 19:59:55.425 INFO  [ModuleRegistry-1] - Module STOPPING
+2024-02-03 19:59:55.612 INFO  [ModuleRegistry-1] - Module STOPPED
+2024-02-03 20:01:23.929 INFO  [ModuleRegistry-2] - Module INITIALIZING
+2024-02-03 20:01:23.956 INFO  [ModuleRegistry-2] - Module INITIALIZED
+2024-02-03 20:01:23.957 INFO  [ModuleRegistry-2] - Module STARTING
+2024-02-03 20:01:24.632 INFO  [ModuleRegistry-2] - Static resources root is /
+2024-02-03 20:01:24.732 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
+2024-02-03 20:01:25.096 ERROR [ModuleRegistry-2] - Cannot start module 
+org.sensorhub.api.common.SensorHubException: Cannot start embedded HTTP server
+	at org.sensorhub.impl.service.HttpServer.doStart(HttpServer.java:299)
+	at org.sensorhub.impl.module.AbstractModule.start(AbstractModule.java:492)
+	at org.sensorhub.impl.module.ModuleRegistry.lambda$startModuleAsync$1(ModuleRegistry.java:670)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.io.IOException: Failed to bind to 0.0.0.0/0.0.0.0:8282
+	at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:349)
+	at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:310)
+	at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)
+	at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:234)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:401)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+	at org.sensorhub.impl.service.HttpServer.doStart(HttpServer.java:291)
+	... 7 common frames omitted
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:459)
+	at java.base/sun.nio.ch.Net.bind(Net.java:448)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:344)
+	... 14 common frames omitted
+2024-02-03 20:01:25.098 INFO  [ModuleRegistry-2] - Module STOPPING
+2024-02-03 20:01:25.172 INFO  [ModuleRegistry-2] - Module STOPPED
+2024-02-03 20:03:19.925 INFO  [ModuleRegistry-7] - Module STOPPING
+2024-02-03 20:03:20.133 INFO  [ModuleRegistry-7] - Module STOPPED
+2024-02-03 20:03:46.956 INFO  [ModuleRegistry-2] - Module INITIALIZING
+2024-02-03 20:03:46.967 INFO  [ModuleRegistry-2] - Module INITIALIZED
+2024-02-03 20:03:46.970 INFO  [ModuleRegistry-2] - Module STARTING
+2024-02-03 20:03:47.211 INFO  [ModuleRegistry-2] - Static resources root is /
+2024-02-03 20:03:47.259 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
+2024-02-03 20:03:47.577 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
+2024-02-03 20:03:47.577 INFO  [ModuleRegistry-2] - Module STARTED
+2024-02-03 20:03:47.919 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-18979363
+2024-02-03 20:03:48.459 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-2205dd73
+2024-02-03 20:03:49.139 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-5f11708f
+2024-02-03 20:05:52.091 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-03 20:05:52.123 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-03 20:05:52.124 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-03 20:05:52.624 INFO  [ModuleRegistry-1] - Static resources root is /
+2024-02-03 20:05:52.656 INFO  [ModuleRegistry-1] - Servlets root is /sensorhub
+2024-02-03 20:05:52.890 INFO  [ModuleRegistry-1] - HTTP server started on port 8282
+2024-02-03 20:05:52.891 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-03 20:05:53.265 DEBUG [ModuleRegistry-1] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-2ccd7f8
+2024-02-03 20:05:53.403 DEBUG [ModuleRegistry-1] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-568c75c9
+2024-02-03 20:05:53.687 DEBUG [ModuleRegistry-1] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-38b57a13
+2024-02-03 20:06:42.487 INFO  [ModuleRegistry-2] - Module INITIALIZING
+2024-02-03 20:06:42.535 INFO  [ModuleRegistry-2] - Module INITIALIZED
+2024-02-03 20:06:42.537 INFO  [ModuleRegistry-2] - Module STARTING
+2024-02-03 20:06:42.898 INFO  [ModuleRegistry-2] - Static resources root is /
+2024-02-03 20:06:42.947 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
+2024-02-03 20:06:43.289 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
+2024-02-03 20:06:43.289 INFO  [ModuleRegistry-2] - Module STARTED
+2024-02-03 20:06:43.748 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-55435354
+2024-02-03 20:06:43.878 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-624f6839
+2024-02-03 20:06:44.137 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-5cffac3b
+2024-02-03 20:21:10.487 INFO  [ModuleRegistry-2] - Module INITIALIZING
+2024-02-03 20:21:10.518 INFO  [ModuleRegistry-2] - Module INITIALIZED
+2024-02-03 20:21:10.522 INFO  [ModuleRegistry-2] - Module STARTING
+2024-02-03 20:21:10.903 INFO  [ModuleRegistry-2] - Static resources root is /
+2024-02-03 20:21:10.945 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
+2024-02-03 20:21:11.224 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
+2024-02-03 20:21:11.225 INFO  [ModuleRegistry-2] - Module STARTED
+2024-02-03 20:21:11.448 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-7f966114
+2024-02-03 20:21:11.783 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-677c4345
+2024-02-03 20:21:11.968 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-43f9342

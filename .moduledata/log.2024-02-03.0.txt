@@ -1,0 +1,960 @@
+2024-02-03 19:44:53.243 INFO  [main] - *****************************************
+2024-02-03 19:44:53.420 INFO  [main] - Starting SensorHub...
+2024-02-03 19:44:53.541 INFO  [main] - Version: 2.0-beta2
+2024-02-03 19:44:53.559 INFO  [main] - Build number: c125ae6d
+2024-02-03 19:44:53.561 INFO  [main] - JDK version: OpenJDK 64-Bit Server VM, 11.0.21+9-adhoc.root.jdk11u, OpenLogic
+2024-02-03 19:44:53.562 INFO  [main] - OS type: Linux, amd64
+2024-02-03 19:44:53.563 INFO  [main] - CPU cores: 4
+2024-02-03 19:44:53.594 INFO  [main] - CommonPool parallelism: 3
+2024-02-03 19:44:55.176 INFO  [main] - Module INITIALIZING
+2024-02-03 19:44:55.257 INFO  [main] - Module INITIALIZED
+2024-02-03 19:44:55.258 INFO  [main] - Module STARTING
+2024-02-03 19:44:55.383 INFO  [main] - Module INITIALIZING
+2024-02-03 19:44:55.642 INFO  [main] - Module INITIALIZED
+2024-02-03 19:44:55.643 INFO  [main] - Module STARTING
+2024-02-03 19:44:55.643 INFO  [main] - Module STARTED
+2024-02-03 19:44:55.643 INFO  [main] - Registering database SystemDriverDatabase with ID 0
+2024-02-03 19:44:55.645 INFO  [main] - Module STARTED
+2024-02-03 19:44:56.713 INFO  [main] - Loading modules...
+2024-02-03 19:44:56.917 DEBUG [main] - Module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1] loaded
+2024-02-03 19:44:56.921 DEBUG [main] - Creating publisher for urn:osh:modules
+2024-02-03 19:44:56.939 DEBUG [main] - Creating publisher for 5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1
+2024-02-03 19:44:56.939 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:44:56.949 DEBUG [main] - Module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669] loaded
+2024-02-03 19:44:56.950 DEBUG [main] - Creating publisher for bd112969-8838-4f62-8d10-1edf1baa6669
+2024-02-03 19:44:56.950 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:44:57.129 DEBUG [main] - Module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678] loaded
+2024-02-03 19:44:57.258 DEBUG [main] - Creating publisher for 5cb05c9c-9123-4fa1-8731-ffaa51489678
+2024-02-03 19:44:57.258 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:44:57.305 DEBUG [main] - Module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1] loaded
+2024-02-03 19:44:57.305 DEBUG [main] - Creating publisher for 5cb05c9c-9e08-4fa1-8731-ff41e246bdc1
+2024-02-03 19:44:57.306 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:44:57.309 DEBUG [main] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] loaded
+2024-02-03 19:44:57.310 DEBUG [main] - Creating publisher for 29f2b677-95b1-4499-8e5b-459839ec3eb6
+2024-02-03 19:44:57.311 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:44:57.508 DEBUG [main] - Module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57] loaded
+2024-02-03 19:44:57.509 DEBUG [main] - Creating publisher for 2659dc3b-f243-477e-b43f-214b75cc8c57
+2024-02-03 19:44:57.510 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:44:58.307 DEBUG [main] - Module 'New Wii Remote Driver' [d57d8faf-bbe7-446b-8949-d24769829761] loaded
+2024-02-03 19:44:58.308 DEBUG [main] - Creating publisher for d57d8faf-bbe7-446b-8949-d24769829761
+2024-02-03 19:44:58.309 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:44:58.309 INFO  [main] - Starting datastore connectors
+2024-02-03 19:44:58.586 INFO  [ModuleRegistry-1] - Initializing module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6]
+2024-02-03 19:44:58.589 INFO  [ModuleRegistry-1] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] initialized
+2024-02-03 19:44:58.617 INFO  [ModuleRegistry-1] - Starting module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6]
+2024-02-03 19:44:59.246 DEBUG [ModuleRegistry-1] - Thread[ModuleRegistry-1,5,main]: kryo=813585978, classResolver=0
+2024-02-03 19:44:59.382 DEBUG [ModuleRegistry-1] - Thread[ModuleRegistry-1,5,main]: kryo=1692131104, classResolver=0
+2024-02-03 19:44:59.710 INFO  [ModuleRegistry-1] - Registering database SystemDriverDatabase with ID 1
+2024-02-03 19:44:59.711 INFO  [ModuleRegistry-1] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] started
+2024-02-03 19:44:59.711 INFO  [main] - All datastores ready. Starting all other modules
+2024-02-03 19:44:59.807 INFO  [ModuleRegistry-6] - Initializing module 'New Wii Remote Driver' [d57d8faf-bbe7-446b-8949-d24769829761]
+2024-02-03 19:44:59.809 INFO  [ModuleRegistry-3] - Initializing module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669]
+2024-02-03 19:44:59.815 INFO  [ModuleRegistry-2] - Initializing module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1]
+2024-02-03 19:44:59.822 INFO  [ModuleRegistry-2] - Module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1] initialized
+2024-02-03 19:44:59.823 INFO  [ModuleRegistry-2] - Starting module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1]
+2024-02-03 19:44:59.823 INFO  [ModuleRegistry-3] - Module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669] initialized
+2024-02-03 19:44:59.828 INFO  [ModuleRegistry-4] - Initializing module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1]
+2024-02-03 19:44:59.831 INFO  [ModuleRegistry-1] - Initializing module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678]
+2024-02-03 19:44:59.833 INFO  [ModuleRegistry-1] - Module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678] initialized
+2024-02-03 19:44:59.835 INFO  [ModuleRegistry-1] - Starting module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678]
+2024-02-03 19:44:59.860 INFO  [ModuleRegistry-3] - Starting module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669]
+2024-02-03 19:44:59.873 INFO  [ModuleRegistry-3] - Registering User Registry module {admin=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@c178c62, anonymous=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@719e76b7, sensor=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@2ebbb75e}
+2024-02-03 19:44:59.873 INFO  [ModuleRegistry-3] - Registering Authorizer module org.sensorhub.impl.security.DefaultAuthorizerImpl@2af75a00
+2024-02-03 19:44:59.874 INFO  [ModuleRegistry-3] - Module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669] started
+2024-02-03 19:44:59.881 INFO  [ModuleRegistry-5] - Initializing module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57]
+2024-02-03 19:44:59.931 INFO  [ModuleRegistry-5] - Module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57] initialized
+2024-02-03 19:44:59.932 INFO  [ModuleRegistry-5] - Starting module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57]
+2024-02-03 19:45:00.198 INFO  [ModuleRegistry-4] - Module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1] initialized
+2024-02-03 19:45:00.199 INFO  [ModuleRegistry-4] - Starting module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1]
+2024-02-03 19:45:01.594 INFO  [ModuleRegistry-6] - Module 'New Wii Remote Driver' [d57d8faf-bbe7-446b-8949-d24769829761] initialized
+2024-02-03 19:45:01.668 INFO  [ModuleRegistry-6] - Starting module 'New Wii Remote Driver' [d57d8faf-bbe7-446b-8949-d24769829761]
+2024-02-03 19:45:01.716 DEBUG [ModuleRegistry-6] - Registering driver urn:osh:sensor:wii001
+2024-02-03 19:45:01.720 INFO  [ForkJoinPool.commonPool-worker-3] - Registering system urn:osh:sensor:wii001
+2024-02-03 19:45:01.720 INFO  [ForkJoinPool.commonPool-worker-3] - System driver urn:osh:sensor:wii001 handled by DB 'SystemDriverDatabase' [NO_ID] (#0)
+2024-02-03 19:45:02.060 DEBUG [ForkJoinPool.commonPool-worker-3] - Added System urn:osh:sensor:wii001
+2024-02-03 19:45:02.272 DEBUG [ForkJoinPool.commonPool-worker-3] - Creating publisher for systems/urn:osh:sensor:wii001/status
+2024-02-03 19:45:02.273 DEBUG [ForkJoinPool.commonPool-worker-3] - Creating publisher for systems/
+2024-02-03 19:45:02.527 DEBUG [ForkJoinPool.commonPool-worker-3] - Added new datastream urn:osh:sensor:wii001#WII_REMOTE_SENSOR
+2024-02-03 19:45:02.619 DEBUG [ForkJoinPool.commonPool-worker-3] - Creating publisher for systems/urn:osh:sensor:wii001/outputs/WII_REMOTE_SENSOR/data
+2024-02-03 19:45:02.620 DEBUG [ForkJoinPool.commonPool-worker-3] - Creating publisher for systems/urn:osh:sensor:wii001/outputs/WII_REMOTE_SENSOR/status
+2024-02-03 19:45:02.621 INFO  [ForkJoinPool.commonPool-worker-3] - System registered: urn:osh:sensor:wii001 (0 FOIs, 1 datastreams, 0 command inputs, 0 members)
+2024-02-03 19:45:05.257 INFO  [ModuleRegistry-2] - Module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1] started
+2024-02-03 19:45:06.252 INFO  [ModuleRegistry-2] - Module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678] started
+2024-02-03 19:45:06.426 INFO  [ModuleRegistry-2] - Module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57] started
+2024-02-03 19:45:07.704 INFO  [ModuleRegistry-2] - Module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1] started
+2024-02-03 19:45:34.699 INFO  [ModuleRegistry-6] - Module 'New Wii Remote Driver' [d57d8faf-bbe7-446b-8949-d24769829761] started
+2024-02-03 19:46:35.750 INFO  [main] - *****************************************
+2024-02-03 19:46:35.780 INFO  [main] - Starting SensorHub...
+2024-02-03 19:46:35.888 INFO  [main] - Version: 2.0-beta2
+2024-02-03 19:46:35.892 INFO  [main] - Build number: c125ae6d
+2024-02-03 19:46:35.893 INFO  [main] - JDK version: OpenJDK 64-Bit Server VM, 11.0.21+9-adhoc.root.jdk11u, OpenLogic
+2024-02-03 19:46:35.893 INFO  [main] - OS type: Linux, amd64
+2024-02-03 19:46:35.894 INFO  [main] - CPU cores: 4
+2024-02-03 19:46:35.928 INFO  [main] - CommonPool parallelism: 3
+2024-02-03 19:46:37.234 INFO  [main] - Module INITIALIZING
+2024-02-03 19:46:37.296 INFO  [main] - Module INITIALIZED
+2024-02-03 19:46:37.296 INFO  [main] - Module STARTING
+2024-02-03 19:46:37.368 INFO  [main] - Module INITIALIZING
+2024-02-03 19:46:37.490 INFO  [main] - Module INITIALIZED
+2024-02-03 19:46:37.491 INFO  [main] - Module STARTING
+2024-02-03 19:46:37.491 INFO  [main] - Module STARTED
+2024-02-03 19:46:37.491 INFO  [main] - Registering database SystemDriverDatabase with ID 0
+2024-02-03 19:46:37.526 INFO  [main] - Module STARTED
+2024-02-03 19:46:38.009 INFO  [main] - Loading modules...
+2024-02-03 19:46:38.115 DEBUG [main] - Module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1] loaded
+2024-02-03 19:46:38.120 DEBUG [main] - Creating publisher for urn:osh:modules
+2024-02-03 19:46:38.158 DEBUG [main] - Creating publisher for 5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1
+2024-02-03 19:46:38.158 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:46:38.168 DEBUG [main] - Module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669] loaded
+2024-02-03 19:46:38.169 DEBUG [main] - Creating publisher for bd112969-8838-4f62-8d10-1edf1baa6669
+2024-02-03 19:46:38.170 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:46:38.292 DEBUG [main] - Module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678] loaded
+2024-02-03 19:46:38.338 DEBUG [main] - Creating publisher for 5cb05c9c-9123-4fa1-8731-ffaa51489678
+2024-02-03 19:46:38.338 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:46:38.390 DEBUG [main] - Module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1] loaded
+2024-02-03 19:46:38.390 DEBUG [main] - Creating publisher for 5cb05c9c-9e08-4fa1-8731-ff41e246bdc1
+2024-02-03 19:46:38.390 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:46:38.393 DEBUG [main] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] loaded
+2024-02-03 19:46:38.394 DEBUG [main] - Creating publisher for 29f2b677-95b1-4499-8e5b-459839ec3eb6
+2024-02-03 19:46:38.394 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:46:38.428 DEBUG [main] - Module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57] loaded
+2024-02-03 19:46:38.429 DEBUG [main] - Creating publisher for 2659dc3b-f243-477e-b43f-214b75cc8c57
+2024-02-03 19:46:38.429 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:46:38.504 DEBUG [main] - Module 'New Wii Remote Driver' [d57d8faf-bbe7-446b-8949-d24769829761] loaded
+2024-02-03 19:46:38.505 DEBUG [main] - Creating publisher for d57d8faf-bbe7-446b-8949-d24769829761
+2024-02-03 19:46:38.505 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:46:38.505 INFO  [main] - Starting datastore connectors
+2024-02-03 19:46:38.657 INFO  [ModuleRegistry-1] - Initializing module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6]
+2024-02-03 19:46:38.661 INFO  [ModuleRegistry-1] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] initialized
+2024-02-03 19:46:38.663 INFO  [ModuleRegistry-1] - Starting module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6]
+2024-02-03 19:46:38.809 ERROR [ModuleRegistry-1] - Error in module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6]
+2024-02-03 19:46:38.810 INFO  [ModuleRegistry-1] - Stopping module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6]
+2024-02-03 19:46:38.817 INFO  [ModuleRegistry-1] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] stopped
+2024-02-03 19:46:58.587 ERROR [main] - Fatal error during sensorhub execution
+org.sensorhub.api.common.SensorHubException: Error starting datastores
+	at org.sensorhub.impl.module.ModuleRegistry.loadAllModules(ModuleRegistry.java:189)
+	at org.sensorhub.impl.SensorHub.start(SensorHub.java:145)
+	at org.sensorhub.impl.SensorHub.main(SensorHub.java:294)
+	at org.sensorhub.node.test.TestSensorHub.main(TestSensorHub.java:18)
+Caused by: java.util.concurrent.TimeoutException: null
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1892)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2027)
+	at org.sensorhub.impl.module.ModuleRegistry.loadAllModules(ModuleRegistry.java:180)
+	... 3 common frames omitted
+2024-02-03 19:51:23.545 INFO  [main] - *****************************************
+2024-02-03 19:51:23.551 INFO  [main] - Starting SensorHub...
+2024-02-03 19:51:23.588 INFO  [main] - Version: 2.0-beta2
+2024-02-03 19:51:23.593 INFO  [main] - Build number: c125ae6d
+2024-02-03 19:51:23.594 INFO  [main] - JDK version: OpenJDK 64-Bit Server VM, 11.0.21+9-adhoc.root.jdk11u, OpenLogic
+2024-02-03 19:51:23.594 INFO  [main] - OS type: Linux, amd64
+2024-02-03 19:51:23.595 INFO  [main] - CPU cores: 4
+2024-02-03 19:51:23.602 INFO  [main] - CommonPool parallelism: 3
+2024-02-03 19:51:24.081 INFO  [main] - Module INITIALIZING
+2024-02-03 19:51:24.116 INFO  [main] - Module INITIALIZED
+2024-02-03 19:51:24.117 INFO  [main] - Module STARTING
+2024-02-03 19:51:24.152 INFO  [main] - Module INITIALIZING
+2024-02-03 19:51:24.215 INFO  [main] - Module INITIALIZED
+2024-02-03 19:51:24.215 INFO  [main] - Module STARTING
+2024-02-03 19:51:24.215 INFO  [main] - Module STARTED
+2024-02-03 19:51:24.216 INFO  [main] - Registering database SystemDriverDatabase with ID 0
+2024-02-03 19:51:24.219 INFO  [main] - Module STARTED
+2024-02-03 19:51:24.325 INFO  [main] - Loading modules...
+2024-02-03 19:51:24.374 DEBUG [main] - Module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1] loaded
+2024-02-03 19:51:24.378 DEBUG [main] - Creating publisher for urn:osh:modules
+2024-02-03 19:51:24.382 DEBUG [main] - Creating publisher for 5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1
+2024-02-03 19:51:24.383 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:51:24.394 DEBUG [main] - Module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669] loaded
+2024-02-03 19:51:24.395 DEBUG [main] - Creating publisher for bd112969-8838-4f62-8d10-1edf1baa6669
+2024-02-03 19:51:24.396 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:51:24.411 DEBUG [main] - Module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678] loaded
+2024-02-03 19:51:24.439 DEBUG [main] - Creating publisher for 5cb05c9c-9123-4fa1-8731-ffaa51489678
+2024-02-03 19:51:24.440 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:51:24.455 DEBUG [main] - Module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1] loaded
+2024-02-03 19:51:24.456 DEBUG [main] - Creating publisher for 5cb05c9c-9e08-4fa1-8731-ff41e246bdc1
+2024-02-03 19:51:24.456 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:51:24.462 DEBUG [main] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] loaded
+2024-02-03 19:51:24.462 DEBUG [main] - Creating publisher for 29f2b677-95b1-4499-8e5b-459839ec3eb6
+2024-02-03 19:51:24.463 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:51:24.475 DEBUG [main] - Module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57] loaded
+2024-02-03 19:51:24.477 DEBUG [main] - Creating publisher for 2659dc3b-f243-477e-b43f-214b75cc8c57
+2024-02-03 19:51:24.477 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:51:24.644 DEBUG [main] - Module 'New Wii Remote Driver' [d57d8faf-bbe7-446b-8949-d24769829761] loaded
+2024-02-03 19:51:24.645 DEBUG [main] - Creating publisher for d57d8faf-bbe7-446b-8949-d24769829761
+2024-02-03 19:51:24.645 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:51:24.646 INFO  [main] - Starting datastore connectors
+2024-02-03 19:51:24.740 INFO  [ModuleRegistry-1] - Initializing module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6]
+2024-02-03 19:51:24.746 INFO  [ModuleRegistry-1] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] initialized
+2024-02-03 19:51:24.750 INFO  [ModuleRegistry-1] - Starting module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6]
+2024-02-03 19:51:24.837 ERROR [ModuleRegistry-1] - Error in module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6]
+2024-02-03 19:51:24.838 INFO  [ModuleRegistry-1] - Stopping module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6]
+2024-02-03 19:51:24.845 INFO  [ModuleRegistry-1] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] stopped
+2024-02-03 19:51:44.671 ERROR [main] - Fatal error during sensorhub execution
+org.sensorhub.api.common.SensorHubException: Error starting datastores
+	at org.sensorhub.impl.module.ModuleRegistry.loadAllModules(ModuleRegistry.java:189)
+	at org.sensorhub.impl.SensorHub.start(SensorHub.java:145)
+	at org.sensorhub.impl.SensorHub.main(SensorHub.java:294)
+	at org.sensorhub.node.test.TestSensorHub.main(TestSensorHub.java:18)
+Caused by: java.util.concurrent.TimeoutException: null
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1892)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2027)
+	at org.sensorhub.impl.module.ModuleRegistry.loadAllModules(ModuleRegistry.java:180)
+	... 3 common frames omitted
+2024-02-03 19:52:58.365 INFO  [main] - *****************************************
+2024-02-03 19:52:58.432 INFO  [main] - Starting SensorHub...
+2024-02-03 19:52:58.651 INFO  [main] - Version: 2.0-beta2
+2024-02-03 19:52:58.673 INFO  [main] - Build number: c125ae6d
+2024-02-03 19:52:58.674 INFO  [main] - JDK version: OpenJDK 64-Bit Server VM, 11.0.21+9-adhoc.root.jdk11u, OpenLogic
+2024-02-03 19:52:58.674 INFO  [main] - OS type: Linux, amd64
+2024-02-03 19:52:58.674 INFO  [main] - CPU cores: 4
+2024-02-03 19:52:58.695 INFO  [main] - CommonPool parallelism: 3
+2024-02-03 19:53:00.013 INFO  [main] - Module INITIALIZING
+2024-02-03 19:53:00.278 INFO  [main] - Module INITIALIZED
+2024-02-03 19:53:00.278 INFO  [main] - Module STARTING
+2024-02-03 19:53:00.395 INFO  [main] - Module INITIALIZING
+2024-02-03 19:53:00.751 INFO  [main] - Module INITIALIZED
+2024-02-03 19:53:00.752 INFO  [main] - Module STARTING
+2024-02-03 19:53:00.752 INFO  [main] - Module STARTED
+2024-02-03 19:53:00.752 INFO  [main] - Registering database SystemDriverDatabase with ID 0
+2024-02-03 19:53:00.777 INFO  [main] - Module STARTED
+2024-02-03 19:53:02.093 INFO  [main] - Loading modules...
+2024-02-03 19:53:02.316 DEBUG [main] - Module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1] loaded
+2024-02-03 19:53:02.344 DEBUG [main] - Creating publisher for urn:osh:modules
+2024-02-03 19:53:02.407 DEBUG [main] - Creating publisher for 5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1
+2024-02-03 19:53:02.407 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:53:02.418 DEBUG [main] - Module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669] loaded
+2024-02-03 19:53:02.418 DEBUG [main] - Creating publisher for bd112969-8838-4f62-8d10-1edf1baa6669
+2024-02-03 19:53:02.419 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:53:02.607 DEBUG [main] - Module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678] loaded
+2024-02-03 19:53:02.697 DEBUG [main] - Creating publisher for 5cb05c9c-9123-4fa1-8731-ffaa51489678
+2024-02-03 19:53:02.698 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:53:02.728 DEBUG [main] - Module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1] loaded
+2024-02-03 19:53:02.729 DEBUG [main] - Creating publisher for 5cb05c9c-9e08-4fa1-8731-ff41e246bdc1
+2024-02-03 19:53:02.729 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:53:02.733 DEBUG [main] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] loaded
+2024-02-03 19:53:02.734 DEBUG [main] - Creating publisher for 29f2b677-95b1-4499-8e5b-459839ec3eb6
+2024-02-03 19:53:02.735 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:53:02.798 DEBUG [main] - Module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57] loaded
+2024-02-03 19:53:02.798 DEBUG [main] - Creating publisher for 2659dc3b-f243-477e-b43f-214b75cc8c57
+2024-02-03 19:53:02.799 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:53:02.910 DEBUG [main] - Module 'New Wii Remote Driver' [d57d8faf-bbe7-446b-8949-d24769829761] loaded
+2024-02-03 19:53:02.912 DEBUG [main] - Creating publisher for d57d8faf-bbe7-446b-8949-d24769829761
+2024-02-03 19:53:02.913 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:53:02.913 INFO  [main] - Starting datastore connectors
+2024-02-03 19:53:03.053 INFO  [ModuleRegistry-1] - Initializing module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6]
+2024-02-03 19:53:03.066 INFO  [ModuleRegistry-1] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] initialized
+2024-02-03 19:53:03.076 INFO  [ModuleRegistry-1] - Starting module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6]
+2024-02-03 19:53:03.486 DEBUG [ModuleRegistry-1] - Thread[ModuleRegistry-1,5,main]: kryo=1505315251, classResolver=0
+2024-02-03 19:53:03.667 INFO  [ModuleRegistry-1] - Registering database SystemDriverDatabase with ID 1
+2024-02-03 19:53:03.667 INFO  [ModuleRegistry-1] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] started
+2024-02-03 19:53:03.668 INFO  [main] - All datastores ready. Starting all other modules
+2024-02-03 19:53:03.742 INFO  [ModuleRegistry-6] - Initializing module 'New Wii Remote Driver' [d57d8faf-bbe7-446b-8949-d24769829761]
+2024-02-03 19:53:03.771 INFO  [ModuleRegistry-5] - Initializing module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57]
+2024-02-03 19:53:03.780 INFO  [ModuleRegistry-5] - Module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57] initialized
+2024-02-03 19:53:03.781 INFO  [ModuleRegistry-5] - Starting module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57]
+2024-02-03 19:53:03.790 INFO  [ModuleRegistry-4] - Initializing module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1]
+2024-02-03 19:53:03.799 INFO  [ModuleRegistry-3] - Initializing module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678]
+2024-02-03 19:53:03.801 INFO  [ModuleRegistry-3] - Module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678] initialized
+2024-02-03 19:53:03.803 INFO  [ModuleRegistry-3] - Starting module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678]
+2024-02-03 19:53:03.805 INFO  [ModuleRegistry-2] - Initializing module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1]
+2024-02-03 19:53:03.807 INFO  [ModuleRegistry-1] - Initializing module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669]
+2024-02-03 19:53:03.808 INFO  [ModuleRegistry-2] - Module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1] initialized
+2024-02-03 19:53:03.812 INFO  [ModuleRegistry-1] - Module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669] initialized
+2024-02-03 19:53:03.812 INFO  [ModuleRegistry-2] - Starting module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1]
+2024-02-03 19:53:03.876 INFO  [ModuleRegistry-1] - Starting module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669]
+2024-02-03 19:53:03.936 INFO  [ModuleRegistry-1] - Registering User Registry module {admin=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@3c452bcc, anonymous=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@fc3e108, sensor=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@1957c2c6}
+2024-02-03 19:53:03.937 INFO  [ModuleRegistry-1] - Registering Authorizer module org.sensorhub.impl.security.DefaultAuthorizerImpl@61ae0904
+2024-02-03 19:53:03.971 INFO  [ModuleRegistry-1] - Module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669] started
+2024-02-03 19:53:04.119 INFO  [ModuleRegistry-4] - Module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1] initialized
+2024-02-03 19:53:04.120 INFO  [ModuleRegistry-4] - Starting module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1]
+2024-02-03 19:53:04.706 INFO  [ModuleRegistry-6] - Module 'New Wii Remote Driver' [d57d8faf-bbe7-446b-8949-d24769829761] initialized
+2024-02-03 19:53:04.728 INFO  [ModuleRegistry-6] - Starting module 'New Wii Remote Driver' [d57d8faf-bbe7-446b-8949-d24769829761]
+2024-02-03 19:53:04.730 DEBUG [ModuleRegistry-6] - Registering driver urn:osh:sensor:wii001
+2024-02-03 19:53:04.734 INFO  [ForkJoinPool.commonPool-worker-3] - Registering system urn:osh:sensor:wii001
+2024-02-03 19:53:04.735 INFO  [ForkJoinPool.commonPool-worker-3] - System driver urn:osh:sensor:wii001 handled by DB 'SystemDriverDatabase' [NO_ID] (#0)
+2024-02-03 19:53:04.934 DEBUG [ForkJoinPool.commonPool-worker-3] - Added System urn:osh:sensor:wii001
+2024-02-03 19:53:05.077 DEBUG [ForkJoinPool.commonPool-worker-3] - Creating publisher for systems/urn:osh:sensor:wii001/status
+2024-02-03 19:53:05.078 DEBUG [ForkJoinPool.commonPool-worker-3] - Creating publisher for systems/
+2024-02-03 19:53:05.287 DEBUG [ForkJoinPool.commonPool-worker-3] - Added new datastream urn:osh:sensor:wii001#WII_REMOTE_SENSOR
+2024-02-03 19:53:05.314 DEBUG [ForkJoinPool.commonPool-worker-3] - Creating publisher for systems/urn:osh:sensor:wii001/outputs/WII_REMOTE_SENSOR/data
+2024-02-03 19:53:05.315 DEBUG [ForkJoinPool.commonPool-worker-3] - Creating publisher for systems/urn:osh:sensor:wii001/outputs/WII_REMOTE_SENSOR/status
+2024-02-03 19:53:05.318 INFO  [ForkJoinPool.commonPool-worker-3] - System registered: urn:osh:sensor:wii001 (0 FOIs, 1 datastreams, 0 command inputs, 0 members)
+2024-02-03 19:53:39.728 ERROR [ModuleRegistry-2] - Error in module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1]
+2024-02-03 19:53:39.729 INFO  [ModuleRegistry-2] - Stopping module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1]
+2024-02-03 19:53:39.799 INFO  [ModuleRegistry-2] - Module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1] stopped
+2024-02-03 19:53:39.804 INFO  [ModuleRegistry-2] - Module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678] stopped
+2024-02-03 19:53:39.806 INFO  [ModuleRegistry-2] - Module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57] stopped
+2024-02-03 19:53:39.809 INFO  [ModuleRegistry-2] - Module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1] stopped
+2024-02-03 19:54:11.501 INFO  [ModuleRegistry-6] - Module 'New Wii Remote Driver' [d57d8faf-bbe7-446b-8949-d24769829761] started
+2024-02-03 19:54:20.844 INFO  [Thread-0] - Module registry shutdown initiated
+2024-02-03 19:54:20.851 INFO  [Thread-0] - Stopping all modules (saving config = false, saving state = true)
+2024-02-03 19:54:34.082 INFO  [main] - *****************************************
+2024-02-03 19:54:34.088 INFO  [main] - Starting SensorHub...
+2024-02-03 19:54:34.298 INFO  [main] - Version: 2.0-beta2
+2024-02-03 19:54:34.303 INFO  [main] - Build number: c125ae6d
+2024-02-03 19:54:34.304 INFO  [main] - JDK version: OpenJDK 64-Bit Server VM, 11.0.21+9-adhoc.root.jdk11u, OpenLogic
+2024-02-03 19:54:34.304 INFO  [main] - OS type: Linux, amd64
+2024-02-03 19:54:34.305 INFO  [main] - CPU cores: 4
+2024-02-03 19:54:34.450 INFO  [main] - CommonPool parallelism: 3
+2024-02-03 19:54:35.934 INFO  [main] - Module INITIALIZING
+2024-02-03 19:54:36.005 INFO  [main] - Module INITIALIZED
+2024-02-03 19:54:36.006 INFO  [main] - Module STARTING
+2024-02-03 19:54:36.111 INFO  [main] - Module INITIALIZING
+2024-02-03 19:54:36.418 INFO  [main] - Module INITIALIZED
+2024-02-03 19:54:36.418 INFO  [main] - Module STARTING
+2024-02-03 19:54:36.418 INFO  [main] - Module STARTED
+2024-02-03 19:54:36.419 INFO  [main] - Registering database SystemDriverDatabase with ID 0
+2024-02-03 19:54:36.423 INFO  [main] - Module STARTED
+2024-02-03 19:54:37.138 INFO  [main] - Loading modules...
+2024-02-03 19:54:37.237 DEBUG [main] - Module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1] loaded
+2024-02-03 19:54:37.242 DEBUG [main] - Creating publisher for urn:osh:modules
+2024-02-03 19:54:37.289 DEBUG [main] - Creating publisher for 5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1
+2024-02-03 19:54:37.290 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:54:37.301 DEBUG [main] - Module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669] loaded
+2024-02-03 19:54:37.302 DEBUG [main] - Creating publisher for bd112969-8838-4f62-8d10-1edf1baa6669
+2024-02-03 19:54:37.302 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:54:37.414 DEBUG [main] - Module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678] loaded
+2024-02-03 19:54:37.490 DEBUG [main] - Creating publisher for 5cb05c9c-9123-4fa1-8731-ffaa51489678
+2024-02-03 19:54:37.490 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:54:37.510 DEBUG [main] - Module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1] loaded
+2024-02-03 19:54:37.511 DEBUG [main] - Creating publisher for 5cb05c9c-9e08-4fa1-8731-ff41e246bdc1
+2024-02-03 19:54:37.511 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:54:37.514 DEBUG [main] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] loaded
+2024-02-03 19:54:37.514 DEBUG [main] - Creating publisher for 29f2b677-95b1-4499-8e5b-459839ec3eb6
+2024-02-03 19:54:37.514 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:54:37.547 DEBUG [main] - Module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57] loaded
+2024-02-03 19:54:37.548 DEBUG [main] - Creating publisher for 2659dc3b-f243-477e-b43f-214b75cc8c57
+2024-02-03 19:54:37.548 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:54:37.616 DEBUG [main] - Module 'New Wii Remote Driver' [d57d8faf-bbe7-446b-8949-d24769829761] loaded
+2024-02-03 19:54:37.616 DEBUG [main] - Creating publisher for d57d8faf-bbe7-446b-8949-d24769829761
+2024-02-03 19:54:37.616 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:54:37.616 INFO  [main] - Starting datastore connectors
+2024-02-03 19:54:37.713 INFO  [ModuleRegistry-1] - Initializing module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6]
+2024-02-03 19:54:37.716 INFO  [ModuleRegistry-1] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] initialized
+2024-02-03 19:54:37.717 INFO  [ModuleRegistry-1] - Starting module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6]
+2024-02-03 19:54:38.142 DEBUG [ModuleRegistry-1] - Thread[ModuleRegistry-1,5,main]: kryo=1022340216, classResolver=0
+2024-02-03 19:54:38.200 DEBUG [ModuleRegistry-1] - Thread[ModuleRegistry-1,5,main]: kryo=262430442, classResolver=0
+2024-02-03 19:54:38.390 INFO  [ModuleRegistry-1] - Registering database SystemDriverDatabase with ID 1
+2024-02-03 19:54:38.391 INFO  [ModuleRegistry-1] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] started
+2024-02-03 19:54:38.392 INFO  [main] - All datastores ready. Starting all other modules
+2024-02-03 19:54:38.451 INFO  [ModuleRegistry-1] - Initializing module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1]
+2024-02-03 19:54:38.455 INFO  [ModuleRegistry-2] - Initializing module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1]
+2024-02-03 19:54:38.472 INFO  [ModuleRegistry-2] - Module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1] initialized
+2024-02-03 19:54:38.473 INFO  [ModuleRegistry-2] - Starting module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1]
+2024-02-03 19:54:38.483 INFO  [ModuleRegistry-3] - Initializing module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669]
+2024-02-03 19:54:38.488 INFO  [ModuleRegistry-3] - Module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669] initialized
+2024-02-03 19:54:38.486 INFO  [ModuleRegistry-5] - Initializing module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57]
+2024-02-03 19:54:38.500 INFO  [ModuleRegistry-5] - Module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57] initialized
+2024-02-03 19:54:38.501 INFO  [ModuleRegistry-5] - Starting module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57]
+2024-02-03 19:54:38.517 ERROR [ModuleRegistry-3] - Cannot load state of module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669]
+org.sensorhub.api.common.SensorHubException: Error reading user_permissions.json
+	at org.sensorhub.impl.security.BasicSecurityRealm.readPermissionJsonFile(BasicSecurityRealm.java:269)
+	at org.sensorhub.impl.security.BasicSecurityRealm.loadState(BasicSecurityRealm.java:212)
+	at org.sensorhub.impl.module.ModuleRegistry.postInit(ModuleRegistry.java:1353)
+	at org.sensorhub.impl.module.ModuleRegistry.handleEvent(ModuleRegistry.java:1233)
+	at org.sensorhub.impl.event.BasicEventHandler.publish(BasicEventHandler.java:104)
+	at org.sensorhub.impl.module.AbstractModule.setState(AbstractModule.java:201)
+	at org.sensorhub.impl.module.AbstractModule.init(AbstractModule.java:405)
+	at org.sensorhub.impl.module.ModuleRegistry.lambda$startModuleAsync$1(ModuleRegistry.java:659)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.io.EOFException: End of input at line 1 column 1 path $
+	at com.google.gson.stream.JsonReader.nextNonWhitespace(JsonReader.java:1395)
+	at com.google.gson.stream.JsonReader.doPeek(JsonReader.java:548)
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:378)
+	at org.sensorhub.impl.security.BasicSecurityRealm.readPermissionJsonFile(BasicSecurityRealm.java:227)
+	... 12 common frames omitted
+2024-02-03 19:54:38.518 INFO  [ModuleRegistry-3] - Starting module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669]
+2024-02-03 19:54:38.561 INFO  [ModuleRegistry-3] - Registering User Registry module {admin=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@3726f4cb, anonymous=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@29ab5f2, sensor=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@50252aec}
+2024-02-03 19:54:38.571 INFO  [ModuleRegistry-3] - Registering Authorizer module org.sensorhub.impl.security.DefaultAuthorizerImpl@59c28c0b
+2024-02-03 19:54:38.571 INFO  [ModuleRegistry-3] - Module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669] started
+2024-02-03 19:54:38.579 INFO  [ModuleRegistry-4] - Initializing module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678]
+2024-02-03 19:54:38.581 INFO  [ModuleRegistry-4] - Module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678] initialized
+2024-02-03 19:54:38.583 INFO  [ModuleRegistry-4] - Starting module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678]
+2024-02-03 19:54:38.617 INFO  [ModuleRegistry-6] - Initializing module 'New Wii Remote Driver' [d57d8faf-bbe7-446b-8949-d24769829761]
+2024-02-03 19:54:38.664 INFO  [ModuleRegistry-1] - Module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1] initialized
+2024-02-03 19:54:38.665 INFO  [ModuleRegistry-1] - Starting module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1]
+2024-02-03 19:54:39.395 INFO  [ModuleRegistry-6] - Module 'New Wii Remote Driver' [d57d8faf-bbe7-446b-8949-d24769829761] initialized
+2024-02-03 19:54:39.433 INFO  [ModuleRegistry-6] - Starting module 'New Wii Remote Driver' [d57d8faf-bbe7-446b-8949-d24769829761]
+2024-02-03 19:54:39.435 DEBUG [ModuleRegistry-6] - Registering driver urn:osh:sensor:wii001
+2024-02-03 19:54:39.439 INFO  [ForkJoinPool.commonPool-worker-3] - Registering system urn:osh:sensor:wii001
+2024-02-03 19:54:39.440 INFO  [ForkJoinPool.commonPool-worker-3] - System driver urn:osh:sensor:wii001 handled by DB 'SystemDriverDatabase' [NO_ID] (#0)
+2024-02-03 19:54:39.661 DEBUG [ForkJoinPool.commonPool-worker-3] - Added System urn:osh:sensor:wii001
+2024-02-03 19:54:39.748 DEBUG [ForkJoinPool.commonPool-worker-3] - Creating publisher for systems/urn:osh:sensor:wii001/status
+2024-02-03 19:54:39.749 DEBUG [ForkJoinPool.commonPool-worker-3] - Creating publisher for systems/
+2024-02-03 19:54:39.912 DEBUG [ForkJoinPool.commonPool-worker-3] - Added new datastream urn:osh:sensor:wii001#WII_REMOTE_SENSOR
+2024-02-03 19:54:39.963 DEBUG [ForkJoinPool.commonPool-worker-3] - Creating publisher for systems/urn:osh:sensor:wii001/outputs/WII_REMOTE_SENSOR/data
+2024-02-03 19:54:39.964 DEBUG [ForkJoinPool.commonPool-worker-3] - Creating publisher for systems/urn:osh:sensor:wii001/outputs/WII_REMOTE_SENSOR/status
+2024-02-03 19:54:39.966 INFO  [ForkJoinPool.commonPool-worker-3] - System registered: urn:osh:sensor:wii001 (0 FOIs, 1 datastreams, 0 command inputs, 0 members)
+2024-02-03 19:54:48.494 ERROR [ModuleRegistry-2] - Error in module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1]
+2024-02-03 19:54:48.495 INFO  [ModuleRegistry-2] - Stopping module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1]
+2024-02-03 19:54:48.512 INFO  [ModuleRegistry-2] - Module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1] stopped
+2024-02-03 19:54:48.515 INFO  [ModuleRegistry-2] - Module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57] stopped
+2024-02-03 19:54:48.517 INFO  [ModuleRegistry-2] - Module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678] stopped
+2024-02-03 19:54:48.519 INFO  [ModuleRegistry-2] - Module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1] stopped
+2024-02-03 19:55:19.484 INFO  [ModuleRegistry-6] - Module 'New Wii Remote Driver' [d57d8faf-bbe7-446b-8949-d24769829761] started
+2024-02-03 19:55:29.487 INFO  [Thread-0] - Module registry shutdown initiated
+2024-02-03 19:55:29.488 INFO  [Thread-0] - Stopping all modules (saving config = false, saving state = true)
+2024-02-03 19:55:29.537 INFO  [ModuleRegistry-8] - Stopping module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669]
+2024-02-03 19:55:29.537 INFO  [ModuleRegistry-8] - Unregistering User Registry module {admin=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@3726f4cb, anonymous=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@29ab5f2, sensor=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@50252aec}
+2024-02-03 19:55:29.537 INFO  [ModuleRegistry-8] - Unregistering Authorizer module org.sensorhub.impl.security.DefaultAuthorizerImpl@59c28c0b
+2024-02-03 19:55:29.538 INFO  [ModuleRegistry-8] - Module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669] stopped
+2024-02-03 19:55:29.538 INFO  [ModuleRegistry-9] - Stopping module 'New Wii Remote Driver' [d57d8faf-bbe7-446b-8949-d24769829761]
+2024-02-03 19:55:29.541 DEBUG [ModuleRegistry-9] - System urn:osh:sensor:wii001 disconnected
+2024-02-03 19:55:29.542 INFO  [ModuleRegistry-9] - Module 'New Wii Remote Driver' [d57d8faf-bbe7-446b-8949-d24769829761] stopped
+2024-02-03 19:55:29.638 INFO  [ModuleRegistry-9] - Stopping module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6]
+2024-02-03 19:55:29.668 INFO  [ModuleRegistry-9] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] stopped
+2024-02-03 19:55:29.737 INFO  [Thread-0] - SensorHub was cleanly stopped
+2024-02-03 19:59:24.427 INFO  [main] - *****************************************
+2024-02-03 19:59:24.445 INFO  [main] - Starting SensorHub...
+2024-02-03 19:59:24.560 INFO  [main] - Version: 2.0-beta2
+2024-02-03 19:59:24.564 INFO  [main] - Build number: c125ae6d
+2024-02-03 19:59:24.564 INFO  [main] - JDK version: OpenJDK 64-Bit Server VM, 11.0.21+9-adhoc.root.jdk11u, OpenLogic
+2024-02-03 19:59:24.564 INFO  [main] - OS type: Linux, amd64
+2024-02-03 19:59:24.565 INFO  [main] - CPU cores: 4
+2024-02-03 19:59:24.582 INFO  [main] - CommonPool parallelism: 3
+2024-02-03 19:59:25.753 INFO  [main] - Module INITIALIZING
+2024-02-03 19:59:25.796 INFO  [main] - Module INITIALIZED
+2024-02-03 19:59:25.796 INFO  [main] - Module STARTING
+2024-02-03 19:59:25.866 INFO  [main] - Module INITIALIZING
+2024-02-03 19:59:25.966 INFO  [main] - Module INITIALIZED
+2024-02-03 19:59:25.966 INFO  [main] - Module STARTING
+2024-02-03 19:59:25.967 INFO  [main] - Module STARTED
+2024-02-03 19:59:25.967 INFO  [main] - Registering database SystemDriverDatabase with ID 0
+2024-02-03 19:59:25.970 INFO  [main] - Module STARTED
+2024-02-03 19:59:26.461 INFO  [main] - Loading modules...
+2024-02-03 19:59:26.555 DEBUG [main] - Module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1] loaded
+2024-02-03 19:59:26.558 DEBUG [main] - Creating publisher for urn:osh:modules
+2024-02-03 19:59:26.600 DEBUG [main] - Creating publisher for 5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1
+2024-02-03 19:59:26.601 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:59:26.612 DEBUG [main] - Module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669] loaded
+2024-02-03 19:59:26.613 DEBUG [main] - Creating publisher for bd112969-8838-4f62-8d10-1edf1baa6669
+2024-02-03 19:59:26.613 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:59:26.736 DEBUG [main] - Module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678] loaded
+2024-02-03 19:59:26.793 DEBUG [main] - Creating publisher for 5cb05c9c-9123-4fa1-8731-ffaa51489678
+2024-02-03 19:59:26.794 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:59:26.821 DEBUG [main] - Module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1] loaded
+2024-02-03 19:59:26.822 DEBUG [main] - Creating publisher for 5cb05c9c-9e08-4fa1-8731-ff41e246bdc1
+2024-02-03 19:59:26.822 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:59:26.826 DEBUG [main] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] loaded
+2024-02-03 19:59:26.826 DEBUG [main] - Creating publisher for 29f2b677-95b1-4499-8e5b-459839ec3eb6
+2024-02-03 19:59:26.826 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:59:26.858 DEBUG [main] - Module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57] loaded
+2024-02-03 19:59:26.859 DEBUG [main] - Creating publisher for 2659dc3b-f243-477e-b43f-214b75cc8c57
+2024-02-03 19:59:26.859 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:59:26.926 DEBUG [main] - Module 'New Wii Remote Driver' [d57d8faf-bbe7-446b-8949-d24769829761] loaded
+2024-02-03 19:59:26.926 DEBUG [main] - Creating publisher for d57d8faf-bbe7-446b-8949-d24769829761
+2024-02-03 19:59:26.926 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 19:59:26.927 INFO  [main] - Starting datastore connectors
+2024-02-03 19:59:27.034 INFO  [ModuleRegistry-1] - Initializing module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6]
+2024-02-03 19:59:27.037 INFO  [ModuleRegistry-1] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] initialized
+2024-02-03 19:59:27.041 INFO  [ModuleRegistry-1] - Starting module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6]
+2024-02-03 19:59:27.551 DEBUG [ModuleRegistry-1] - Thread[ModuleRegistry-1,5,main]: kryo=1430187919, classResolver=0
+2024-02-03 19:59:27.782 INFO  [ModuleRegistry-1] - Registering database SystemDriverDatabase with ID 1
+2024-02-03 19:59:27.783 INFO  [ModuleRegistry-1] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] started
+2024-02-03 19:59:27.783 INFO  [main] - All datastores ready. Starting all other modules
+2024-02-03 19:59:27.859 INFO  [ModuleRegistry-6] - Initializing module 'New Wii Remote Driver' [d57d8faf-bbe7-446b-8949-d24769829761]
+2024-02-03 19:59:27.875 INFO  [ModuleRegistry-4] - Initializing module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1]
+2024-02-03 19:59:27.877 INFO  [ModuleRegistry-5] - Initializing module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57]
+2024-02-03 19:59:27.882 INFO  [ModuleRegistry-2] - Initializing module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669]
+2024-02-03 19:59:27.883 INFO  [ModuleRegistry-5] - Module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57] initialized
+2024-02-03 19:59:27.887 INFO  [ModuleRegistry-3] - Initializing module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678]
+2024-02-03 19:59:27.892 INFO  [ModuleRegistry-5] - Starting module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57]
+2024-02-03 19:59:27.893 INFO  [ModuleRegistry-3] - Module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678] initialized
+2024-02-03 19:59:27.893 INFO  [ModuleRegistry-2] - Module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669] initialized
+2024-02-03 19:59:27.896 INFO  [ModuleRegistry-3] - Starting module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678]
+2024-02-03 19:59:27.914 INFO  [ModuleRegistry-1] - Initializing module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1]
+2024-02-03 19:59:27.917 INFO  [ModuleRegistry-1] - Module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1] initialized
+2024-02-03 19:59:27.918 INFO  [ModuleRegistry-1] - Starting module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1]
+2024-02-03 19:59:27.944 INFO  [ModuleRegistry-2] - Starting module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669]
+2024-02-03 19:59:27.970 INFO  [ModuleRegistry-2] - Registering User Registry module {admin=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@3124fc09, anonymous=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@4301c129, sensor=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@2c1df98c}
+2024-02-03 19:59:27.970 INFO  [ModuleRegistry-2] - Registering Authorizer module org.sensorhub.impl.security.DefaultAuthorizerImpl@373725f4
+2024-02-03 19:59:27.970 INFO  [ModuleRegistry-2] - Module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669] started
+2024-02-03 19:59:28.147 INFO  [ModuleRegistry-4] - Module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1] initialized
+2024-02-03 19:59:28.148 INFO  [ModuleRegistry-4] - Starting module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1]
+2024-02-03 19:59:28.854 INFO  [ModuleRegistry-6] - Module 'New Wii Remote Driver' [d57d8faf-bbe7-446b-8949-d24769829761] initialized
+2024-02-03 19:59:28.867 INFO  [ModuleRegistry-6] - Starting module 'New Wii Remote Driver' [d57d8faf-bbe7-446b-8949-d24769829761]
+2024-02-03 19:59:28.873 DEBUG [ModuleRegistry-6] - Registering driver urn:osh:sensor:wii001
+2024-02-03 19:59:28.882 INFO  [ForkJoinPool.commonPool-worker-3] - Registering system urn:osh:sensor:wii001
+2024-02-03 19:59:28.883 INFO  [ForkJoinPool.commonPool-worker-3] - System driver urn:osh:sensor:wii001 handled by DB 'SystemDriverDatabase' [NO_ID] (#0)
+2024-02-03 19:59:29.239 DEBUG [ForkJoinPool.commonPool-worker-3] - Added System urn:osh:sensor:wii001
+2024-02-03 19:59:29.352 DEBUG [ForkJoinPool.commonPool-worker-3] - Creating publisher for systems/urn:osh:sensor:wii001/status
+2024-02-03 19:59:29.352 DEBUG [ForkJoinPool.commonPool-worker-3] - Creating publisher for systems/
+2024-02-03 19:59:29.538 DEBUG [ForkJoinPool.commonPool-worker-3] - Added new datastream urn:osh:sensor:wii001#WII_REMOTE_SENSOR
+2024-02-03 19:59:29.708 DEBUG [ForkJoinPool.commonPool-worker-3] - Creating publisher for systems/urn:osh:sensor:wii001/outputs/WII_REMOTE_SENSOR/data
+2024-02-03 19:59:29.710 DEBUG [ForkJoinPool.commonPool-worker-3] - Creating publisher for systems/urn:osh:sensor:wii001/outputs/WII_REMOTE_SENSOR/status
+2024-02-03 19:59:29.711 INFO  [ForkJoinPool.commonPool-worker-3] - System registered: urn:osh:sensor:wii001 (0 FOIs, 1 datastreams, 0 command inputs, 0 members)
+2024-02-03 19:59:55.425 ERROR [ModuleRegistry-1] - Error in module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1]
+2024-02-03 19:59:55.426 INFO  [ModuleRegistry-1] - Stopping module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1]
+2024-02-03 19:59:55.612 INFO  [ModuleRegistry-1] - Module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1] stopped
+2024-02-03 19:59:55.613 INFO  [ModuleRegistry-1] - Module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678] stopped
+2024-02-03 19:59:55.615 INFO  [ModuleRegistry-1] - Module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57] stopped
+2024-02-03 19:59:55.635 INFO  [ModuleRegistry-1] - Module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1] stopped
+2024-02-03 20:00:25.951 INFO  [ModuleRegistry-6] - Module 'New Wii Remote Driver' [d57d8faf-bbe7-446b-8949-d24769829761] started
+2024-02-03 20:00:35.998 INFO  [Thread-0] - Module registry shutdown initiated
+2024-02-03 20:00:36.001 INFO  [Thread-0] - Stopping all modules (saving config = false, saving state = true)
+2024-02-03 20:00:36.125 INFO  [ModuleRegistry-7] - Stopping module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669]
+2024-02-03 20:00:36.125 INFO  [ModuleRegistry-7] - Unregistering User Registry module {admin=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@3124fc09, anonymous=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@4301c129, sensor=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@2c1df98c}
+2024-02-03 20:00:36.125 INFO  [ModuleRegistry-7] - Unregistering Authorizer module org.sensorhub.impl.security.DefaultAuthorizerImpl@373725f4
+2024-02-03 20:00:36.126 INFO  [ModuleRegistry-7] - Module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669] stopped
+2024-02-03 20:00:36.189 INFO  [ModuleRegistry-7] - Stopping module 'New Wii Remote Driver' [d57d8faf-bbe7-446b-8949-d24769829761]
+2024-02-03 20:00:36.191 DEBUG [ModuleRegistry-7] - System urn:osh:sensor:wii001 disconnected
+2024-02-03 20:00:36.192 INFO  [ModuleRegistry-7] - Module 'New Wii Remote Driver' [d57d8faf-bbe7-446b-8949-d24769829761] stopped
+2024-02-03 20:00:36.235 INFO  [ModuleRegistry-7] - Stopping module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6]
+2024-02-03 20:00:36.393 INFO  [ModuleRegistry-7] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] stopped
+2024-02-03 20:00:36.435 INFO  [Thread-0] - SensorHub was cleanly stopped
+2024-02-03 20:01:00.569 INFO  [qtp712502306-38] - Stopping module 'New Wii Remote Driver' [d57d8faf-bbe7-446b-8949-d24769829761]
+2024-02-03 20:01:00.572 DEBUG [qtp712502306-38] - System urn:osh:sensor:wii001 disconnected
+2024-02-03 20:01:00.572 INFO  [qtp712502306-38] - Module 'New Wii Remote Driver' [d57d8faf-bbe7-446b-8949-d24769829761] stopped
+2024-02-03 20:01:00.693 DEBUG [qtp712502306-38] - System urn:osh:sensor:wii001 disconnected
+2024-02-03 20:01:00.694 DEBUG [qtp712502306-38] - Module 'New Wii Remote Driver' [d57d8faf-bbe7-446b-8949-d24769829761] deleted
+2024-02-03 20:01:20.612 INFO  [main] - *****************************************
+2024-02-03 20:01:20.616 INFO  [main] - Starting SensorHub...
+2024-02-03 20:01:20.713 INFO  [main] - Version: 2.0-beta2
+2024-02-03 20:01:20.718 INFO  [main] - Build number: c125ae6d
+2024-02-03 20:01:20.719 INFO  [main] - JDK version: OpenJDK 64-Bit Server VM, 11.0.21+9-adhoc.root.jdk11u, OpenLogic
+2024-02-03 20:01:20.719 INFO  [main] - OS type: Linux, amd64
+2024-02-03 20:01:20.720 INFO  [main] - CPU cores: 4
+2024-02-03 20:01:20.741 INFO  [main] - CommonPool parallelism: 3
+2024-02-03 20:01:21.900 INFO  [main] - Module INITIALIZING
+2024-02-03 20:01:21.952 INFO  [main] - Module INITIALIZED
+2024-02-03 20:01:21.953 INFO  [main] - Module STARTING
+2024-02-03 20:01:22.019 INFO  [main] - Module INITIALIZING
+2024-02-03 20:01:22.119 INFO  [main] - Module INITIALIZED
+2024-02-03 20:01:22.119 INFO  [main] - Module STARTING
+2024-02-03 20:01:22.119 INFO  [main] - Module STARTED
+2024-02-03 20:01:22.120 INFO  [main] - Registering database SystemDriverDatabase with ID 0
+2024-02-03 20:01:22.122 INFO  [main] - Module STARTED
+2024-02-03 20:01:22.647 INFO  [main] - Loading modules...
+2024-02-03 20:01:22.755 DEBUG [main] - Module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1] loaded
+2024-02-03 20:01:22.759 DEBUG [main] - Creating publisher for urn:osh:modules
+2024-02-03 20:01:22.798 DEBUG [main] - Creating publisher for 5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1
+2024-02-03 20:01:22.798 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 20:01:22.808 DEBUG [main] - Module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669] loaded
+2024-02-03 20:01:22.809 DEBUG [main] - Creating publisher for bd112969-8838-4f62-8d10-1edf1baa6669
+2024-02-03 20:01:22.809 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 20:01:22.909 DEBUG [main] - Module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678] loaded
+2024-02-03 20:01:22.958 DEBUG [main] - Creating publisher for 5cb05c9c-9123-4fa1-8731-ffaa51489678
+2024-02-03 20:01:22.959 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 20:01:22.985 DEBUG [main] - Module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1] loaded
+2024-02-03 20:01:22.986 DEBUG [main] - Creating publisher for 5cb05c9c-9e08-4fa1-8731-ff41e246bdc1
+2024-02-03 20:01:22.986 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 20:01:22.988 DEBUG [main] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] loaded
+2024-02-03 20:01:22.989 DEBUG [main] - Creating publisher for 29f2b677-95b1-4499-8e5b-459839ec3eb6
+2024-02-03 20:01:22.989 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 20:01:23.022 DEBUG [main] - Module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57] loaded
+2024-02-03 20:01:23.023 DEBUG [main] - Creating publisher for 2659dc3b-f243-477e-b43f-214b75cc8c57
+2024-02-03 20:01:23.023 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 20:01:23.023 INFO  [main] - Starting datastore connectors
+2024-02-03 20:01:23.120 INFO  [ModuleRegistry-1] - Initializing module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6]
+2024-02-03 20:01:23.124 INFO  [ModuleRegistry-1] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] initialized
+2024-02-03 20:01:23.126 INFO  [ModuleRegistry-1] - Starting module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6]
+2024-02-03 20:01:23.546 DEBUG [ModuleRegistry-1] - Thread[ModuleRegistry-1,5,main]: kryo=1169434418, classResolver=0
+2024-02-03 20:01:23.580 DEBUG [ModuleRegistry-1] - Thread[ModuleRegistry-1,5,main]: kryo=848345091, classResolver=0
+2024-02-03 20:01:23.851 INFO  [ModuleRegistry-1] - Registering database SystemDriverDatabase with ID 1
+2024-02-03 20:01:23.853 INFO  [ModuleRegistry-1] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] started
+2024-02-03 20:01:23.854 INFO  [main] - All datastores ready. Starting all other modules
+2024-02-03 20:01:23.920 INFO  [ModuleRegistry-3] - Initializing module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669]
+2024-02-03 20:01:23.920 INFO  [ModuleRegistry-1] - Initializing module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678]
+2024-02-03 20:01:23.929 INFO  [ModuleRegistry-1] - Module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678] initialized
+2024-02-03 20:01:23.930 INFO  [ModuleRegistry-5] - Initializing module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57]
+2024-02-03 20:01:23.932 INFO  [ModuleRegistry-2] - Initializing module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1]
+2024-02-03 20:01:23.933 INFO  [ModuleRegistry-3] - Module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669] initialized
+2024-02-03 20:01:23.933 INFO  [ModuleRegistry-1] - Starting module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678]
+2024-02-03 20:01:23.936 INFO  [ModuleRegistry-3] - Starting module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669]
+2024-02-03 20:01:23.956 INFO  [ModuleRegistry-4] - Initializing module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1]
+2024-02-03 20:01:23.957 INFO  [ModuleRegistry-2] - Module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1] initialized
+2024-02-03 20:01:23.957 INFO  [ModuleRegistry-5] - Module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57] initialized
+2024-02-03 20:01:23.957 INFO  [ModuleRegistry-3] - Registering User Registry module {admin=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@5491c399, anonymous=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@485430de, sensor=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@277e99ee}
+2024-02-03 20:01:23.959 INFO  [ModuleRegistry-2] - Starting module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1]
+2024-02-03 20:01:23.959 INFO  [ModuleRegistry-3] - Registering Authorizer module org.sensorhub.impl.security.DefaultAuthorizerImpl@29c5cb8
+2024-02-03 20:01:23.960 INFO  [ModuleRegistry-5] - Starting module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57]
+2024-02-03 20:01:23.961 INFO  [ModuleRegistry-3] - Module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669] started
+2024-02-03 20:01:24.064 INFO  [ModuleRegistry-4] - Module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1] initialized
+2024-02-03 20:01:24.065 INFO  [ModuleRegistry-4] - Starting module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1]
+2024-02-03 20:01:25.097 ERROR [ModuleRegistry-2] - Error in module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1]
+2024-02-03 20:01:25.098 INFO  [ModuleRegistry-2] - Stopping module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1]
+2024-02-03 20:01:25.173 INFO  [ModuleRegistry-2] - Module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1] stopped
+2024-02-03 20:01:25.175 INFO  [ModuleRegistry-2] - Module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678] stopped
+2024-02-03 20:01:25.177 INFO  [ModuleRegistry-2] - Module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57] stopped
+2024-02-03 20:01:25.180 INFO  [ModuleRegistry-2] - Module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1] stopped
+2024-02-03 20:01:35.183 INFO  [Thread-0] - Module registry shutdown initiated
+2024-02-03 20:01:35.184 INFO  [Thread-0] - Stopping all modules (saving config = false, saving state = true)
+2024-02-03 20:01:35.194 INFO  [ModuleRegistry-6] - Stopping module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669]
+2024-02-03 20:01:35.194 INFO  [ModuleRegistry-6] - Unregistering User Registry module {admin=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@5491c399, anonymous=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@485430de, sensor=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@277e99ee}
+2024-02-03 20:01:35.194 INFO  [ModuleRegistry-6] - Unregistering Authorizer module org.sensorhub.impl.security.DefaultAuthorizerImpl@29c5cb8
+2024-02-03 20:01:35.195 INFO  [ModuleRegistry-6] - Module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669] stopped
+2024-02-03 20:01:35.197 INFO  [ModuleRegistry-6] - Stopping module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6]
+2024-02-03 20:01:35.302 INFO  [ModuleRegistry-6] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] stopped
+2024-02-03 20:01:35.397 INFO  [Thread-0] - SensorHub was cleanly stopped
+2024-02-03 20:03:19.923 INFO  [Timer-2] - Module registry shutdown initiated
+2024-02-03 20:03:19.924 INFO  [Timer-2] - Stopping all modules (saving config = false, saving state = true)
+2024-02-03 20:03:19.927 INFO  [ModuleRegistry-7] - Stopping module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1]
+2024-02-03 20:03:19.931 INFO  [ModuleRegistry-9] - Stopping module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678]
+2024-02-03 20:03:19.932 INFO  [ModuleRegistry-10] - Stopping module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1]
+2024-02-03 20:03:20.066 INFO  [ModuleRegistry-10] - Module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1] stopped
+2024-02-03 20:03:20.066 INFO  [ModuleRegistry-11] - Stopping module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57]
+2024-02-03 20:03:20.066 INFO  [ModuleRegistry-8] - Stopping module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669]
+2024-02-03 20:03:20.067 INFO  [ModuleRegistry-8] - Unregistering User Registry module {admin=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@c178c62, anonymous=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@719e76b7, sensor=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@2ebbb75e}
+2024-02-03 20:03:20.067 INFO  [ModuleRegistry-11] - Module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57] stopped
+2024-02-03 20:03:20.084 INFO  [ModuleRegistry-8] - Unregistering Authorizer module org.sensorhub.impl.security.DefaultAuthorizerImpl@2af75a00
+2024-02-03 20:03:20.085 INFO  [ModuleRegistry-8] - Module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669] stopped
+2024-02-03 20:03:20.133 INFO  [ModuleRegistry-9] - Module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678] stopped
+2024-02-03 20:03:20.133 INFO  [ModuleRegistry-7] - Module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1] stopped
+2024-02-03 20:03:20.167 INFO  [ModuleRegistry-7] - Stopping module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6]
+2024-02-03 20:03:20.188 INFO  [ModuleRegistry-7] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] stopped
+2024-02-03 20:03:20.266 INFO  [Timer-2] - SensorHub was cleanly stopped
+2024-02-03 20:03:45.394 INFO  [main] - *****************************************
+2024-02-03 20:03:45.399 INFO  [main] - Starting SensorHub...
+2024-02-03 20:03:45.429 INFO  [main] - Version: 2.0-beta2
+2024-02-03 20:03:45.434 INFO  [main] - Build number: c125ae6d
+2024-02-03 20:03:45.434 INFO  [main] - JDK version: OpenJDK 64-Bit Server VM, 11.0.21+9-adhoc.root.jdk11u, OpenLogic
+2024-02-03 20:03:45.435 INFO  [main] - OS type: Linux, amd64
+2024-02-03 20:03:45.435 INFO  [main] - CPU cores: 4
+2024-02-03 20:03:45.440 INFO  [main] - CommonPool parallelism: 3
+2024-02-03 20:03:45.902 INFO  [main] - Module INITIALIZING
+2024-02-03 20:03:45.934 INFO  [main] - Module INITIALIZED
+2024-02-03 20:03:45.935 INFO  [main] - Module STARTING
+2024-02-03 20:03:45.961 INFO  [main] - Module INITIALIZING
+2024-02-03 20:03:46.020 INFO  [main] - Module INITIALIZED
+2024-02-03 20:03:46.021 INFO  [main] - Module STARTING
+2024-02-03 20:03:46.022 INFO  [main] - Module STARTED
+2024-02-03 20:03:46.023 INFO  [main] - Registering database SystemDriverDatabase with ID 0
+2024-02-03 20:03:46.027 INFO  [main] - Module STARTED
+2024-02-03 20:03:46.268 INFO  [main] - Loading modules...
+2024-02-03 20:03:46.312 DEBUG [main] - Module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1] loaded
+2024-02-03 20:03:46.317 DEBUG [main] - Creating publisher for urn:osh:modules
+2024-02-03 20:03:46.320 DEBUG [main] - Creating publisher for 5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1
+2024-02-03 20:03:46.321 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 20:03:46.335 DEBUG [main] - Module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669] loaded
+2024-02-03 20:03:46.335 DEBUG [main] - Creating publisher for bd112969-8838-4f62-8d10-1edf1baa6669
+2024-02-03 20:03:46.336 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 20:03:46.354 DEBUG [main] - Module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678] loaded
+2024-02-03 20:03:46.393 DEBUG [main] - Creating publisher for 5cb05c9c-9123-4fa1-8731-ffaa51489678
+2024-02-03 20:03:46.393 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 20:03:46.407 DEBUG [main] - Module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1] loaded
+2024-02-03 20:03:46.408 DEBUG [main] - Creating publisher for 5cb05c9c-9e08-4fa1-8731-ff41e246bdc1
+2024-02-03 20:03:46.409 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 20:03:46.412 DEBUG [main] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] loaded
+2024-02-03 20:03:46.413 DEBUG [main] - Creating publisher for 29f2b677-95b1-4499-8e5b-459839ec3eb6
+2024-02-03 20:03:46.413 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 20:03:46.425 DEBUG [main] - Module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57] loaded
+2024-02-03 20:03:46.427 DEBUG [main] - Creating publisher for 2659dc3b-f243-477e-b43f-214b75cc8c57
+2024-02-03 20:03:46.427 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 20:03:46.428 INFO  [main] - Starting datastore connectors
+2024-02-03 20:03:46.489 INFO  [ModuleRegistry-1] - Initializing module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6]
+2024-02-03 20:03:46.491 INFO  [ModuleRegistry-1] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] initialized
+2024-02-03 20:03:46.492 INFO  [ModuleRegistry-1] - Starting module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6]
+2024-02-03 20:03:46.706 DEBUG [ModuleRegistry-1] - Thread[ModuleRegistry-1,5,main]: kryo=914288425, classResolver=0
+2024-02-03 20:03:46.731 DEBUG [ModuleRegistry-1] - Thread[ModuleRegistry-1,5,main]: kryo=311758327, classResolver=0
+2024-02-03 20:03:46.845 INFO  [ModuleRegistry-1] - Registering database SystemDriverDatabase with ID 1
+2024-02-03 20:03:46.846 INFO  [ModuleRegistry-1] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] started
+2024-02-03 20:03:46.847 INFO  [main] - All datastores ready. Starting all other modules
+2024-02-03 20:03:46.907 INFO  [ModuleRegistry-3] - Initializing module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678]
+2024-02-03 20:03:46.909 INFO  [ModuleRegistry-3] - Module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678] initialized
+2024-02-03 20:03:46.918 INFO  [ModuleRegistry-3] - Starting module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678]
+2024-02-03 20:03:46.923 INFO  [ModuleRegistry-5] - Initializing module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57]
+2024-02-03 20:03:46.923 INFO  [ModuleRegistry-1] - Initializing module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669]
+2024-02-03 20:03:46.928 INFO  [ModuleRegistry-5] - Module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57] initialized
+2024-02-03 20:03:46.931 INFO  [ModuleRegistry-5] - Starting module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57]
+2024-02-03 20:03:46.929 INFO  [ModuleRegistry-4] - Initializing module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1]
+2024-02-03 20:03:46.933 INFO  [ModuleRegistry-1] - Module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669] initialized
+2024-02-03 20:03:46.937 INFO  [ModuleRegistry-1] - Starting module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669]
+2024-02-03 20:03:46.941 INFO  [ModuleRegistry-1] - Registering User Registry module {admin=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@7fb6a6d5, anonymous=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@3e618954, sensor=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@67473aa3}
+2024-02-03 20:03:46.943 INFO  [ModuleRegistry-1] - Registering Authorizer module org.sensorhub.impl.security.DefaultAuthorizerImpl@369118d0
+2024-02-03 20:03:46.945 INFO  [ModuleRegistry-1] - Module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669] started
+2024-02-03 20:03:46.963 INFO  [ModuleRegistry-2] - Initializing module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1]
+2024-02-03 20:03:46.968 INFO  [ModuleRegistry-2] - Module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1] initialized
+2024-02-03 20:03:46.970 INFO  [ModuleRegistry-2] - Starting module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1]
+2024-02-03 20:03:47.012 INFO  [ModuleRegistry-4] - Module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1] initialized
+2024-02-03 20:03:47.014 INFO  [ModuleRegistry-4] - Starting module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1]
+2024-02-03 20:03:47.577 INFO  [ModuleRegistry-2] - Module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1] started
+2024-02-03 20:03:47.921 INFO  [ModuleRegistry-2] - Module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57] started
+2024-02-03 20:03:48.461 INFO  [ModuleRegistry-2] - Module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678] started
+2024-02-03 20:03:49.140 INFO  [ModuleRegistry-2] - Module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1] started
+2024-02-03 20:04:34.053 ERROR [qtp308035875-29] - java.util.ServiceConfigurationError: org.sensorhub.api.module.IModuleProvider: Provider org.sensorhub.impl.database.obs.ProcedureObsEventDatabaseDescriptor not found
+2024-02-03 20:04:36.368 DEBUG [qtp308035875-29] - Module 'New Wii Remote Driver' [ca84ed44-b26d-4980-971e-8430ee29b83b] loaded
+2024-02-03 20:04:36.369 DEBUG [qtp308035875-29] - Creating publisher for ca84ed44-b26d-4980-971e-8430ee29b83b
+2024-02-03 20:04:36.369 DEBUG [qtp308035875-29] - Publisher group = urn:osh:modules
+2024-02-03 20:04:39.953 INFO  [ModuleRegistry-6] - Initializing module 'New Wii Remote Driver' [ca84ed44-b26d-4980-971e-8430ee29b83b]
+2024-02-03 20:04:40.498 INFO  [ModuleRegistry-6] - Module 'New Wii Remote Driver' [ca84ed44-b26d-4980-971e-8430ee29b83b] initialized
+2024-02-03 20:04:52.468 INFO  [ModuleRegistry-7] - Starting module 'New Wii Remote Driver' [ca84ed44-b26d-4980-971e-8430ee29b83b]
+2024-02-03 20:04:52.470 DEBUG [ModuleRegistry-7] - Registering driver urn:osh:sensor:wii001
+2024-02-03 20:04:52.473 INFO  [ForkJoinPool.commonPool-worker-3] - Registering system urn:osh:sensor:wii001
+2024-02-03 20:04:52.474 INFO  [ForkJoinPool.commonPool-worker-3] - System driver urn:osh:sensor:wii001 handled by DB 'SystemDriverDatabase' [NO_ID] (#0)
+2024-02-03 20:04:52.725 DEBUG [ForkJoinPool.commonPool-worker-3] - Added System urn:osh:sensor:wii001
+2024-02-03 20:04:52.735 DEBUG [ForkJoinPool.commonPool-worker-3] - Creating publisher for systems/urn:osh:sensor:wii001/status
+2024-02-03 20:04:52.736 DEBUG [ForkJoinPool.commonPool-worker-3] - Creating publisher for systems/
+2024-02-03 20:04:52.849 DEBUG [ForkJoinPool.commonPool-worker-3] - Added new datastream urn:osh:sensor:wii001#WII_REMOTE_SENSOR
+2024-02-03 20:04:52.862 DEBUG [ForkJoinPool.commonPool-worker-3] - Creating publisher for systems/urn:osh:sensor:wii001/outputs/WII_REMOTE_SENSOR/data
+2024-02-03 20:04:52.862 DEBUG [ForkJoinPool.commonPool-worker-3] - Creating publisher for systems/urn:osh:sensor:wii001/outputs/WII_REMOTE_SENSOR/status
+2024-02-03 20:04:52.864 INFO  [ForkJoinPool.commonPool-worker-3] - System registered: urn:osh:sensor:wii001 (0 FOIs, 1 datastreams, 0 command inputs, 0 members)
+2024-02-03 20:05:34.896 ERROR [ModuleRegistry-7] - Error in module 'New Wii Remote Driver' [ca84ed44-b26d-4980-971e-8430ee29b83b]
+2024-02-03 20:05:34.899 INFO  [ModuleRegistry-7] - Stopping module 'New Wii Remote Driver' [ca84ed44-b26d-4980-971e-8430ee29b83b]
+2024-02-03 20:05:34.903 DEBUG [ModuleRegistry-7] - System urn:osh:sensor:wii001 disconnected
+2024-02-03 20:05:34.905 INFO  [ModuleRegistry-7] - Module 'New Wii Remote Driver' [ca84ed44-b26d-4980-971e-8430ee29b83b] stopped
+2024-02-03 20:05:50.107 INFO  [main] - *****************************************
+2024-02-03 20:05:50.112 INFO  [main] - Starting SensorHub...
+2024-02-03 20:05:50.155 INFO  [main] - Version: 2.0-beta2
+2024-02-03 20:05:50.164 INFO  [main] - Build number: c125ae6d
+2024-02-03 20:05:50.167 INFO  [main] - JDK version: OpenJDK 64-Bit Server VM, 11.0.21+9-adhoc.root.jdk11u, OpenLogic
+2024-02-03 20:05:50.168 INFO  [main] - OS type: Linux, amd64
+2024-02-03 20:05:50.168 INFO  [main] - CPU cores: 4
+2024-02-03 20:05:50.176 INFO  [main] - CommonPool parallelism: 3
+2024-02-03 20:05:50.891 INFO  [main] - Module INITIALIZING
+2024-02-03 20:05:50.953 INFO  [main] - Module INITIALIZED
+2024-02-03 20:05:50.954 INFO  [main] - Module STARTING
+2024-02-03 20:05:50.987 INFO  [main] - Module INITIALIZING
+2024-02-03 20:05:51.076 INFO  [main] - Module INITIALIZED
+2024-02-03 20:05:51.077 INFO  [main] - Module STARTING
+2024-02-03 20:05:51.078 INFO  [main] - Module STARTED
+2024-02-03 20:05:51.078 INFO  [main] - Registering database SystemDriverDatabase with ID 0
+2024-02-03 20:05:51.081 INFO  [main] - Module STARTED
+2024-02-03 20:05:51.269 INFO  [main] - Loading modules...
+2024-02-03 20:05:51.317 DEBUG [main] - Module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1] loaded
+2024-02-03 20:05:51.323 DEBUG [main] - Creating publisher for urn:osh:modules
+2024-02-03 20:05:51.329 DEBUG [main] - Creating publisher for 5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1
+2024-02-03 20:05:51.329 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 20:05:51.342 DEBUG [main] - Module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669] loaded
+2024-02-03 20:05:51.343 DEBUG [main] - Creating publisher for bd112969-8838-4f62-8d10-1edf1baa6669
+2024-02-03 20:05:51.343 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 20:05:51.364 DEBUG [main] - Module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678] loaded
+2024-02-03 20:05:51.392 DEBUG [main] - Creating publisher for 5cb05c9c-9123-4fa1-8731-ffaa51489678
+2024-02-03 20:05:51.393 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 20:05:51.405 DEBUG [main] - Module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1] loaded
+2024-02-03 20:05:51.406 DEBUG [main] - Creating publisher for 5cb05c9c-9e08-4fa1-8731-ff41e246bdc1
+2024-02-03 20:05:51.406 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 20:05:51.409 DEBUG [main] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] loaded
+2024-02-03 20:05:51.410 DEBUG [main] - Creating publisher for 29f2b677-95b1-4499-8e5b-459839ec3eb6
+2024-02-03 20:05:51.410 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 20:05:51.421 DEBUG [main] - Module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57] loaded
+2024-02-03 20:05:51.421 DEBUG [main] - Creating publisher for 2659dc3b-f243-477e-b43f-214b75cc8c57
+2024-02-03 20:05:51.421 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 20:05:51.422 INFO  [main] - Starting datastore connectors
+2024-02-03 20:05:51.478 INFO  [ModuleRegistry-1] - Initializing module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6]
+2024-02-03 20:05:51.479 INFO  [ModuleRegistry-1] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] initialized
+2024-02-03 20:05:51.480 INFO  [ModuleRegistry-1] - Starting module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6]
+2024-02-03 20:05:51.801 DEBUG [ModuleRegistry-1] - Thread[ModuleRegistry-1,5,main]: kryo=1901954550, classResolver=0
+2024-02-03 20:05:51.832 DEBUG [ModuleRegistry-1] - Thread[ModuleRegistry-1,5,main]: kryo=432687570, classResolver=0
+2024-02-03 20:05:52.063 INFO  [ModuleRegistry-1] - Registering database SystemDriverDatabase with ID 1
+2024-02-03 20:05:52.064 INFO  [ModuleRegistry-1] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] started
+2024-02-03 20:05:52.068 INFO  [main] - All datastores ready. Starting all other modules
+2024-02-03 20:05:52.112 INFO  [ModuleRegistry-1] - Initializing module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1]
+2024-02-03 20:05:52.123 INFO  [ModuleRegistry-1] - Module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1] initialized
+2024-02-03 20:05:52.126 INFO  [ModuleRegistry-1] - Starting module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1]
+2024-02-03 20:05:52.280 INFO  [ModuleRegistry-3] - Initializing module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678]
+2024-02-03 20:05:52.281 INFO  [ModuleRegistry-3] - Module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678] initialized
+2024-02-03 20:05:52.282 INFO  [ModuleRegistry-3] - Starting module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678]
+2024-02-03 20:05:52.284 INFO  [ModuleRegistry-2] - Initializing module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669]
+2024-02-03 20:05:52.286 INFO  [ModuleRegistry-5] - Initializing module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57]
+2024-02-03 20:05:52.332 INFO  [ModuleRegistry-5] - Module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57] initialized
+2024-02-03 20:05:52.333 INFO  [ModuleRegistry-5] - Starting module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57]
+2024-02-03 20:05:52.346 INFO  [ModuleRegistry-2] - Module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669] initialized
+2024-02-03 20:05:52.349 INFO  [ModuleRegistry-2] - Starting module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669]
+2024-02-03 20:05:52.393 INFO  [ModuleRegistry-4] - Initializing module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1]
+2024-02-03 20:05:52.416 INFO  [ModuleRegistry-2] - Registering User Registry module {admin=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@5733b2df, anonymous=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@7984731e, sensor=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@1e8a770c}
+2024-02-03 20:05:52.417 INFO  [ModuleRegistry-2] - Registering Authorizer module org.sensorhub.impl.security.DefaultAuthorizerImpl@4693e33
+2024-02-03 20:05:52.417 INFO  [ModuleRegistry-2] - Module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669] started
+2024-02-03 20:05:52.489 INFO  [ModuleRegistry-4] - Module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1] initialized
+2024-02-03 20:05:52.492 INFO  [ModuleRegistry-4] - Starting module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1]
+2024-02-03 20:05:52.892 INFO  [ModuleRegistry-1] - Module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1] started
+2024-02-03 20:05:53.268 INFO  [ModuleRegistry-1] - Module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678] started
+2024-02-03 20:05:53.409 INFO  [ModuleRegistry-1] - Module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57] started
+2024-02-03 20:05:53.689 INFO  [ModuleRegistry-1] - Module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1] started
+2024-02-03 20:05:58.953 ERROR [qtp1403546115-31] - java.util.ServiceConfigurationError: org.sensorhub.api.module.IModuleProvider: Provider org.sensorhub.impl.database.obs.ProcedureObsEventDatabaseDescriptor not found
+2024-02-03 20:06:00.753 DEBUG [qtp1403546115-31] - Module 'New Wii Remote Driver' [bd3500d5-3350-4b62-9c8a-61e47c1e1d19] loaded
+2024-02-03 20:06:00.753 DEBUG [qtp1403546115-31] - Creating publisher for bd3500d5-3350-4b62-9c8a-61e47c1e1d19
+2024-02-03 20:06:00.753 DEBUG [qtp1403546115-31] - Publisher group = urn:osh:modules
+2024-02-03 20:06:04.092 INFO  [ModuleRegistry-6] - Initializing module 'New Wii Remote Driver' [bd3500d5-3350-4b62-9c8a-61e47c1e1d19]
+2024-02-03 20:06:04.588 INFO  [ModuleRegistry-6] - Module 'New Wii Remote Driver' [bd3500d5-3350-4b62-9c8a-61e47c1e1d19] initialized
+2024-02-03 20:06:10.453 INFO  [ModuleRegistry-6] - Starting module 'New Wii Remote Driver' [bd3500d5-3350-4b62-9c8a-61e47c1e1d19]
+2024-02-03 20:06:10.456 DEBUG [ModuleRegistry-6] - Registering driver urn:osh:sensor:wii001
+2024-02-03 20:06:10.459 INFO  [ForkJoinPool.commonPool-worker-3] - Registering system urn:osh:sensor:wii001
+2024-02-03 20:06:10.459 INFO  [ForkJoinPool.commonPool-worker-3] - System driver urn:osh:sensor:wii001 handled by DB 'SystemDriverDatabase' [NO_ID] (#0)
+2024-02-03 20:06:10.548 DEBUG [ForkJoinPool.commonPool-worker-3] - Added System urn:osh:sensor:wii001
+2024-02-03 20:06:10.561 DEBUG [ForkJoinPool.commonPool-worker-3] - Creating publisher for systems/urn:osh:sensor:wii001/status
+2024-02-03 20:06:10.562 DEBUG [ForkJoinPool.commonPool-worker-3] - Creating publisher for systems/
+2024-02-03 20:06:10.647 DEBUG [ForkJoinPool.commonPool-worker-3] - Added new datastream urn:osh:sensor:wii001#WII_REMOTE_SENSOR
+2024-02-03 20:06:10.673 DEBUG [ForkJoinPool.commonPool-worker-3] - Creating publisher for systems/urn:osh:sensor:wii001/outputs/WII_REMOTE_SENSOR/data
+2024-02-03 20:06:10.673 DEBUG [ForkJoinPool.commonPool-worker-3] - Creating publisher for systems/urn:osh:sensor:wii001/outputs/WII_REMOTE_SENSOR/status
+2024-02-03 20:06:10.674 INFO  [ForkJoinPool.commonPool-worker-3] - System registered: urn:osh:sensor:wii001 (0 FOIs, 1 datastreams, 0 command inputs, 0 members)
+2024-02-03 20:06:40.187 INFO  [main] - *****************************************
+2024-02-03 20:06:40.195 INFO  [main] - Starting SensorHub...
+2024-02-03 20:06:40.239 INFO  [main] - Version: 2.0-beta2
+2024-02-03 20:06:40.248 INFO  [main] - Build number: c125ae6d
+2024-02-03 20:06:40.249 INFO  [main] - JDK version: OpenJDK 64-Bit Server VM, 11.0.21+9-adhoc.root.jdk11u, OpenLogic
+2024-02-03 20:06:40.250 INFO  [main] - OS type: Linux, amd64
+2024-02-03 20:06:40.250 INFO  [main] - CPU cores: 4
+2024-02-03 20:06:40.260 INFO  [main] - CommonPool parallelism: 3
+2024-02-03 20:06:41.089 INFO  [main] - Module INITIALIZING
+2024-02-03 20:06:41.140 INFO  [main] - Module INITIALIZED
+2024-02-03 20:06:41.140 INFO  [main] - Module STARTING
+2024-02-03 20:06:41.178 INFO  [main] - Module INITIALIZING
+2024-02-03 20:06:41.277 INFO  [main] - Module INITIALIZED
+2024-02-03 20:06:41.278 INFO  [main] - Module STARTING
+2024-02-03 20:06:41.280 INFO  [main] - Module STARTED
+2024-02-03 20:06:41.280 INFO  [main] - Registering database SystemDriverDatabase with ID 0
+2024-02-03 20:06:41.285 INFO  [main] - Module STARTED
+2024-02-03 20:06:41.488 INFO  [main] - Loading modules...
+2024-02-03 20:06:41.590 DEBUG [main] - Module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1] loaded
+2024-02-03 20:06:41.595 DEBUG [main] - Creating publisher for urn:osh:modules
+2024-02-03 20:06:41.606 DEBUG [main] - Creating publisher for 5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1
+2024-02-03 20:06:41.607 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 20:06:41.632 DEBUG [main] - Module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669] loaded
+2024-02-03 20:06:41.633 DEBUG [main] - Creating publisher for bd112969-8838-4f62-8d10-1edf1baa6669
+2024-02-03 20:06:41.634 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 20:06:41.677 DEBUG [main] - Module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678] loaded
+2024-02-03 20:06:41.738 DEBUG [main] - Creating publisher for 5cb05c9c-9123-4fa1-8731-ffaa51489678
+2024-02-03 20:06:41.739 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 20:06:41.762 DEBUG [main] - Module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1] loaded
+2024-02-03 20:06:41.763 DEBUG [main] - Creating publisher for 5cb05c9c-9e08-4fa1-8731-ff41e246bdc1
+2024-02-03 20:06:41.764 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 20:06:41.769 DEBUG [main] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] loaded
+2024-02-03 20:06:41.769 DEBUG [main] - Creating publisher for 29f2b677-95b1-4499-8e5b-459839ec3eb6
+2024-02-03 20:06:41.770 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 20:06:41.786 DEBUG [main] - Module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57] loaded
+2024-02-03 20:06:41.786 DEBUG [main] - Creating publisher for 2659dc3b-f243-477e-b43f-214b75cc8c57
+2024-02-03 20:06:41.787 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 20:06:41.787 INFO  [main] - Starting datastore connectors
+2024-02-03 20:06:41.880 INFO  [ModuleRegistry-1] - Initializing module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6]
+2024-02-03 20:06:41.885 INFO  [ModuleRegistry-1] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] initialized
+2024-02-03 20:06:41.887 INFO  [ModuleRegistry-1] - Starting module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6]
+2024-02-03 20:06:42.210 DEBUG [ModuleRegistry-1] - Thread[ModuleRegistry-1,5,main]: kryo=1800072623, classResolver=0
+2024-02-03 20:06:42.236 DEBUG [ModuleRegistry-1] - Thread[ModuleRegistry-1,5,main]: kryo=1287999969, classResolver=0
+2024-02-03 20:06:42.381 INFO  [ModuleRegistry-1] - Registering database SystemDriverDatabase with ID 1
+2024-02-03 20:06:42.382 INFO  [ModuleRegistry-1] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] started
+2024-02-03 20:06:42.383 INFO  [main] - All datastores ready. Starting all other modules
+2024-02-03 20:06:42.521 INFO  [ModuleRegistry-3] - Initializing module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669]
+2024-02-03 20:06:42.525 INFO  [ModuleRegistry-4] - Initializing module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1]
+2024-02-03 20:06:42.529 INFO  [ModuleRegistry-2] - Initializing module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1]
+2024-02-03 20:06:42.536 INFO  [ModuleRegistry-2] - Module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1] initialized
+2024-02-03 20:06:42.538 INFO  [ModuleRegistry-2] - Starting module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1]
+2024-02-03 20:06:42.539 INFO  [ModuleRegistry-1] - Initializing module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678]
+2024-02-03 20:06:42.541 INFO  [ModuleRegistry-1] - Module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678] initialized
+2024-02-03 20:06:42.542 INFO  [ModuleRegistry-1] - Starting module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678]
+2024-02-03 20:06:42.556 INFO  [ModuleRegistry-3] - Module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669] initialized
+2024-02-03 20:06:42.569 INFO  [ModuleRegistry-3] - Starting module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669]
+2024-02-03 20:06:42.599 INFO  [ModuleRegistry-5] - Initializing module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57]
+2024-02-03 20:06:42.609 INFO  [ModuleRegistry-5] - Module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57] initialized
+2024-02-03 20:06:42.611 INFO  [ModuleRegistry-5] - Starting module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57]
+2024-02-03 20:06:42.623 INFO  [ModuleRegistry-3] - Registering User Registry module {admin=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@39730446, anonymous=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@31c9ff89, sensor=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@7848ce3}
+2024-02-03 20:06:42.624 INFO  [ModuleRegistry-3] - Registering Authorizer module org.sensorhub.impl.security.DefaultAuthorizerImpl@62f0a80b
+2024-02-03 20:06:42.628 INFO  [ModuleRegistry-3] - Module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669] started
+2024-02-03 20:06:42.676 INFO  [ModuleRegistry-4] - Module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1] initialized
+2024-02-03 20:06:42.680 INFO  [ModuleRegistry-4] - Starting module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1]
+2024-02-03 20:06:43.290 INFO  [ModuleRegistry-2] - Module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1] started
+2024-02-03 20:06:43.750 INFO  [ModuleRegistry-2] - Module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678] started
+2024-02-03 20:06:43.881 INFO  [ModuleRegistry-2] - Module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57] started
+2024-02-03 20:06:44.138 INFO  [ModuleRegistry-2] - Module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1] started
+2024-02-03 20:06:50.029 ERROR [qtp1257779954-29] - java.util.ServiceConfigurationError: org.sensorhub.api.module.IModuleProvider: Provider org.sensorhub.impl.database.obs.ProcedureObsEventDatabaseDescriptor not found
+2024-02-03 20:06:55.664 DEBUG [qtp1257779954-29] - Module 'New Wii Remote Driver' [c5f291b3-7bd9-430c-8d02-28f9d299e97d] loaded
+2024-02-03 20:06:55.664 DEBUG [qtp1257779954-29] - Creating publisher for c5f291b3-7bd9-430c-8d02-28f9d299e97d
+2024-02-03 20:06:55.664 DEBUG [qtp1257779954-29] - Publisher group = urn:osh:modules
+2024-02-03 20:06:57.376 INFO  [ModuleRegistry-6] - Initializing module 'New Wii Remote Driver' [c5f291b3-7bd9-430c-8d02-28f9d299e97d]
+2024-02-03 20:06:57.735 INFO  [ModuleRegistry-6] - Module 'New Wii Remote Driver' [c5f291b3-7bd9-430c-8d02-28f9d299e97d] initialized
+2024-02-03 20:07:01.981 INFO  [ModuleRegistry-6] - Starting module 'New Wii Remote Driver' [c5f291b3-7bd9-430c-8d02-28f9d299e97d]
+2024-02-03 20:07:01.983 DEBUG [ModuleRegistry-6] - Registering driver urn:osh:sensor:wii001
+2024-02-03 20:07:01.987 INFO  [ForkJoinPool.commonPool-worker-3] - Registering system urn:osh:sensor:wii001
+2024-02-03 20:07:01.988 INFO  [ForkJoinPool.commonPool-worker-3] - System driver urn:osh:sensor:wii001 handled by DB 'SystemDriverDatabase' [NO_ID] (#0)
+2024-02-03 20:07:02.086 DEBUG [ForkJoinPool.commonPool-worker-3] - Added System urn:osh:sensor:wii001
+2024-02-03 20:07:02.094 DEBUG [ForkJoinPool.commonPool-worker-3] - Creating publisher for systems/urn:osh:sensor:wii001/status
+2024-02-03 20:07:02.094 DEBUG [ForkJoinPool.commonPool-worker-3] - Creating publisher for systems/
+2024-02-03 20:07:02.147 DEBUG [ForkJoinPool.commonPool-worker-3] - Added new datastream urn:osh:sensor:wii001#WII_REMOTE_SENSOR
+2024-02-03 20:07:02.160 DEBUG [ForkJoinPool.commonPool-worker-3] - Creating publisher for systems/urn:osh:sensor:wii001/outputs/WII_REMOTE_SENSOR/data
+2024-02-03 20:07:02.161 DEBUG [ForkJoinPool.commonPool-worker-3] - Creating publisher for systems/urn:osh:sensor:wii001/outputs/WII_REMOTE_SENSOR/status
+2024-02-03 20:07:02.163 INFO  [ForkJoinPool.commonPool-worker-3] - System registered: urn:osh:sensor:wii001 (0 FOIs, 1 datastreams, 0 command inputs, 0 members)
+2024-02-03 20:07:38.638 ERROR [ModuleRegistry-6] - Error in module 'New Wii Remote Driver' [c5f291b3-7bd9-430c-8d02-28f9d299e97d]
+2024-02-03 20:07:38.640 INFO  [ModuleRegistry-6] - Stopping module 'New Wii Remote Driver' [c5f291b3-7bd9-430c-8d02-28f9d299e97d]
+2024-02-03 20:07:38.643 DEBUG [ModuleRegistry-6] - System urn:osh:sensor:wii001 disconnected
+2024-02-03 20:07:38.645 INFO  [ModuleRegistry-6] - Module 'New Wii Remote Driver' [c5f291b3-7bd9-430c-8d02-28f9d299e97d] stopped
+2024-02-03 20:21:08.301 INFO  [main] - *****************************************
+2024-02-03 20:21:08.306 INFO  [main] - Starting SensorHub...
+2024-02-03 20:21:08.362 INFO  [main] - Version: 2.0-beta2
+2024-02-03 20:21:08.369 INFO  [main] - Build number: c125ae6d
+2024-02-03 20:21:08.369 INFO  [main] - JDK version: OpenJDK 64-Bit Server VM, 11.0.21+9-adhoc.root.jdk11u, OpenLogic
+2024-02-03 20:21:08.373 INFO  [main] - OS type: Linux, amd64
+2024-02-03 20:21:08.374 INFO  [main] - CPU cores: 4
+2024-02-03 20:21:08.383 INFO  [main] - CommonPool parallelism: 3
+2024-02-03 20:21:09.079 INFO  [main] - Module INITIALIZING
+2024-02-03 20:21:09.115 INFO  [main] - Module INITIALIZED
+2024-02-03 20:21:09.116 INFO  [main] - Module STARTING
+2024-02-03 20:21:09.145 INFO  [main] - Module INITIALIZING
+2024-02-03 20:21:09.232 INFO  [main] - Module INITIALIZED
+2024-02-03 20:21:09.233 INFO  [main] - Module STARTING
+2024-02-03 20:21:09.234 INFO  [main] - Module STARTED
+2024-02-03 20:21:09.235 INFO  [main] - Registering database SystemDriverDatabase with ID 0
+2024-02-03 20:21:09.249 INFO  [main] - Module STARTED
+2024-02-03 20:21:09.467 INFO  [main] - Loading modules...
+2024-02-03 20:21:09.536 DEBUG [main] - Module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1] loaded
+2024-02-03 20:21:09.541 DEBUG [main] - Creating publisher for urn:osh:modules
+2024-02-03 20:21:09.546 DEBUG [main] - Creating publisher for 5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1
+2024-02-03 20:21:09.546 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 20:21:09.565 DEBUG [main] - Module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669] loaded
+2024-02-03 20:21:09.566 DEBUG [main] - Creating publisher for bd112969-8838-4f62-8d10-1edf1baa6669
+2024-02-03 20:21:09.566 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 20:21:09.585 DEBUG [main] - Module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678] loaded
+2024-02-03 20:21:09.621 DEBUG [main] - Creating publisher for 5cb05c9c-9123-4fa1-8731-ffaa51489678
+2024-02-03 20:21:09.621 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 20:21:09.634 DEBUG [main] - Module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1] loaded
+2024-02-03 20:21:09.635 DEBUG [main] - Creating publisher for 5cb05c9c-9e08-4fa1-8731-ff41e246bdc1
+2024-02-03 20:21:09.635 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 20:21:09.638 DEBUG [main] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] loaded
+2024-02-03 20:21:09.639 DEBUG [main] - Creating publisher for 29f2b677-95b1-4499-8e5b-459839ec3eb6
+2024-02-03 20:21:09.639 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 20:21:09.651 DEBUG [main] - Module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57] loaded
+2024-02-03 20:21:09.652 DEBUG [main] - Creating publisher for 2659dc3b-f243-477e-b43f-214b75cc8c57
+2024-02-03 20:21:09.652 DEBUG [main] - Publisher group = urn:osh:modules
+2024-02-03 20:21:09.653 INFO  [main] - Starting datastore connectors
+2024-02-03 20:21:09.720 INFO  [ModuleRegistry-1] - Initializing module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6]
+2024-02-03 20:21:09.725 INFO  [ModuleRegistry-1] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] initialized
+2024-02-03 20:21:09.726 INFO  [ModuleRegistry-1] - Starting module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6]
+2024-02-03 20:21:10.028 DEBUG [ModuleRegistry-1] - Thread[ModuleRegistry-1,5,main]: kryo=1686472870, classResolver=0
+2024-02-03 20:21:10.104 DEBUG [ModuleRegistry-1] - Thread[ModuleRegistry-1,5,main]: kryo=1157934260, classResolver=0
+2024-02-03 20:21:10.277 INFO  [ModuleRegistry-1] - Registering database SystemDriverDatabase with ID 1
+2024-02-03 20:21:10.278 INFO  [ModuleRegistry-1] - Module 'System Driver Database' [29f2b677-95b1-4499-8e5b-459839ec3eb6] started
+2024-02-03 20:21:10.279 INFO  [main] - All datastores ready. Starting all other modules
+2024-02-03 20:21:10.393 INFO  [ModuleRegistry-3] - Initializing module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678]
+2024-02-03 20:21:10.396 INFO  [ModuleRegistry-3] - Module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678] initialized
+2024-02-03 20:21:10.397 INFO  [ModuleRegistry-3] - Starting module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678]
+2024-02-03 20:21:10.424 INFO  [ModuleRegistry-4] - Initializing module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1]
+2024-02-03 20:21:10.436 INFO  [ModuleRegistry-1] - Initializing module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669]
+2024-02-03 20:21:10.459 INFO  [ModuleRegistry-1] - Module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669] initialized
+2024-02-03 20:21:10.461 INFO  [ModuleRegistry-1] - Starting module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669]
+2024-02-03 20:21:10.462 INFO  [ModuleRegistry-5] - Initializing module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57]
+2024-02-03 20:21:10.465 INFO  [ModuleRegistry-5] - Module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57] initialized
+2024-02-03 20:21:10.475 INFO  [ModuleRegistry-1] - Registering User Registry module {admin=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@46c7fc0e, anonymous=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@5327d06c, sensor=org.sensorhub.impl.security.BasicSecurityRealmConfig$UserConfig@26457718}
+2024-02-03 20:21:10.476 INFO  [ModuleRegistry-1] - Registering Authorizer module org.sensorhub.impl.security.DefaultAuthorizerImpl@310dbdfa
+2024-02-03 20:21:10.476 INFO  [ModuleRegistry-1] - Module 'Users' [bd112969-8838-4f62-8d10-1edf1baa6669] started
+2024-02-03 20:21:10.484 INFO  [ModuleRegistry-5] - Starting module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57]
+2024-02-03 20:21:10.514 INFO  [ModuleRegistry-2] - Initializing module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1]
+2024-02-03 20:21:10.522 INFO  [ModuleRegistry-2] - Module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1] initialized
+2024-02-03 20:21:10.523 INFO  [ModuleRegistry-2] - Starting module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1]
+2024-02-03 20:21:10.630 INFO  [ModuleRegistry-4] - Module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1] initialized
+2024-02-03 20:21:10.631 INFO  [ModuleRegistry-4] - Starting module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1]
+2024-02-03 20:21:11.225 INFO  [ModuleRegistry-2] - Module 'HTTP Server' [5cb05c9c-9e08-4fa1-8731-ffaa5846bdc1] started
+2024-02-03 20:21:11.450 INFO  [ModuleRegistry-2] - Module 'Connected Systems API Service' [2659dc3b-f243-477e-b43f-214b75cc8c57] started
+2024-02-03 20:21:11.786 INFO  [ModuleRegistry-2] - Module 'Admin UI' [5cb05c9c-9123-4fa1-8731-ffaa51489678] started
+2024-02-03 20:21:11.968 INFO  [ModuleRegistry-2] - Module 'SOS Service' [5cb05c9c-9e08-4fa1-8731-ff41e246bdc1] started
+2024-02-03 20:21:29.968 ERROR [qtp2003440264-29] - java.util.ServiceConfigurationError: org.sensorhub.api.module.IModuleProvider: Provider org.sensorhub.impl.database.obs.ProcedureObsEventDatabaseDescriptor not found
+2024-02-03 20:21:32.440 DEBUG [qtp2003440264-29] - Module 'New Wii Remote Driver' [3be3dece-80a7-407c-a0f2-e3c973d188ae] loaded
+2024-02-03 20:21:32.441 DEBUG [qtp2003440264-29] - Creating publisher for 3be3dece-80a7-407c-a0f2-e3c973d188ae
+2024-02-03 20:21:32.441 DEBUG [qtp2003440264-29] - Publisher group = urn:osh:modules
+2024-02-03 20:21:34.541 INFO  [ModuleRegistry-6] - Initializing module 'New Wii Remote Driver' [3be3dece-80a7-407c-a0f2-e3c973d188ae]
+2024-02-03 20:21:35.001 INFO  [ModuleRegistry-6] - Module 'New Wii Remote Driver' [3be3dece-80a7-407c-a0f2-e3c973d188ae] initialized
+2024-02-03 20:21:40.817 INFO  [ModuleRegistry-6] - Starting module 'New Wii Remote Driver' [3be3dece-80a7-407c-a0f2-e3c973d188ae]
+2024-02-03 20:21:40.881 DEBUG [ModuleRegistry-6] - Registering driver urn:osh:sensor:wii001
+2024-02-03 20:21:40.920 INFO  [ForkJoinPool.commonPool-worker-3] - Registering system urn:osh:sensor:wii001
+2024-02-03 20:21:40.921 INFO  [ForkJoinPool.commonPool-worker-3] - System driver urn:osh:sensor:wii001 handled by DB 'SystemDriverDatabase' [NO_ID] (#0)
+2024-02-03 20:21:41.098 DEBUG [ForkJoinPool.commonPool-worker-3] - Added System urn:osh:sensor:wii001
+2024-02-03 20:21:41.147 DEBUG [ForkJoinPool.commonPool-worker-3] - Creating publisher for systems/urn:osh:sensor:wii001/status
+2024-02-03 20:21:41.147 DEBUG [ForkJoinPool.commonPool-worker-3] - Creating publisher for systems/
+2024-02-03 20:21:41.255 DEBUG [ForkJoinPool.commonPool-worker-3] - Added new datastream urn:osh:sensor:wii001#WII_REMOTE_SENSOR
+2024-02-03 20:21:41.267 DEBUG [ForkJoinPool.commonPool-worker-3] - Creating publisher for systems/urn:osh:sensor:wii001/outputs/WII_REMOTE_SENSOR/data
+2024-02-03 20:21:41.267 DEBUG [ForkJoinPool.commonPool-worker-3] - Creating publisher for systems/urn:osh:sensor:wii001/outputs/WII_REMOTE_SENSOR/status
+2024-02-03 20:21:41.268 INFO  [ForkJoinPool.commonPool-worker-3] - System registered: urn:osh:sensor:wii001 (0 FOIs, 1 datastreams, 0 command inputs, 0 members)
+2024-02-03 20:22:29.057 ERROR [ModuleRegistry-6] - Error in module 'New Wii Remote Driver' [3be3dece-80a7-407c-a0f2-e3c973d188ae]
+2024-02-03 20:22:29.060 INFO  [ModuleRegistry-6] - Stopping module 'New Wii Remote Driver' [3be3dece-80a7-407c-a0f2-e3c973d188ae]
+2024-02-03 20:22:29.062 DEBUG [ModuleRegistry-6] - System urn:osh:sensor:wii001 disconnected
+2024-02-03 20:22:29.062 INFO  [ModuleRegistry-6] - Module 'New Wii Remote Driver' [3be3dece-80a7-407c-a0f2-e3c973d188ae] stopped

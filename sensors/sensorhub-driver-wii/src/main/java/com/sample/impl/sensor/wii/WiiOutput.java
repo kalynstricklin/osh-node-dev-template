@@ -13,8 +13,10 @@
  ******************************* END LICENSE BLOCK ***************************/
 package com.sample.impl.sensor.wii;
 
+import javafx.util.Pair;
 import motej.Mote;
 import motej.event.CoreButtonEvent;
+import motej.event.CoreButtonListener;
 import net.opengis.swe.v20.DataBlock;
 import net.opengis.swe.v20.DataComponent;
 import net.opengis.swe.v20.DataEncoding;
@@ -51,6 +53,7 @@ public class WiiOutput extends AbstractSensorOutput<WiiDriver> implements Runnab
     private Thread worker;
 
     WiiRemote wiiRemote;
+    Mote mote;
 
     /**
      * Constructor
@@ -58,7 +61,6 @@ public class WiiOutput extends AbstractSensorOutput<WiiDriver> implements Runnab
      * @param parent Sensor driver providing this output
      */
     WiiOutput(WiiDriver parent) {
-
         super(SENSOR_OUTPUT_NAME, parent);
 
         logger.debug("Wii Output created");
@@ -75,9 +77,6 @@ public class WiiOutput extends AbstractSensorOutput<WiiDriver> implements Runnab
         // Get an instance of SWE Factory suitable to build components
         SWEHelper sweFactory = new SWEHelper();
 
-
-
-
         // TODO: Create data record description
         dataStruct = sweFactory.createRecord()
                 .name(SENSOR_OUTPUT_NAME)
@@ -87,8 +86,10 @@ public class WiiOutput extends AbstractSensorOutput<WiiDriver> implements Runnab
                         .asSamplingTimeIsoUTC()
                         .label("Sample Time")
                         .description("Time of data collection"))
-                .addField("Wii Remote Controls", sweFactory.createRecord()
-                        .addField("D_PAD",sweFactory.createRecord()
+
+                .addField("Wii Button Data", sweFactory.createRecord()
+
+                        .addField("buttons",sweFactory.createRecord()
                             .addField("D_PAD_UP",sweFactory.createBoolean()
                                     .label("D-Pad Up Button")
                                     .value(false))
@@ -100,37 +101,47 @@ public class WiiOutput extends AbstractSensorOutput<WiiDriver> implements Runnab
                                     .value(false))
                             .addField("D_PAD_RIGHT", sweFactory.createBoolean()
                                     .label("D-Pad right")
-                                    .value(false)))
-                        .addField("POWER_BUTTON", sweFactory.createBoolean()
-                                .label("Power button")
-                                .description("Disconnects bluetooth when pressed")
-                                .value(false))
-                        .addField("HOME_BUTTON", sweFactory.createBoolean()
-                                .value(false)
-                                .label("Home Button"))
-                        .addField("BUTTON_ONE", sweFactory.createBoolean()
-                                .value(false)
-                                .label("Button One"))
-                        .addField("BUTTON_TWO", sweFactory.createBoolean()
-                                .value(false)
-                                .label("Button Two"))
-                        .addField("BUTTON_A", sweFactory.createBoolean()
-                                .value(false)
-                                .label("Button A"))
-                        .addField("BUTTON_B", sweFactory.createBoolean()
-                                .value(false)
-                                .label("Button B"))
-                        .addField("PLUS_BUTTON", sweFactory.createBoolean()
-                                .value(false)
-                                .label("Plus button"))
-                        .addField("MINUS_BUTTON", sweFactory.createBoolean()
-                                .value(false)
-                                .label("Minus button"))
-                        .addField("Motion_Accelerometer", sweFactory.createVector()
-                                .label("Accelerometer"))
+                                    .value(false))
+                            .addField("HOME", sweFactory.createBoolean()
+                                    .value(false)
+                                    .label("Home"))
+                            .addField("1", sweFactory.createBoolean()
+                                    .value(false)
+                                    .label("1"))
+                            .addField("2", sweFactory.createBoolean()
+                                    .value(false)
+                                    .label("2"))
+                            .addField("A", sweFactory.createBoolean()
+                                    .value(false)
+                                    .label("A"))
+                            .addField("B", sweFactory.createBoolean()
+                                    .value(false)
+                                    .label("B"))
+                            .addField("PLUS", sweFactory.createBoolean()
+                                    .value(false)
+                                    .label("Plus"))
+                            .addField("MINUS", sweFactory.createBoolean()
+                                    .value(false)
+                                    .label("Minus")))
+                                .addField("NONE", sweFactory.createBoolean()
+                                        .value(false)
+                                        .label("none"))
+
+//                        .addField("Motion_Accelerometer", sweFactory.createVector()
+//                                .label("Accelerometer"))
                         //https://wiibrew.org/wiki/Wiimote#Core_Buttons
-//                        .addField("Tilt_Accelerometer", sweFactory.createRecord()
-//                                .label("Motion")
+                        .addField("Tilt_Accelerometer", sweFactory.createRecord()
+                                .label("Motion")
+                                        .addField("X", sweFactory.createVector()
+                                                .label("X-accel")
+                                        )
+                                        .addField("Y", sweFactory.createVector()
+                                                .label("Y-accel")
+                                        )
+                                        .addField("Z", sweFactory.createVector()
+                                                .label("Z-accel")
+                                        )
+                        )
 //                                .addField("UP", sweFactory.createVector()
 //                                        .label("accelerometer rotated up"))
 //                                .addField("LEFT", sweFactory.createVector()
@@ -143,28 +154,30 @@ public class WiiOutput extends AbstractSensorOutput<WiiDriver> implements Runnab
 //                                        .label("accelerometer pushing forward"))
 //                                .addField("BACKWARD", sweFactory.createVector()
 //                                        .label("accelerometer pulling backwards")))
-                        .addField("Gyroscope", sweFactory.createRecord()
-                                .label("Rotation and Orientation")
-                                .description("Measures orientation and angular velocity")
-                                .addField("PITCH_UP", sweFactory.createVector())
-                                .addField("PITCH_DOWN", sweFactory.createVector())
-                                .addField("ROLL_LEFT", sweFactory.createVector()) //roll is arctan2(z,x)
-                                .addField("ROLL_RIGHT",sweFactory.createVector())
-                                .addField("YAW_LEFT", sweFactory.createVector())  //pitch arctan2(z,y)
-                                .addField("YAW_RIGHT",sweFactory.createVector()))
-//                        .addField("Rumble_Motor", sweFactory.createRecord()) //0x10 RR -> setting RR to 1 enables rumble, where 0 disables it
-                        .addField("Battery_Status", sweFactory.createRecord()
-                                .label("Battery Level")
-                                .description("Status of the battery level on the wii remote, given by the led lights on the remote"))
-//                        .addField("Speaker", sweFactory.createRecord()) //0x14 used to enable/disable speaker setting bit 2 will enable and clearing will disable & 0x19 is used to mute/unmute
-                            //0x18 is used to send speaker data 1-20 bytes can be sent at once
+//                        .addField("Gyroscope", sweFactory.createRecord()
+//                                .label("Rotation and Orientation")
+//                                .description("Measures orientation and angular velocity")
+//                                .addField("PITCH_UP", sweFactory.createVector())
+//                                .addField("PITCH_DOWN", sweFactory.createVector())
+//                                .addField("ROLL_LEFT", sweFactory.createVector()) //roll is arctan2(z,x)
+//                                .addField("ROLL_RIGHT",sweFactory.createVector())
+//                                .addField("YAW_LEFT", sweFactory.createVector())  //pitch arctan2(z,y)
+//                                .addField("YAW_RIGHT",sweFactory.createVector()))
+////                        .addField("Rumble_Motor", sweFactory.createRecord()) //0x10 RR -> setting RR to 1 enables rumble, where 0 disables it
+//                        .addField("Battery", sweFactory.createRecord()
+//                                .label("Battery Level")
+//                                .description("Status of the battery level on the wii remote, given by the led lights on the remote"))
+////                        .addField("Speaker", sweFactory.createRecord()) //0x14 used to enable/disable speaker setting bit 2 will enable and clearing will disable & 0x19 is used to mute/unmute
+//                            //0x18 is used to send speaker data 1-20 bytes can be sent at onc
                 )
                 .build();
 
         dataEncoding = sweFactory.newTextEncoding(",", "\n");
 
-
         logger.debug("Initializing Wii Output Complete");
+
+
+
     }
 
     /**
@@ -172,8 +185,16 @@ public class WiiOutput extends AbstractSensorOutput<WiiDriver> implements Runnab
      */
     public void doStart() {
 
+        //        mote = PairWii.getInstance().motes.get(0);
+        wiiRemote = WiiRemote.getInstance();
+
+//        wiiRemote = new WiiRemote(PairWii.getInstance().getMote());
+//        wiiRemote = WiiRemote.getInstance();
+//        wiiRemote.addMoteListeners(wiiRemote.getMote());
+
+
         // Instantiate a new worker thread
-        worker = new Thread(this.name);
+        worker = new Thread(this, this.name);
 
         // TODO: Perform other startup
         logger.info("Starting worker thread: {}", worker.getName());
@@ -184,37 +205,6 @@ public class WiiOutput extends AbstractSensorOutput<WiiDriver> implements Runnab
 
 
 
-    // data will be [0-1] for buttons [2-4] for accel data
-//    public void readButtonData(byte[] data){
-//        if (data == null || data.length != 2){
-//
-//        }
-//        d_left = (data[0] & 0x01) == 0x01;
-//        d_right = (data[0] & 0x02) == 0x02;
-//        d_down = (data[0] & 0x04) == 0x04;
-//        d_up = (data[0] & 0x08) == 0x08;
-//        button_plus = (data[0] & 0x10) == 0x10;
-//        button_two = (data[1] & 0x01) == 0x01;
-//        button_one = (data[1] & 0x02) == 0x02;
-//        button_b = (data[1] & 0x04) == 0x04;
-//        button_a = (data[1] & 0x08) == 0x08;
-//        button_minus = (data[1] & 0x10) == 0x10;
-//        home = (data[1] & 0x80) == 0x80;
-//    }
-//
-//    //read raw accelerometer data
-//    public void readAccelData(byte[] data){
-//
-//    }
-//
-//    //read raw battery level
-//    public void readBatteryLevel(byte[] data){}
-//
-//
-//    public void processData(){
-//
-//    }
-
     /**
      * Terminates processing data for output
      */
@@ -224,7 +214,9 @@ public class WiiOutput extends AbstractSensorOutput<WiiDriver> implements Runnab
 
             stopProcessing = true;
         }
+//        wiiRemote.getMote().disconnect();
 
+        logger.debug("wii remote disconnected");
         // TODO: Perform other shutdown procedures
     }
 
@@ -300,56 +292,28 @@ public class WiiOutput extends AbstractSensorOutput<WiiDriver> implements Runnab
 
                 ++setCount;
 
-                double timestamp = System.currentTimeMillis() / 1000;
+                double timestamp = System.currentTimeMillis() / 1000d;
 
 
                 // TODO: Populate data block
                 dataBlock.setDoubleValue(0, timestamp);
 
-                //set underlying wii remote button data
-                AbstractDataBlock wiiRemoteData = ((DataBlockMixed) dataBlock).getUnderlyingObject()[0];
-                AbstractDataBlock buttonData = ((DataBlockMixed) dataBlock).getUnderlyingObject()[1];
-//                AbstractDataBlock dPadData = ((DataBlockMixed) dataBlock).getUnderlyingObject()[2];
-                AbstractDataBlock accelData = ((DataBlockMixed) dataBlock).getUnderlyingObject()[3];
-                AbstractDataBlock gyroData = ((DataBlockMixed) dataBlock).getUnderlyingObject()[4];
+                //set underlying wii remote dpad, button, gyro data
+                AbstractDataBlock wiiButtonData = ((DataBlockMixed) dataBlock).getUnderlyingObject()[1];
+//                AbstractDataBlock accelData= ((DataBlockMixed) dataBlock).getUnderlyingObject()[2];
 
-//
-//                buttonData.setBooleanValue(0,wiiRemote.isButtonPressed(WiiRemote.Button.D_PAD_UP));  // d pad up
-//                buttonData.setBooleanValue(1,wiiRemote.isButtonPressed(WiiRemote.Button.D_PAD_DOWN) ); // d pad down
-//                buttonData.setBooleanValue(2,wiiRemote.isButtonPressed(WiiRemote.Button.D_PAD_LEFT) ); // d pad left
-//                buttonData.setBooleanValue(3,wiiRemote.isButtonPressed(WiiRemote.Button.D_PAD_RIGHT)); //d pad right
-//                buttonData.setBooleanValue(4,wiiRemote.isButtonPressed(WiiRemote.Button.BUTTON_POWER) ); //power
-//                buttonData.setBooleanValue(5,wiiRemote.isButtonPressed(WiiRemote.Button.BUTTON_HOME) ); //home
-//                buttonData.setBooleanValue(6,wiiRemote.isButtonPressed(WiiRemote.Button.BUTTON_ONE) ); //1
-//                buttonData.setBooleanValue(7,wiiRemote.isButtonPressed(WiiRemote.Button.BUTTON_TWO) ); //2
-//                buttonData.setBooleanValue(8,wiiRemote.isButtonPressed(WiiRemote.Button.BUTTON_A) ); //A
-//                buttonData.setBooleanValue(9,wiiRemote.isButtonPressed(WiiRemote.Button.BUTTON_B) ); // B
-//                buttonData.setBooleanValue(10,wiiRemote.isButtonPressed(WiiRemote.Button.BUTTON_PLUS)); //plus
-//                buttonData.setBooleanValue(11,wiiRemote.isButtonPressed(WiiRemote.Button.BUTTON_MINUS)); //minus
-                Mote mote;
-                mote = wiiRemote.mote;
-                CoreButtonEvent event = new CoreButtonEvent(mote, 1);
-                buttonData.setBooleanValue(0,wiiRemote.isButtonPressed(WiiRemote.Button.D_PAD_UP, event));  // d pad up
-                buttonData.setBooleanValue(1,wiiRemote.isButtonPressed(WiiRemote.Button.D_PAD_DOWN, event)); // d pad down
-                buttonData.setBooleanValue(2,wiiRemote.isButtonPressed(WiiRemote.Button.D_PAD_LEFT, event)); // d pad left
-                buttonData.setBooleanValue(3,wiiRemote.isButtonPressed(WiiRemote.Button.D_PAD_RIGHT, event)); //d pad right
-                buttonData.setBooleanValue(4,wiiRemote.isButtonPressed(WiiRemote.Button.BUTTON_POWER, event)); //power
-                buttonData.setBooleanValue(5,wiiRemote.isButtonPressed(WiiRemote.Button.BUTTON_HOME, event)); //home
-                buttonData.setBooleanValue(6,wiiRemote.isButtonPressed(WiiRemote.Button.BUTTON_ONE, event)); //1
-                buttonData.setBooleanValue(7,wiiRemote.isButtonPressed(WiiRemote.Button.BUTTON_TWO, event)); //2
-                buttonData.setBooleanValue(8,wiiRemote.isButtonPressed(WiiRemote.Button.BUTTON_A, event)); //A
-                buttonData.setBooleanValue(9,wiiRemote.isButtonPressed(WiiRemote.Button.BUTTON_B,event)); // B
-                buttonData.setBooleanValue(10,wiiRemote.isButtonPressed(WiiRemote.Button.BUTTON_PLUS, event)); //plus
-                buttonData.setBooleanValue(11,wiiRemote.isButtonPressed(WiiRemote.Button.BUTTON_MINUS, event)); //minus
-
-
-//                gyroData.setDoubleValue(0, wiiRemote.getPitch()); //pitch up
-//                gyroData.setDoubleValue(1, wiiRemote.getPitch()); //pitch down
-                gyroData.setDoubleValue(2); //roll left
-                gyroData.setDoubleValue(3); //roll right
-                gyroData.setDoubleValue(4); //yaw left
-                gyroData.setDoubleValue(5); //yaw right
-
+                wiiButtonData.setBooleanValue(0, wiiRemote.isButtonPressed(WiiRemote.Button.D_PAD_UP));
+                wiiButtonData.setBooleanValue(1, wiiRemote.isButtonPressed(WiiRemote.Button.D_PAD_DOWN));
+                wiiButtonData.setBooleanValue(2, wiiRemote.isButtonPressed(WiiRemote.Button.D_PAD_LEFT));
+                wiiButtonData.setBooleanValue(3, wiiRemote.isButtonPressed(WiiRemote.Button.D_PAD_RIGHT));
+                wiiButtonData.setBooleanValue(4, wiiRemote.isButtonPressed(WiiRemote.Button.BUTTON_HOME));
+                wiiButtonData.setBooleanValue(5, wiiRemote.isButtonPressed(WiiRemote.Button.BUTTON_ONE));
+                wiiButtonData.setBooleanValue(6, wiiRemote.isButtonPressed(WiiRemote.Button.BUTTON_TWO));
+                wiiButtonData.setBooleanValue(7, wiiRemote.isButtonPressed(WiiRemote.Button.BUTTON_A));
+                wiiButtonData.setBooleanValue(8, wiiRemote.isButtonPressed(WiiRemote.Button.BUTTON_B));
+                wiiButtonData.setBooleanValue(9, wiiRemote.isButtonPressed(WiiRemote.Button.BUTTON_PLUS));
+                wiiButtonData.setBooleanValue(10, wiiRemote.isButtonPressed(WiiRemote.Button.BUTTON_MINUS));
+                wiiButtonData.setBooleanValue(11, wiiRemote.isButtonPressed(WiiRemote.Button.NONE));
 
                 latestRecord = dataBlock;
 
@@ -374,5 +338,6 @@ public class WiiOutput extends AbstractSensorOutput<WiiDriver> implements Runnab
             logger.debug("Terminating worker thread: {}", this.name);
         }
     }
+
 
 }

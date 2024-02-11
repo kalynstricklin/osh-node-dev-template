@@ -21,7 +21,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.intel.bluetooth.BlueCoveConfigProperties;
 
-//import edu.wpi.first.wpilibj.GenericHID;
 
 /**
  * Sensor driver providing sensor description, output registration, initialization and shutdown of driver and outputs.
@@ -32,9 +31,8 @@ import com.intel.bluetooth.BlueCoveConfigProperties;
 public class WiiDriver extends AbstractSensorModule<WiiConfig> {
     private static final Logger logger = LoggerFactory.getLogger(WiiDriver.class);
     WiiOutput output;
-    WiiRemoteFinder remoteFinder;
-//    WiiRemote[] wiiRemotes;
-
+    PairWii pairWii;
+    WiiRemote wiiRemote;
     Mote mote;
     @Override
     public void doInit() throws SensorHubException {
@@ -45,17 +43,8 @@ public class WiiDriver extends AbstractSensorModule<WiiConfig> {
         generateUniqueID("urn:osh:sensor:", config.serialNumber);
         generateXmlID("WII_REMOTE", config.serialNumber);
 
-//        remoteFinder = new WiiRemoteFinder[1];
-//        wiiRemotes = new WiiRemote[1];
-
-        // discover wii remote
+        // discover wii remote super important for bluetooth
         System.setProperty(BlueCoveConfigProperties.PROPERTY_JSR_82_PSM_MINIMUM_OFF, "true");
-        remoteFinder = new WiiRemoteFinder();
-        remoteFinder.findRemote(); // finding wii remote
-        remoteFinder.moteFound(mote); //found wii remote
-
-
-
 
         // Create and initialize output
         output = new WiiOutput(this);
@@ -68,17 +57,37 @@ public class WiiDriver extends AbstractSensorModule<WiiConfig> {
     }
 
     @Override
-    public void doStart() throws SensorHubException {
+    public void doStart() {
 
         if (null != output) {
             // Allocate necessary resources and start outputs
+            logger.debug("Getting ready to pair wii");
+            pairWii = PairWii.getInstance();
+            logger.debug("finding wii remote");
+            pairWii.findMote();
+            logger.debug("setting wii remote to be the motes pair");
+
+            //add a delay!!!
+            try{
+                logger.debug("Thread to sleep before checking if motes array is null");
+                Thread.sleep(1000L);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+            if (!pairWii.motes.isEmpty()){
+                mote = pairWii.motes.get(0);
+                if(mote != null){
+                    wiiRemote = WiiRemote.getInstance();
+//                    wiiRemote = new WiiRemote();
+                }
+            }
             output.doStart();
         }
-        // TODO: Perform other startup procedures
+
     }
 
     @Override
-    public void doStop() throws SensorHubException {
+    public void doStop() {
 
         if (null != output) {
             output.doStop();
@@ -92,6 +101,22 @@ public class WiiDriver extends AbstractSensorModule<WiiConfig> {
     public boolean isConnected() {
         // Determine if sensor is connected
         return true;
+    }
+
+    /**
+     * method to return instance of mote
+     * @return mote
+     */
+    public Mote getMote(){
+        return mote;
+    }
+
+    /**
+     * method to set mote object
+     * @param mote
+     */
+    public void setMote(Mote mote){
+        this.mote = mote;
     }
 
 }
