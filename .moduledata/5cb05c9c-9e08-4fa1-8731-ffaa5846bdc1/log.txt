@@ -1,434 +1,102 @@
-2024-02-10 16:08:24.104 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 16:08:24.113 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 16:08:24.114 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 16:08:24.617 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 16:08:24.734 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 16:08:25.015 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 16:08:25.015 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 16:08:25.307 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-637ec4c4
-2024-02-10 16:08:25.795 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-416ad59f
-2024-02-10 16:08:26.219 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-2422bd5
-2024-02-10 16:22:39.431 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 16:22:39.468 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 16:22:39.482 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 16:22:39.762 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 16:22:39.790 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 16:22:39.968 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 16:22:39.969 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 16:22:40.214 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-114bafeb
-2024-02-10 16:22:40.313 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-12409c89
-2024-02-10 16:22:40.489 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-483c421f
-2024-02-10 16:24:05.705 INFO  [ModuleRegistry-7] - Module STOPPING
-2024-02-10 16:24:05.863 INFO  [ModuleRegistry-7] - Module STOPPED
-2024-02-10 16:25:12.485 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 16:25:12.489 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 16:25:12.529 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 16:25:12.998 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 16:25:13.036 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 16:25:13.529 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 16:25:13.530 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 16:25:13.995 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-6e374962
-2024-02-10 16:25:14.150 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-16f22d80
-2024-02-10 16:25:14.504 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-2f227cd3
-2024-02-10 16:25:31.954 INFO  [ModuleRegistry-6] - Module STOPPING
-2024-02-10 16:25:32.073 INFO  [ModuleRegistry-6] - Module STOPPED
-2024-02-10 16:26:39.288 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 16:26:39.304 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 16:26:39.306 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 16:26:39.581 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 16:26:39.636 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 16:26:39.891 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 16:26:39.892 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 16:26:40.213 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-60ea1c54
-2024-02-10 16:26:40.324 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-2f58cf21
-2024-02-10 16:26:40.531 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-92a3ece
-2024-02-10 16:31:22.620 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 16:31:22.678 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 16:31:22.697 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 16:31:22.963 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 16:31:23.003 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 16:31:23.275 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 16:31:23.276 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 16:31:23.692 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-46c0928d
-2024-02-10 16:31:23.808 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-15a45c52
-2024-02-10 16:31:24.063 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-4c4ad1c2
-2024-02-10 16:35:37.136 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 16:35:37.165 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 16:35:37.167 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 16:35:37.407 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 16:35:37.460 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 16:35:37.685 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 16:35:37.686 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 16:35:37.876 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-6971cd4a
-2024-02-10 16:35:38.125 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-5e13411a
-2024-02-10 16:35:38.307 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-33cbe006
-2024-02-10 16:41:35.423 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 16:41:35.439 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 16:41:35.473 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 16:41:35.780 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 16:41:35.809 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 16:41:36.012 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 16:41:36.013 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 16:41:36.234 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-735b8c2c
-2024-02-10 16:41:36.487 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-2305280c
-2024-02-10 16:41:36.696 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-2f715b6e
-2024-02-10 16:55:23.094 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 16:55:23.109 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 16:55:23.110 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 16:55:23.556 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 16:55:23.602 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 16:55:23.926 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 16:55:23.927 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 16:55:24.199 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-427c176f
-2024-02-10 16:55:24.568 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-71510bf9
-2024-02-10 16:55:24.896 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-e45ddf4
-2024-02-10 16:56:46.727 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 16:56:46.750 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 16:56:46.751 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 16:56:47.069 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 16:56:47.136 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 16:56:47.372 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 16:56:47.372 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 16:56:47.660 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-1bb15dbc
-2024-02-10 16:56:47.766 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-1e11c036
-2024-02-10 16:56:47.945 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-7b854683
-2024-02-10 17:01:37.395 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 17:01:37.417 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 17:01:37.419 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 17:01:37.627 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 17:01:37.678 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 17:01:38.009 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 17:01:38.010 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 17:01:38.273 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-306d5e7f
-2024-02-10 17:01:38.619 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-3743624d
-2024-02-10 17:01:38.876 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-298ac6f
-2024-02-10 17:13:02.813 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 17:13:02.822 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 17:13:02.823 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 17:13:03.061 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 17:13:03.098 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 17:13:03.317 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 17:13:03.317 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 17:13:03.470 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-5d134dd7
-2024-02-10 17:13:03.696 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-6ea08b00
-2024-02-10 17:13:03.946 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-62e79d29
-2024-02-10 17:18:59.103 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 17:18:59.238 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 17:18:59.239 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 17:18:59.438 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 17:18:59.484 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 17:18:59.698 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 17:18:59.699 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 17:18:59.916 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-7ae9057d
-2024-02-10 17:19:00.178 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-576ee7e8
-2024-02-10 17:19:00.385 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-76358aae
-2024-02-10 17:21:42.921 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 17:21:42.925 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 17:21:42.927 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 17:21:43.161 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 17:21:43.211 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 17:21:43.415 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 17:21:43.415 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 17:21:43.718 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-4e1f2b49
-2024-02-10 17:21:43.857 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-68008d3a
-2024-02-10 17:21:44.068 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-54f1fa1b
-2024-02-10 17:32:14.500 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 17:32:14.522 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 17:32:14.523 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 17:32:14.810 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 17:32:14.855 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 17:32:15.126 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 17:32:15.127 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 17:32:15.408 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-a8c3f84
-2024-02-10 17:32:15.576 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-10b75148
-2024-02-10 17:32:15.769 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-5aa99c1d
-2024-02-10 17:43:00.917 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 17:43:00.931 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 17:43:00.943 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 17:43:01.187 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 17:43:01.215 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 17:43:01.509 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 17:43:01.510 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 17:43:01.732 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-7ed733de
-2024-02-10 17:43:02.092 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-831aa6d
-2024-02-10 17:43:02.260 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-33d56da2
-2024-02-10 17:44:20.025 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 17:44:20.040 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 17:44:20.041 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 17:44:20.370 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 17:44:20.408 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 17:44:20.601 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 17:44:20.602 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 17:44:20.906 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-11942021
-2024-02-10 17:44:21.025 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-10aa1819
-2024-02-10 17:44:21.211 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-2ed9fab6
-2024-02-10 17:49:56.619 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 17:49:56.627 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 17:49:56.628 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 17:49:56.947 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 17:49:56.979 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 17:49:57.152 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 17:49:57.153 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 17:49:57.488 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-48781bee
-2024-02-10 17:49:57.601 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-40d814bc
-2024-02-10 17:49:57.820 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-5f44f94
-2024-02-10 18:07:25.052 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 18:07:25.059 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 18:07:25.061 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 18:07:25.385 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 18:07:25.433 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 18:07:25.632 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 18:07:25.632 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 18:07:25.815 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-54ec088
-2024-02-10 18:07:26.085 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-50652589
-2024-02-10 18:07:26.274 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-5e3af4b5
-2024-02-10 18:12:22.089 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 18:12:22.113 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 18:12:22.115 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 18:12:22.532 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 18:12:22.581 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 18:12:22.790 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 18:12:22.790 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 18:12:22.991 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-392ef1a9
-2024-02-10 18:12:23.298 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-67c5b83f
-2024-02-10 18:12:23.501 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-779a9770
-2024-02-10 18:18:19.614 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 18:18:19.634 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 18:18:19.643 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 18:18:19.953 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 18:18:19.989 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 18:18:20.187 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 18:18:20.188 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 18:18:20.366 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-36980398
-2024-02-10 18:18:20.698 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-42b1496b
-2024-02-10 18:18:20.915 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-609db836
-2024-02-10 18:22:19.548 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 18:22:19.583 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 18:22:19.585 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 18:22:20.143 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 18:22:20.213 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 18:22:20.664 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 18:22:20.664 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 18:22:21.026 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-ff82a55
-2024-02-10 18:22:21.444 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-48cc576b
-2024-02-10 18:22:21.971 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-6d2ce991
-2024-02-10 18:28:21.585 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 18:28:21.590 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 18:28:21.592 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 18:28:21.887 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 18:28:21.940 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 18:28:22.115 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 18:28:22.116 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 18:28:22.405 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-465710f9
-2024-02-10 18:28:22.509 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-6caf2706
-2024-02-10 18:28:22.723 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-26ff5d6a
-2024-02-10 18:32:35.740 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 18:32:35.746 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 18:32:35.747 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 18:32:36.108 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 18:32:36.134 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 18:32:36.335 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 18:32:36.335 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 18:32:36.762 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-2a3f796c
-2024-02-10 18:32:36.922 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-7b79bf94
-2024-02-10 18:32:37.130 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-4afc472b
-2024-02-10 18:36:03.400 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 18:36:03.418 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 18:36:03.419 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 18:36:03.716 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 18:36:03.758 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 18:36:03.946 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 18:36:03.946 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 18:36:04.276 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-2a9ffac7
-2024-02-10 18:36:04.381 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-16bf01c6
-2024-02-10 18:36:04.577 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-7e2f8fe8
-2024-02-10 18:40:29.582 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 18:40:29.613 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 18:40:29.614 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 18:40:29.971 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 18:40:30.006 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 18:40:30.285 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 18:40:30.285 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 18:40:30.434 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-8fa1779
-2024-02-10 18:40:30.718 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-186421ce
-2024-02-10 18:40:30.936 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-7812360c
-2024-02-10 18:41:49.986 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 18:41:50.003 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 18:41:50.004 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 18:41:50.299 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 18:41:50.353 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 18:41:50.637 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 18:41:50.638 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 18:41:50.862 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-3e21c41b
-2024-02-10 18:41:51.188 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-27026efe
-2024-02-10 18:41:51.376 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-2b8304bc
-2024-02-10 18:44:17.598 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 18:44:17.618 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 18:44:17.619 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 18:44:17.969 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 18:44:18.013 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 18:44:18.219 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 18:44:18.220 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 18:44:18.620 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-5edbde90
-2024-02-10 18:44:18.774 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-7777c104
-2024-02-10 18:44:19.023 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-10bdb4e8
-2024-02-10 18:47:46.656 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 18:47:46.663 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 18:47:46.664 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 18:47:46.907 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 18:47:46.945 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 18:47:47.175 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 18:47:47.176 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 18:47:47.347 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-6d313986
-2024-02-10 18:47:47.628 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-f1c5128
-2024-02-10 18:47:47.816 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-63113d1c
-2024-02-10 19:00:44.731 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 19:00:44.746 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 19:00:44.747 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 19:00:45.051 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 19:00:45.086 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 19:00:45.327 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 19:00:45.328 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 19:00:45.496 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-3e8f0fa7
-2024-02-10 19:00:45.775 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-515f20b3
-2024-02-10 19:00:45.953 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-265fc6f3
-2024-02-10 19:08:49.642 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 19:08:49.647 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 19:08:49.652 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 19:08:50.307 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 19:08:50.355 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 19:08:50.761 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 19:08:50.762 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 19:08:51.082 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-123c7163
-2024-02-10 19:08:51.486 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-e7b1eed
-2024-02-10 19:08:51.880 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-63072c0d
-2024-02-10 19:12:16.717 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 19:12:16.721 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 19:12:16.726 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 19:12:16.976 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 19:12:17.008 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 19:12:17.245 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 19:12:17.246 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 19:12:17.413 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-5118452f
-2024-02-10 19:12:17.725 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-25fb9e68
-2024-02-10 19:12:17.897 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-20a2d9a1
-2024-02-10 19:16:58.764 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 19:16:58.774 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 19:16:58.775 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 19:16:59.070 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 19:16:59.106 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 19:16:59.304 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 19:16:59.304 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 19:16:59.630 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-3e92d2d5
-2024-02-10 19:16:59.753 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-5bd007a5
-2024-02-10 19:16:59.919 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-358beaae
-2024-02-10 19:17:48.086 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 19:17:48.100 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 19:17:48.101 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 19:17:48.496 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 19:17:48.548 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 19:17:48.783 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 19:17:48.783 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 19:17:49.100 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-a0703d8
-2024-02-10 19:17:49.228 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-3923ed9c
-2024-02-10 19:17:49.398 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-39cdc89e
-2024-02-10 19:19:12.853 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 19:19:12.865 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 19:19:12.908 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 19:19:13.245 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 19:19:13.293 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 19:19:13.518 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 19:19:13.519 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 19:19:13.679 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-460d3f8a
-2024-02-10 19:19:13.961 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-690d717d
-2024-02-10 19:19:14.127 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-594eac75
-2024-02-10 19:19:58.507 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 19:19:58.522 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 19:19:58.523 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 19:19:58.818 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 19:19:58.859 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 19:19:59.106 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 19:19:59.107 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 19:19:59.331 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-239bc6c7
-2024-02-10 19:19:59.596 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-68549618
-2024-02-10 19:19:59.803 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-46b5ad2e
-2024-02-10 19:21:45.928 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 19:21:45.932 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 19:21:45.938 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 19:21:46.124 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 19:21:46.165 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 19:21:46.374 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 19:21:46.375 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 19:21:46.552 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-739af61c
-2024-02-10 19:21:46.834 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-5112c363
-2024-02-10 19:21:47.078 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-67bc39d1
-2024-02-10 19:23:15.788 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 19:23:15.796 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 19:23:15.800 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 19:23:16.043 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 19:23:16.090 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 19:23:16.305 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 19:23:16.306 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 19:23:16.483 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-f54bc65
-2024-02-10 19:23:16.780 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-5dddd96b
-2024-02-10 19:23:16.979 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-d6a0d2d
-2024-02-10 19:26:11.562 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 19:26:11.578 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 19:26:11.582 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 19:26:11.917 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 19:26:11.961 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 19:26:12.142 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 19:26:12.143 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 19:26:12.570 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-56a4f132
-2024-02-10 19:26:12.686 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-257ddf04
-2024-02-10 19:26:12.932 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-6135e33
-2024-02-10 19:30:10.068 INFO  [ModuleRegistry-1] - Module INITIALIZING
-2024-02-10 19:30:10.113 INFO  [ModuleRegistry-1] - Module INITIALIZED
-2024-02-10 19:30:10.115 INFO  [ModuleRegistry-1] - Module STARTING
-2024-02-10 19:30:10.376 INFO  [ModuleRegistry-1] - Static resources root is /
-2024-02-10 19:30:10.425 INFO  [ModuleRegistry-1] - Servlets root is /sensorhub
-2024-02-10 19:30:10.705 INFO  [ModuleRegistry-1] - HTTP server started on port 8282
-2024-02-10 19:30:10.710 INFO  [ModuleRegistry-1] - Module STARTED
-2024-02-10 19:30:10.913 DEBUG [ModuleRegistry-1] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-65bca511
-2024-02-10 19:30:11.209 DEBUG [ModuleRegistry-1] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-6c6619f7
-2024-02-10 19:30:11.378 DEBUG [ModuleRegistry-1] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-4ea030eb
-2024-02-10 19:39:13.099 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 19:39:13.110 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 19:39:13.128 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 19:39:13.400 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 19:39:13.445 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 19:39:13.646 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 19:39:13.646 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 19:39:13.996 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-684698ec
-2024-02-10 19:39:14.103 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-e65c266
-2024-02-10 19:39:14.319 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-6b2d7fc1
-2024-02-10 20:04:31.821 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 20:04:31.828 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 20:04:31.829 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 20:04:32.143 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 20:04:32.172 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 20:04:32.416 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 20:04:32.417 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 20:04:32.733 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-5dfbbafb
-2024-02-10 20:04:32.831 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-26665527
-2024-02-10 20:04:33.036 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-256a7e39
-2024-02-10 20:07:03.726 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 20:07:03.786 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 20:07:03.788 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 20:07:04.146 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 20:07:04.184 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 20:07:04.449 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 20:07:04.451 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 20:07:04.664 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-7fb3b1bc
-2024-02-10 20:07:04.981 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-113ac529
-2024-02-10 20:07:05.181 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-6fc2aeb2
-2024-02-10 20:08:30.497 INFO  [ModuleRegistry-2] - Module INITIALIZING
-2024-02-10 20:08:30.510 INFO  [ModuleRegistry-2] - Module INITIALIZED
-2024-02-10 20:08:30.515 INFO  [ModuleRegistry-2] - Module STARTING
-2024-02-10 20:08:30.778 INFO  [ModuleRegistry-2] - Static resources root is /
-2024-02-10 20:08:30.827 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
-2024-02-10 20:08:31.063 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
-2024-02-10 20:08:31.064 INFO  [ModuleRegistry-2] - Module STARTED
-2024-02-10 20:08:31.222 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-23d8d3d
-2024-02-10 20:08:31.519 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-4e8efc0e
-2024-02-10 20:08:31.735 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-4196b8f4
+2024-03-01 13:53:46.462 INFO  [ModuleRegistry-2] - Module INITIALIZING
+2024-03-01 13:53:46.499 INFO  [ModuleRegistry-2] - Module INITIALIZED
+2024-03-01 13:53:46.501 INFO  [ModuleRegistry-2] - Module STARTING
+2024-03-01 13:53:47.178 INFO  [ModuleRegistry-2] - Static resources root is /
+2024-03-01 13:53:47.252 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
+2024-03-01 13:53:47.612 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
+2024-03-01 13:53:47.613 INFO  [ModuleRegistry-2] - Module STARTED
+2024-03-01 13:53:48.286 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-69cefeec
+2024-03-01 13:53:48.602 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-363fe31c
+2024-03-01 13:53:49.183 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-4e070589
+2024-03-01 13:58:36.927 INFO  [ModuleRegistry-2] - Module INITIALIZING
+2024-03-01 13:58:36.940 INFO  [ModuleRegistry-2] - Module INITIALIZED
+2024-03-01 13:58:36.942 INFO  [ModuleRegistry-2] - Module STARTING
+2024-03-01 13:58:37.365 INFO  [ModuleRegistry-2] - Static resources root is /
+2024-03-01 13:58:37.430 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
+2024-03-01 13:58:37.917 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
+2024-03-01 13:58:37.918 INFO  [ModuleRegistry-2] - Module STARTED
+2024-03-01 13:58:38.372 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-2916494b
+2024-03-01 13:58:38.594 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-6c8ddf14
+2024-03-01 13:58:38.943 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-61f38400
+2024-03-01 14:09:58.583 INFO  [ModuleRegistry-2] - Module INITIALIZING
+2024-03-01 14:09:58.612 INFO  [ModuleRegistry-2] - Module INITIALIZED
+2024-03-01 14:09:58.614 INFO  [ModuleRegistry-2] - Module STARTING
+2024-03-01 14:09:59.259 INFO  [ModuleRegistry-2] - Static resources root is /
+2024-03-01 14:09:59.322 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
+2024-03-01 14:09:59.706 ERROR [ModuleRegistry-2] - Cannot start module 
+org.sensorhub.api.common.SensorHubException: Cannot start embedded HTTP server
+	at org.sensorhub.impl.service.HttpServer.doStart(HttpServer.java:299)
+	at org.sensorhub.impl.module.AbstractModule.start(AbstractModule.java:492)
+	at org.sensorhub.impl.module.ModuleRegistry.lambda$startModuleAsync$1(ModuleRegistry.java:670)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.io.IOException: Failed to bind to 0.0.0.0/0.0.0.0:8282
+	at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:349)
+	at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:310)
+	at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)
+	at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:234)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:401)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+	at org.sensorhub.impl.service.HttpServer.doStart(HttpServer.java:291)
+	... 7 common frames omitted
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:459)
+	at java.base/sun.nio.ch.Net.bind(Net.java:448)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:344)
+	... 14 common frames omitted
+2024-03-01 14:09:59.708 INFO  [ModuleRegistry-2] - Module STOPPING
+2024-03-01 14:09:59.738 INFO  [ModuleRegistry-2] - Module STOPPED
+2024-03-01 14:10:40.503 INFO  [ModuleRegistry-2] - Module INITIALIZING
+2024-03-01 14:10:40.511 INFO  [ModuleRegistry-2] - Module INITIALIZED
+2024-03-01 14:10:40.519 INFO  [ModuleRegistry-2] - Module STARTING
+2024-03-01 14:10:40.818 INFO  [ModuleRegistry-2] - Static resources root is /
+2024-03-01 14:10:40.864 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
+2024-03-01 14:10:41.061 ERROR [ModuleRegistry-2] - Cannot start module 
+org.sensorhub.api.common.SensorHubException: Cannot start embedded HTTP server
+	at org.sensorhub.impl.service.HttpServer.doStart(HttpServer.java:299)
+	at org.sensorhub.impl.module.AbstractModule.start(AbstractModule.java:492)
+	at org.sensorhub.impl.module.ModuleRegistry.lambda$startModuleAsync$1(ModuleRegistry.java:670)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.io.IOException: Failed to bind to 0.0.0.0/0.0.0.0:8282
+	at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:349)
+	at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:310)
+	at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)
+	at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:234)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:401)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+	at org.sensorhub.impl.service.HttpServer.doStart(HttpServer.java:291)
+	... 7 common frames omitted
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:459)
+	at java.base/sun.nio.ch.Net.bind(Net.java:448)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:344)
+	... 14 common frames omitted
+2024-03-01 14:10:41.062 INFO  [ModuleRegistry-2] - Module STOPPING
+2024-03-01 14:10:41.077 INFO  [ModuleRegistry-2] - Module STOPPED
+2024-03-01 14:11:32.303 INFO  [ModuleRegistry-9] - Module STOPPING
+2024-03-01 14:11:32.329 INFO  [ModuleRegistry-9] - Module STOPPED
+2024-03-01 14:13:30.822 INFO  [ModuleRegistry-2] - Module INITIALIZING
+2024-03-01 14:13:30.878 INFO  [ModuleRegistry-2] - Module INITIALIZED
+2024-03-01 14:13:30.882 INFO  [ModuleRegistry-2] - Module STARTING
+2024-03-01 14:13:31.288 INFO  [ModuleRegistry-2] - Static resources root is /
+2024-03-01 14:13:31.323 INFO  [ModuleRegistry-2] - Servlets root is /sensorhub
+2024-03-01 14:13:31.609 INFO  [ModuleRegistry-2] - HTTP server started on port 8282
+2024-03-01 14:13:31.609 INFO  [ModuleRegistry-2] - Module STARTED
+2024-03-01 14:13:31.928 DEBUG [ModuleRegistry-2] - Servlet deployed [/api/*]=>org.sensorhub.impl.service.consys.ConSysApiServlet-75096cc6
+2024-03-01 14:13:32.435 DEBUG [ModuleRegistry-2] - Servlet deployed [/admin/*, /VAADIN/*]=>org.sensorhub.ui.AdminUIServlet-3df46e9d
+2024-03-01 14:13:32.931 DEBUG [ModuleRegistry-2] - Servlet deployed [/sos]=>org.sensorhub.impl.service.sos.SOSServlet-1c3e6081

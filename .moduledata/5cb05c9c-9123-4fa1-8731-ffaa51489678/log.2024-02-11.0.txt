@@ -1,0 +1,214 @@
+2024-02-11 17:45:55.879 INFO  [ModuleRegistry-3] - Module INITIALIZING
+2024-02-11 17:45:55.881 INFO  [ModuleRegistry-3] - Module INITIALIZED
+2024-02-11 17:45:55.882 INFO  [ModuleRegistry-3] - Module STARTING
+2024-02-11 17:45:57.964 INFO  [ModuleRegistry-2] - Module STARTED
+2024-02-11 17:46:31.471 INFO  [qtp2028505206-35] - New connection to admin UI (from ip=127.0.0.1, user=admin)
+2024-02-11 17:46:41.752 INFO  [qtp2028505206-32] - New UI action: Add New Module com.sample.impl.sensor.wii.WiiDriver (from ip=127.0.0.1, user=admin)
+2024-02-11 17:46:43.785 INFO  [qtp2028505206-38] - New UI action: Update Config 'New Wii Remote Driver' [8f063ed0-560e-43be-afcc-e5968a425a5c] (from ip=127.0.0.1, user=admin)
+2024-02-11 17:47:31.205 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-11 17:47:31.237 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-11 17:47:31.253 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-11 17:47:33.418 INFO  [ModuleRegistry-2] - Module STARTED
+2024-02-11 17:48:19.115 INFO  [qtp1025321483-25] - New connection to admin UI (from ip=127.0.0.1, user=admin)
+2024-02-11 17:48:22.379 INFO  [qtp1025321483-30] - New connection to admin UI (from ip=127.0.0.1, user=admin)
+2024-02-11 17:48:26.301 INFO  [qtp1025321483-27] - New UI action: Add New Module com.sample.impl.sensor.wii.WiiDriver (from ip=127.0.0.1, user=admin)
+2024-02-11 17:48:28.425 INFO  [qtp1025321483-30] - New UI action: Update Config 'New Wii Remote Driver' [2ba6b6b2-69c3-44d9-a593-85219b8098e3] (from ip=127.0.0.1, user=admin)
+2024-02-11 17:48:32.278 INFO  [qtp1025321483-27] - New UI action: Start 'New Wii Remote Driver' [2ba6b6b2-69c3-44d9-a593-85219b8098e3] (from ip=127.0.0.1, user=admin)
+2024-02-11 17:50:06.041 INFO  [ModuleRegistry-3] - Module INITIALIZING
+2024-02-11 17:50:06.065 INFO  [ModuleRegistry-3] - Module INITIALIZED
+2024-02-11 17:50:06.067 INFO  [ModuleRegistry-3] - Module STARTING
+2024-02-11 17:50:07.138 INFO  [ModuleRegistry-2] - Module STARTED
+2024-02-11 17:50:53.457 INFO  [qtp1673921665-26] - New connection to admin UI (from ip=127.0.0.1, user=admin)
+2024-02-11 17:50:55.669 INFO  [qtp1673921665-27] - New connection to admin UI (from ip=127.0.0.1, user=admin)
+2024-02-11 17:51:00.153 INFO  [qtp1673921665-31] - New UI action: Add New Module com.sample.impl.sensor.wii.WiiDriver (from ip=127.0.0.1, user=admin)
+2024-02-11 17:51:01.478 INFO  [qtp1673921665-27] - New UI action: Update Config 'New Wii Remote Driver' [54030603-1072-42ea-8a8e-aa0a2b4fedf4] (from ip=127.0.0.1, user=admin)
+2024-02-11 17:51:05.011 INFO  [qtp1673921665-29] - New UI action: Start 'New Wii Remote Driver' [54030603-1072-42ea-8a8e-aa0a2b4fedf4] (from ip=127.0.0.1, user=admin)
+2024-02-11 17:53:09.894 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-11 17:53:09.922 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-11 17:53:09.925 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-11 17:53:11.409 INFO  [ModuleRegistry-2] - Module STARTED
+2024-02-11 17:53:17.260 INFO  [qtp490359447-24] - New connection to admin UI (from ip=127.0.0.1, user=admin)
+2024-02-11 17:53:19.689 INFO  [qtp490359447-27] - New connection to admin UI (from ip=127.0.0.1, user=admin)
+2024-02-11 17:53:24.234 INFO  [qtp490359447-30] - New UI action: Add New Module com.sample.impl.sensor.wii.WiiDriver (from ip=127.0.0.1, user=admin)
+2024-02-11 17:53:28.549 INFO  [qtp490359447-30] - New UI action: Update Config 'New Wii Remote Driver' [9c6e33d1-edea-4e5f-bbff-631a824d8462] (from ip=127.0.0.1, user=admin)
+2024-02-11 17:53:31.693 INFO  [qtp490359447-27] - New UI action: Start 'New Wii Remote Driver' [9c6e33d1-edea-4e5f-bbff-631a824d8462] (from ip=127.0.0.1, user=admin)
+2024-02-11 17:55:31.079 INFO  [ModuleRegistry-4] - Module INITIALIZING
+2024-02-11 17:55:31.089 INFO  [ModuleRegistry-4] - Module INITIALIZED
+2024-02-11 17:55:31.097 INFO  [ModuleRegistry-4] - Module STARTING
+2024-02-11 17:55:32.075 INFO  [ModuleRegistry-2] - Module STARTED
+2024-02-11 17:55:37.274 INFO  [qtp584477068-24] - New connection to admin UI (from ip=127.0.0.1, user=admin)
+2024-02-11 17:55:42.672 INFO  [qtp584477068-28] - New UI action: Add New Module com.sample.impl.sensor.wii.WiiDriver (from ip=127.0.0.1, user=admin)
+2024-02-11 17:55:44.183 INFO  [qtp584477068-31] - New UI action: Update Config 'New Wii Remote Driver' [762d4543-d3e2-4e0f-bb78-acba9bad5760] (from ip=127.0.0.1, user=admin)
+2024-02-11 17:55:49.223 INFO  [qtp584477068-30] - New UI action: Start 'New Wii Remote Driver' [762d4543-d3e2-4e0f-bb78-acba9bad5760] (from ip=127.0.0.1, user=admin)
+2024-02-11 18:15:09.251 INFO  [ModuleRegistry-3] - Module INITIALIZING
+2024-02-11 18:15:09.273 INFO  [ModuleRegistry-3] - Module INITIALIZED
+2024-02-11 18:15:09.274 INFO  [ModuleRegistry-3] - Module STARTING
+2024-02-11 18:15:10.997 INFO  [ModuleRegistry-2] - Module STARTED
+2024-02-11 18:15:18.019 INFO  [qtp1672047868-24] - New connection to admin UI (from ip=127.0.0.1, user=admin)
+2024-02-11 18:15:23.502 INFO  [qtp1672047868-31] - New UI action: Add New Module com.sample.impl.sensor.wii.WiiDriver (from ip=127.0.0.1, user=admin)
+2024-02-11 18:15:24.663 INFO  [qtp1672047868-30] - New UI action: Update Config 'New Wii Remote Driver' [4fe85e58-681a-4d2d-825d-f13b99d955b6] (from ip=127.0.0.1, user=admin)
+2024-02-11 18:15:26.172 ERROR [qtp1672047868-28] - Unexpected error when selecting module
+java.lang.IllegalStateException: The array element count hasn't been set. Please use one of setElementCount() or setFixedSize() methods
+	at org.vast.data.AbstractArrayImpl.getArraySizeComponent(AbstractArrayImpl.java:241)
+	at org.vast.data.DataArrayImpl.getComponentCount(DataArrayImpl.java:512)
+	at org.vast.data.DataArrayImpl.copyTo(DataArrayImpl.java:85)
+	at org.vast.data.DataArrayImpl.copy(DataArrayImpl.java:75)
+	at org.vast.data.DataArrayImpl.copy(DataArrayImpl.java:43)
+	at net.opengis.OgcPropertyImpl.copyTo(OgcPropertyImpl.java:73)
+	at net.opengis.OgcPropertyImpl.copy(OgcPropertyImpl.java:58)
+	at net.opengis.OgcPropertyImpl.copy(OgcPropertyImpl.java:23)
+	at net.opengis.OgcPropertyList.copyTo(OgcPropertyList.java:66)
+	at org.vast.data.DataRecordImpl.copy(DataRecordImpl.java:53)
+	at org.vast.data.DataRecordImpl.copy(DataRecordImpl.java:31)
+	at net.opengis.OgcPropertyImpl.copyTo(OgcPropertyImpl.java:73)
+	at net.opengis.OgcPropertyImpl.copy(OgcPropertyImpl.java:58)
+	at net.opengis.OgcPropertyImpl.copy(OgcPropertyImpl.java:23)
+	at net.opengis.OgcPropertyList.copyTo(OgcPropertyList.java:66)
+	at org.vast.data.DataRecordImpl.copy(DataRecordImpl.java:53)
+	at org.vast.data.DataRecordImpl.copy(DataRecordImpl.java:31)
+	at org.sensorhub.ui.DataSourceAdminPanel.newOutputsPanel(DataSourceAdminPanel.java:209)
+	at org.sensorhub.ui.DataSourceAdminPanel.rebuildOutputsPanels(DataSourceAdminPanel.java:185)
+	at org.sensorhub.ui.DataSourceAdminPanel.build(DataSourceAdminPanel.java:173)
+	at org.sensorhub.ui.SensorAdminPanel.build(SensorAdminPanel.java:49)
+	at org.sensorhub.ui.SensorAdminPanel.build(SensorAdminPanel.java:40)
+	at org.sensorhub.ui.AdminUI.openModuleInfo(AdminUI.java:1120)
+	at org.sensorhub.ui.AdminUI.selectModule(AdminUI.java:1096)
+	at org.sensorhub.ui.AdminUI$10.itemClick(AdminUI.java:670)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at com.vaadin.event.ListenerMethod.receiveEvent(ListenerMethod.java:706)
+	at com.vaadin.event.EventRouter.fireEvent(EventRouter.java:399)
+	at com.vaadin.event.EventRouter.fireEvent(EventRouter.java:363)
+	at com.vaadin.server.AbstractClientConnector.fireEvent(AbstractClientConnector.java:1190)
+	at com.vaadin.v7.ui.Table.handleClickEvent(Table.java:3154)
+	at com.vaadin.v7.ui.Table.changeVariables(Table.java:2948)
+	at com.vaadin.v7.ui.TreeTable.changeVariables(TreeTable.java:434)
+	at com.vaadin.server.communication.ServerRpcHandler.changeVariables(ServerRpcHandler.java:616)
+	at com.vaadin.server.communication.ServerRpcHandler.handleInvocation(ServerRpcHandler.java:468)
+	at com.vaadin.server.communication.ServerRpcHandler.handleInvocations(ServerRpcHandler.java:411)
+	at com.vaadin.server.communication.ServerRpcHandler.handleRpc(ServerRpcHandler.java:275)
+	at com.vaadin.server.communication.UidlRequestHandler.synchronizedHandleRequest(UidlRequestHandler.java:91)
+	at com.vaadin.server.SynchronizedRequestHandler.handleRequest(SynchronizedRequestHandler.java:40)
+	at com.vaadin.server.VaadinService.handleRequest(VaadinService.java:1637)
+	at com.vaadin.server.VaadinServlet.service(VaadinServlet.java:464)
+	at org.sensorhub.ui.AdminUIServlet.service(AdminUIServlet.java:53)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:799)
+	at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1656)
+	at org.eclipse.jetty.servlets.CrossOriginFilter.handle(CrossOriginFilter.java:319)
+	at org.eclipse.jetty.servlets.CrossOriginFilter.doFilter(CrossOriginFilter.java:273)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:193)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1626)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:552)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1440)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:505)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1355)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerList.handle(HandlerList.java:59)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:516)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:487)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:732)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:479)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2024-02-11 18:17:45.452 INFO  [ModuleRegistry-3] - Module INITIALIZING
+2024-02-11 18:17:45.456 INFO  [ModuleRegistry-3] - Module INITIALIZED
+2024-02-11 18:17:45.467 INFO  [ModuleRegistry-3] - Module STARTING
+2024-02-11 18:17:46.481 INFO  [ModuleRegistry-2] - Module STARTED
+2024-02-11 18:17:50.707 INFO  [qtp464521111-24] - New connection to admin UI (from ip=127.0.0.1, user=admin)
+2024-02-11 18:17:55.447 INFO  [qtp464521111-31] - New UI action: Add New Module com.sample.impl.sensor.wii.WiiDriver (from ip=127.0.0.1, user=admin)
+2024-02-11 18:17:57.821 INFO  [qtp464521111-28] - New UI action: Update Config 'New Wii Remote Driver' [b9dc40f8-53be-413f-95fa-8e2e30a4ac91] (from ip=127.0.0.1, user=admin)
+2024-02-11 18:19:21.843 INFO  [ModuleRegistry-4] - Module INITIALIZING
+2024-02-11 18:19:21.852 INFO  [ModuleRegistry-4] - Module INITIALIZED
+2024-02-11 18:19:21.854 INFO  [ModuleRegistry-4] - Module STARTING
+2024-02-11 18:19:22.734 INFO  [ModuleRegistry-2] - Module STARTED
+2024-02-11 18:19:26.247 INFO  [qtp844887616-24] - New connection to admin UI (from ip=127.0.0.1, user=admin)
+2024-02-11 18:19:32.576 INFO  [qtp844887616-31] - New UI action: Add New Module com.sample.impl.sensor.wii.WiiDriver (from ip=127.0.0.1, user=admin)
+2024-02-11 18:19:33.922 INFO  [qtp844887616-28] - New UI action: Update Config 'New Wii Remote Driver' [71ae3e55-3690-4263-8b9e-179d02382a0b] (from ip=127.0.0.1, user=admin)
+2024-02-11 18:20:14.890 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-11 18:20:14.903 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-11 18:20:14.905 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-11 18:20:16.009 INFO  [ModuleRegistry-2] - Module STARTED
+2024-02-11 18:20:20.821 INFO  [qtp656962646-27] - New connection to admin UI (from ip=127.0.0.1, user=admin)
+2024-02-11 18:20:24.836 INFO  [qtp656962646-30] - New UI action: Add New Module com.sample.impl.sensor.wii.WiiDriver (from ip=127.0.0.1, user=admin)
+2024-02-11 18:20:28.901 INFO  [qtp656962646-28] - New UI action: save_config (from ip=127.0.0.1, user=admin)
+2024-02-11 18:20:30.341 INFO  [qtp656962646-29] - New UI action: Update Config 'New Wii Remote Driver' [9b2483d2-80ef-47d6-b6e9-3808f95fdd30] (from ip=127.0.0.1, user=admin)
+2024-02-11 18:20:34.092 INFO  [qtp656962646-30] - New UI action: Start 'New Wii Remote Driver' [9b2483d2-80ef-47d6-b6e9-3808f95fdd30] (from ip=127.0.0.1, user=admin)
+2024-02-11 18:23:59.723 INFO  [ModuleRegistry-3] - Module INITIALIZING
+2024-02-11 18:23:59.733 INFO  [ModuleRegistry-3] - Module INITIALIZED
+2024-02-11 18:23:59.734 INFO  [ModuleRegistry-3] - Module STARTING
+2024-02-11 18:24:00.860 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-11 18:24:58.119 INFO  [qtp1640538073-30] - New connection to admin UI (from ip=127.0.0.1, user=admin)
+2024-02-11 18:25:02.169 INFO  [qtp1640538073-27] - New UI action: Update Config 'New Wii Remote Driver' [9b2483d2-80ef-47d6-b6e9-3808f95fdd30] (from ip=127.0.0.1, user=admin)
+2024-02-11 18:25:21.287 INFO  [qtp1640538073-27] - New connection to admin UI (from ip=127.0.0.1, user=admin)
+2024-02-11 18:26:03.253 INFO  [qtp1640538073-27] - New UI action: Start 'New Wii Remote Driver' [9b2483d2-80ef-47d6-b6e9-3808f95fdd30] (from ip=127.0.0.1, user=admin)
+2024-02-11 18:36:19.198 INFO  [ModuleRegistry-3] - Module INITIALIZING
+2024-02-11 18:36:19.220 INFO  [ModuleRegistry-3] - Module INITIALIZED
+2024-02-11 18:36:19.222 INFO  [ModuleRegistry-3] - Module STARTING
+2024-02-11 18:36:20.039 INFO  [ModuleRegistry-2] - Module STARTED
+2024-02-11 18:36:31.619 INFO  [qtp287749595-25] - New connection to admin UI (from ip=127.0.0.1, user=admin)
+2024-02-11 18:36:36.748 INFO  [qtp287749595-29] - New UI action: Start 'New Wii Remote Driver' [9b2483d2-80ef-47d6-b6e9-3808f95fdd30] (from ip=127.0.0.1, user=admin)
+2024-02-11 18:41:04.378 INFO  [ModuleRegistry-3] - Module INITIALIZING
+2024-02-11 18:41:04.381 INFO  [ModuleRegistry-3] - Module INITIALIZED
+2024-02-11 18:41:04.382 INFO  [ModuleRegistry-3] - Module STARTING
+2024-02-11 18:41:05.353 INFO  [ModuleRegistry-2] - Module STARTED
+2024-02-11 18:41:09.779 INFO  [qtp168624900-24] - New connection to admin UI (from ip=127.0.0.1, user=admin)
+2024-02-11 18:41:14.432 INFO  [qtp168624900-30] - New UI action: Start 'New Wii Remote Driver' [9b2483d2-80ef-47d6-b6e9-3808f95fdd30] (from ip=127.0.0.1, user=admin)
+2024-02-11 19:10:02.582 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-11 19:10:02.613 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-11 19:10:02.614 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-11 19:10:04.278 INFO  [ModuleRegistry-2] - Module STARTED
+2024-02-11 19:10:13.785 INFO  [qtp1842047429-30] - New connection to admin UI (from ip=127.0.0.1, user=admin)
+2024-02-11 19:10:17.947 INFO  [qtp1842047429-28] - New UI action: Update Config 'New Wii Remote Driver' [9b2483d2-80ef-47d6-b6e9-3808f95fdd30] (from ip=127.0.0.1, user=admin)
+2024-02-11 19:10:22.128 INFO  [qtp1842047429-28] - New UI action: Start 'New Wii Remote Driver' [9b2483d2-80ef-47d6-b6e9-3808f95fdd30] (from ip=127.0.0.1, user=admin)
+2024-02-11 19:16:49.857 INFO  [ModuleRegistry-3] - Module INITIALIZING
+2024-02-11 19:16:49.859 INFO  [ModuleRegistry-3] - Module INITIALIZED
+2024-02-11 19:16:49.876 INFO  [ModuleRegistry-3] - Module STARTING
+2024-02-11 19:16:50.914 INFO  [ModuleRegistry-2] - Module STARTED
+2024-02-11 19:16:54.918 INFO  [qtp2080335697-24] - New connection to admin UI (from ip=127.0.0.1, user=admin)
+2024-02-11 19:16:59.894 INFO  [qtp2080335697-31] - New UI action: Update Config 'New Wii Remote Driver' [9b2483d2-80ef-47d6-b6e9-3808f95fdd30] (from ip=127.0.0.1, user=admin)
+2024-02-11 19:17:03.914 INFO  [qtp2080335697-31] - New UI action: Start 'New Wii Remote Driver' [9b2483d2-80ef-47d6-b6e9-3808f95fdd30] (from ip=127.0.0.1, user=admin)
+2024-02-11 19:30:49.289 INFO  [ModuleRegistry-4] - Module INITIALIZING
+2024-02-11 19:30:49.297 INFO  [ModuleRegistry-4] - Module INITIALIZED
+2024-02-11 19:30:49.306 INFO  [ModuleRegistry-4] - Module STARTING
+2024-02-11 19:30:50.188 INFO  [ModuleRegistry-2] - Module STARTED
+2024-02-11 19:30:57.617 INFO  [qtp1033218362-24] - New connection to admin UI (from ip=127.0.0.1, user=admin)
+2024-02-11 19:31:03.686 INFO  [qtp1033218362-28] - New UI action: Update Config 'New Wii Remote Driver' [9b2483d2-80ef-47d6-b6e9-3808f95fdd30] (from ip=127.0.0.1, user=admin)
+2024-02-11 19:31:06.961 INFO  [qtp1033218362-31] - New UI action: save_config (from ip=127.0.0.1, user=admin)
+2024-02-11 19:31:10.000 INFO  [qtp1033218362-28] - New UI action: Start 'New Wii Remote Driver' [9b2483d2-80ef-47d6-b6e9-3808f95fdd30] (from ip=127.0.0.1, user=admin)
+2024-02-11 21:29:33.843 INFO  [ModuleRegistry-1] - Module INITIALIZING
+2024-02-11 21:29:33.871 INFO  [ModuleRegistry-1] - Module INITIALIZED
+2024-02-11 21:29:33.872 INFO  [ModuleRegistry-1] - Module STARTING
+2024-02-11 21:29:36.065 INFO  [ModuleRegistry-2] - Module STARTED
+2024-02-11 21:30:00.802 INFO  [qtp1071907011-31] - New connection to admin UI (from ip=127.0.0.1, user=admin)
+2024-02-11 21:30:10.752 INFO  [qtp1071907011-31] - New UI action: Update Config 'New Wii Remote Driver' [9b2483d2-80ef-47d6-b6e9-3808f95fdd30] (from ip=127.0.0.1, user=admin)
+2024-02-11 21:30:15.076 INFO  [qtp1071907011-25] - New UI action: Start 'New Wii Remote Driver' [9b2483d2-80ef-47d6-b6e9-3808f95fdd30] (from ip=127.0.0.1, user=admin)
+2024-02-11 21:40:34.440 INFO  [ModuleRegistry-3] - Module INITIALIZING
+2024-02-11 21:40:34.472 INFO  [ModuleRegistry-3] - Module INITIALIZED
+2024-02-11 21:40:34.473 INFO  [ModuleRegistry-3] - Module STARTING
+2024-02-11 21:40:36.201 INFO  [ModuleRegistry-1] - Module STARTED
+2024-02-11 21:40:40.695 INFO  [qtp1827032114-25] - New connection to admin UI (from ip=127.0.0.1, user=admin)
+2024-02-11 21:42:30.335 INFO  [qtp1827032114-25] - New UI action: Update Config 'New Wii Remote Driver' [9b2483d2-80ef-47d6-b6e9-3808f95fdd30] (from ip=127.0.0.1, user=admin)
+2024-02-11 21:42:33.860 INFO  [qtp1827032114-25] - New UI action: Start 'New Wii Remote Driver' [9b2483d2-80ef-47d6-b6e9-3808f95fdd30] (from ip=127.0.0.1, user=admin)

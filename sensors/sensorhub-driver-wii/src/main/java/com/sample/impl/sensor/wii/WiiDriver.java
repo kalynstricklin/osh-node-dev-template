@@ -32,7 +32,6 @@ public class WiiDriver extends AbstractSensorModule<WiiConfig> {
     private static final Logger logger = LoggerFactory.getLogger(WiiDriver.class);
     WiiOutput output;
     PairWii pairWii;
-    WiiRemote wiiRemote;
     Mote mote;
     @Override
     public void doInit() throws SensorHubException {
@@ -76,10 +75,9 @@ public class WiiDriver extends AbstractSensorModule<WiiConfig> {
             }
             if (!pairWii.motes.isEmpty()){
                 mote = pairWii.motes.get(0);
-                if(mote != null){
-                    wiiRemote = WiiRemote.getInstance();
-//                    wiiRemote = new WiiRemote();
-                }
+//                if(mote != null){
+//                    wiiRemote = WiiRemote.getInstance();
+//                }
             }
             output.doStart();
         }
