@@ -2,7 +2,7 @@ apply from: gradle.oshCoreDir + '/common.gradle'
 description = ''
 
 allprojects {
-  version = '0.0.1'
+  version = 'wii-pi-bot-searchlight'
 }
 
 subprojects {
@@ -17,10 +17,26 @@ dependencies {
   implementation 'org.sensorhub:sensorhub-datastore-h2'
   implementation 'org.sensorhub:sensorhub-service-sweapi:' + oshCoreVersion
 
+
+  // pi-bot
   implementation project(':sensorhub-driver-simulation')
   implementation project(':sensorhub-driver-wii')
+  implementation project(':pi-bot-pibot-ultrasonic')
+  implementation project(':pi-bot-pibot-searchlight')
+  implementation project(':pi-bot-pibot-drive')
+  implementation project(':pi-bot-pibot-camera')
+  implementation project(':pi-bot-pibot-common')
+  implementation project(':pi-bot-sensors-video')
+  implementation project(':pi-bot-sensors-common')
+
+  //processing
+  implementation project(':sensorhub-process-light')
 
 
+
+
+//  implementation project(':sensorhub-driver-onvif')
+//  implementation project(':sensorhub-driver-rtpcam')
 
 }
 

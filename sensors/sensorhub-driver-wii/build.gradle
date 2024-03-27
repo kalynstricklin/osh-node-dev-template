@@ -7,8 +7,8 @@ dependencies {
 
 
     //these connected to the driver fr
-    implementation 'net.sf.bluecove:bluecove:2.1.0'
-    implementation 'net.sf.bluecove:bluecove-gpl:2.1.0'
+//    implementation 'net.sf.bluecove:bluecove:2.1.0'
+//    implementation 'net.sf.bluecove:bluecove-gpl:2.1.0'
 
 
 //    implementation 'motej:motej-library:0.9-2008.02.05-patched'

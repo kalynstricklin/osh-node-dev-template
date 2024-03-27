@@ -32,6 +32,68 @@ if (gradle.parent == null) {
 include 'sensorhub-test'
 project(':sensorhub-test').projectDir = "$toolsDir/sensorhub-test" as File
 
+// osh-services
+include 'sensorhub-service-video'
+project(':sensorhub-service-video').projectDir = "$serviceDir/sensorhub-service-video" as File
+
+// osh-sensor-drivers
+include 'sensorhub-driver-videocam'
+project(':sensorhub-driver-videocam').projectDir = "$sensorDir/video/sensorhub-driver-videocam" as File
+
+
+// onvif camera stuff
+//include 'sensorhub-driver-onvif'
+//project(':sensorhub-driver-onvif').projectDir = "$sensorDir/video/sensorhub-driver-onvif" as File
+//
+//include 'sensorhub-driver-rtpcam'
+//project(':sensorhub-driver-rtpcam').projectDir = "$sensorDir/video/sensorhub-driver-rtpcam" as File
+//
+
+
+
+// Project modules
+include 'pi-bot-sensors-common'
+project(':pi-bot-sensors-common').projectDir = "$sensorDir/robotics/pibot/common" as File
+
+include 'pi-bot-sensors-video'
+project(':pi-bot-sensors-video').projectDir = "$sensorDir/robotics/pibot/video" as File
+
+include 'pi-bot-pibot-common'
+project(':pi-bot-pibot-common').projectDir = "$sensorDir/robotics/pibot/robotics/common" as File
+
+include 'pi-bot-pibot-camera'
+project(':pi-bot-pibot-camera').projectDir = "$sensorDir/robotics/pibot/robotics/camera" as File
+
+include 'pi-bot-pibot-drive'
+project(':pi-bot-pibot-drive').projectDir = "$sensorDir/robotics/pibot/robotics/drive" as File
+
+include 'pi-bot-pibot-searchlight'
+project(':pi-bot-pibot-searchlight').projectDir = "$sensorDir/robotics/pibot/robotics/searchlight" as File
+
+include 'pi-bot-pibot-ultrasonic'
+project(':pi-bot-pibot-ultrasonic').projectDir = "$sensorDir/robotics/pibot/robotics/ultrasonic" as File
+
+//include 'pi-bot-sensors-sphinx4-nlp'
+//project(':pi-bot-sensors-sphinx4-nlp').projectDir = "$sensorDir/robotics/pibot/audio/sphinx4-nlp" as File
+
+//include 'pi-bot-pibot-bluetooth'
+//project(':pi-bot-pibot-bluetooth').projectDir = "$sensorDir/robotics/pibot/robotics/bluetooth" as File
+
+//include 'pi-bot-pibot-buzzer'
+//project(':pi-bot-pibot-buzzer').projectDir = "$sensorDir/robotics/pibot/robotics/buzzer" as File
+
+//include 'pi-bot-pibot-track'
+//project(':pi-bot-pibot-track').projectDir = "$sensorDir/robotics/pibot/robotics/track" as File
+
+//include 'pi-bot-processing-image'
+//project(':pi-bot-processing-image').projectDir = "$pi-botProcessDir/image" as File
+
+//include 'pi-bot-processing-common'
+//project(':pi-bot-processing-common').projectDir = "$sentinelProcessDir/common" as File
+
+//
+//include 'my-osh-node.sensorhub-process-light'
+//project(':my-osh-node.sensorhub-process-light').projectDir = "$processDir/sensorhub-process-light" as File
 
 
 // Include all folders with build.gradle as subprojects
@@ -45,5 +107,15 @@ subprojects.files.each { File f ->
             include projectName
             project(projectName).projectDir = projectFolder
         }
+    }
+
+}
+subprojects = fileTree("$rootDir/processing").include('**/build.gradle')
+subprojects.files.each { File f ->
+    File projectFolder = f.parentFile
+    if (projectFolder != rootDir) {
+        String projectName = ':' + projectFolder.name
+        include projectName
+        project(projectName).projectDir = projectFolder
     }
 }
