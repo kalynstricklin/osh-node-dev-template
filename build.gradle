@@ -31,6 +31,7 @@ dependencies {
 
   //processing
   implementation project(':sensorhub-process-light')
+  implementation project(':my-osh-node.sensorhub-process-vecmath')
 
 
 

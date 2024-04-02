@@ -94,6 +94,8 @@ project(':pi-bot-pibot-ultrasonic').projectDir = "$sensorDir/robotics/pibot/robo
 //
 //include 'my-osh-node.sensorhub-process-light'
 //project(':my-osh-node.sensorhub-process-light').projectDir = "$processDir/sensorhub-process-light" as File
+include 'my-osh-node.sensorhub-process-vecmath'
+project(':my-osh-node.sensorhub-process-vecmath').projectDir = "$processDir/sensorhub-process-vecmath" as File
 
 
 // Include all folders with build.gradle as subprojects

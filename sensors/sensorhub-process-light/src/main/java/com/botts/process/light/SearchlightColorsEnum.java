@@ -14,7 +14,6 @@ public enum SearchlightColorsEnum {
     YELLOW,
     UNKNOWN;
 
-
     public static SearchlightColorsEnum fromString (String name){
         for(SearchlightColorsEnum color: SearchlightColorsEnum.values()){
             if(color.name().equalsIgnoreCase(name)){

@@ -5,10 +5,13 @@ version = '1.0.0'
 dependencies {
     implementation 'org.sensorhub:sensorhub-core:' + oshCoreVersion
     implementation project(':sensorhub-driver-videocam')
+    testImplementation project(path: ':pi-bot-pibot-searchlight')
     embeddedImpl 'org.bytedeco:javacv-platform:1.5.3'
     embeddedImpl 'org.jcodec:jcodec-javase:0.1.9'
     embeddedImpl 'org.bytedeco:ffmpeg-platform:4.2.1-1.5.2'
     testImplementation('junit:junit:4.13.1')
+
+    implementation project(':pi-bot-pibot-searchlight')
 }
 
 

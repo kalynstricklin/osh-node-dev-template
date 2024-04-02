@@ -4,11 +4,10 @@
  ******************************* END LICENSE BLOCK ***************************/
 package com.botts.process.light;
 
-import net.opengis.swe.v20.BinaryBlock;
+import net.opengis.swe.v20.*;
 import net.opengis.swe.v20.Boolean;
-import net.opengis.swe.v20.Category;
-import net.opengis.swe.v20.Time;
 import org.sensorhub.api.processing.OSHProcessInfo;
+import org.sensorhub.impl.sensor.pibot.searchlight.SearchlightState;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.vast.process.ExecutableProcessImpl;
@@ -30,13 +29,13 @@ public class SearchlightProcess extends ExecutableProcessImpl {
             "Light changing algorithm, can be used to alternate between colors on Searchlight pi-bot sensor",
             SearchlightProcess.class);
 
-    protected static final Logger logger = LoggerFactory.getLogger(
-            SearchlightProcess.class);
+    protected static final Logger logger = LoggerFactory.getLogger(SearchlightProcess.class);
 
     private final Boolean inputButton;
     private final Category outputColor;
     private final Time inputTimeStamp;
     private final Time outputTimeStamp;
+    private DataRecord searchlightOutput;
 
     public SearchlightProcess() {
 
@@ -45,15 +44,16 @@ public class SearchlightProcess extends ExecutableProcessImpl {
         // Get an instance of SWE Factory suitable to build components
         SWEHelper sweFactory = new SWEHelper();
 
-
         // Inputs
         inputData.add("button", sweFactory.createRecord()
-                .label("Remote Button")
+                .label("WiiMote Button")
                 .addField("time", inputTimeStamp = sweFactory.createTime()
+                        .definition(SWEHelper.getPropertyUri("SamplingTime"))
                         .asSamplingTimeIsoUTC()
                         .build())
-                .addField("buttonOne", inputButton = sweFactory.createBoolean()
+                .addField("button1", inputButton = sweFactory.createBoolean()
                         .id("IN_BUTTON_ONE")
+                        .definition(SWEHelper.getPropertyUri("button1"))
                         .label("Input Button One")
                         .build())
                 .build());
@@ -63,11 +63,13 @@ public class SearchlightProcess extends ExecutableProcessImpl {
         outputData.add("searchlight", sweFactory.createRecord()
                 .label("SearchlightSensor")
                 .addField("time", outputTimeStamp = sweFactory.createTime()
+                        .definition(SWEHelper.getPropertyUri("SamplingTime"))
                         .asSamplingTimeIsoUTC()
                         .build())
-                .addField("color", outputColor = sweFactory.createCategory()
-                        .id("OUTPUT_COLOR")
-                        .label("Searchlight Output RBG Color")
+                .addField("Color", outputColor = sweFactory.createCategory()
+                        .id("RGB_OUTPUT_COLOR")
+                        .definition(SWEHelper.getPropertyUri("Color"))
+                        .label("RBG Color")
                                 .addAllowedValues(
                                         SearchlightColorsEnum.OFF.name(),
                                         SearchlightColorsEnum.WHITE.name(),
@@ -77,16 +79,13 @@ public class SearchlightProcess extends ExecutableProcessImpl {
                                         SearchlightColorsEnum.CYAN.name(),
                                         SearchlightColorsEnum.GREEN.name(),
                                         SearchlightColorsEnum.YELLOW.name(),
-                                        SearchlightColorsEnum.UNKNOWN.name()
-                                )
+                                        SearchlightColorsEnum.UNKNOWN.name())
                         .build())
 
                 .build());
         
         // set encoding options so that output datablocks are generated correctly
         BinaryBlock dataEncoding = sweFactory.newBinaryBlock();
-//        dataEncoding.setCompression("COLOR");
-//        new SMLUtils(SMLUtils.V2_1).writeProcess(System.out, , true);
 
     }
 
@@ -108,7 +107,9 @@ public class SearchlightProcess extends ExecutableProcessImpl {
         double timeStamp = inputTimeStamp.getValue().getAsDouble() * 1000.0;
 
         boolean buttonPressed = inputButton.getData().getBooleanValue();
-        SearchlightColorsEnum searchlightColor = SearchlightColorsEnum.valueOf(outputColor.getData().getStringValue());
+
+        String colorValue = outputColor.getData().getStringValue();
+        SearchlightColorsEnum searchlightColor = colorValue != null ? SearchlightColorsEnum.valueOf(colorValue) : SearchlightColorsEnum.UNKNOWN;
 
         if(buttonPressed){
             logger.info("button pressed, changing color of searchlight");
@@ -121,7 +122,10 @@ public class SearchlightProcess extends ExecutableProcessImpl {
             //copy timestamp for when button is pressed and light changes
             double timestamp = inputTimeStamp.getData().getDoubleValue();
             outputTimeStamp.getData().setDoubleValue(timeStamp);
+
+
         }
+
 
         logger.debug("Processed event");
     }
