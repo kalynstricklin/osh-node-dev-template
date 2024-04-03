@@ -58,34 +58,37 @@
     <sml:components>
         <sml:ComponentList>
             <sml:component name="source0">
-                <sml:SimpleProcess gml:id="F2">
+                <sml:SimpleProcess gml:id="F1">
                     <gml:identifier codeSpace="uid">urn:osh:sensor:wii001</gml:identifier>
-                    <sml:typeOf xlink:href="urn:osh:process:pi-bot:searchlight"></sml:typeOf>
+                    <sml:typeOf xlink:href="urn:osh:process:datasource:datastream"></sml:typeOf>
                     <sml:configuration>
                         <sml:Settings>
-                            <sml:setValue ref="buttonState">false</sml:setValue>
+                            <sml:setValue ref="parameters/systemUID">urn:sensors:sensor:wii001</sml:setValue>
+                            <sml:setValue ref="parameters/outputName">buttonState</sml:setValue>
                         </sml:Settings>
                     </sml:configuration>
                 </sml:SimpleProcess>
             </sml:component>
             <sml:component name="searchlight">
-                <sml:SimpleProcess gml:id="F3">
-                    <gml:identifier codeSpace="uid">urn:osh:process:pibot:SearchLight</gml:identifier>
-                    <sml:typeOf xlink:href="urn:osh:process:"></sml:typeOf>
+                <sml:SimpleProcess gml:id="F2">
+                    <gml:identifier codeSpace="uid">urn:pibot:searchlight</gml:identifier>
+                    <sml:typeOf xlink:href="urn:osh:process:pibot:SearchLight"></sml:typeOf>
                     <sml:configuration>
                         <sml:Settings>
-                            <sml:setValue ref="color">OFF</sml:setValue>
+                            <sml:setValue ref="parameters/systemUID">urn:pibot:searchlight</sml:setValue>
+                            <sml:setValue ref="parameters/inputName">cmd1</sml:setValue>
                         </sml:Settings>
                     </sml:configuration>
                 </sml:SimpleProcess>
             </sml:component>
         </sml:ComponentList>
     </sml:components>
+
     <sml:connections>
         <sml:ConnectionList>
             <sml:connection>
                 <sml:Link>
-                    <sml:source ref="inputs/valueIn/button"/>
+                    <sml:source ref="components/source0/outputs/lightColor/button1"/>
                     <sml:destination ref="components/buttonSRC/inputs/button/one"/>
                 </sml:Link>
             </sml:connection>

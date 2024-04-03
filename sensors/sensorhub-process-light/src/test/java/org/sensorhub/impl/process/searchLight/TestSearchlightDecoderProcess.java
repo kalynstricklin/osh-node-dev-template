@@ -1,13 +1,16 @@
 package org.sensorhub.impl.process.searchLight;
 
 
+import com.botts.process.light.SearchlightColorProcess;
 import com.botts.process.light.SearchlightProcess;
+import net.opengis.sensorml.v20.AbstractProcess;
 import net.opengis.sensorml.v20.Settings;
 import net.opengis.sensorml.v20.SimpleProcess;
 import net.opengis.sensorml.v20.impl.SettingsImpl;
 import org.junit.Assert;
 import org.junit.Test;
 import org.sensorhub.api.data.IStreamingDataInterface;
+import org.sensorhub.api.module.IModule;
 import org.sensorhub.api.processing.IProcessModule;
 import org.sensorhub.api.sensor.ISensorModule;
 import org.sensorhub.api.sensor.SensorConfig;
@@ -17,10 +20,8 @@ import org.sensorhub.impl.processing.SMLProcessConfig;
 import org.sensorhub.impl.processing.SMLProcessImpl;
 import org.sensorhub.impl.sensor.pibot.searchlight.SearchlightConfig;
 import org.sensorhub.impl.sensor.pibot.searchlight.SearchlightSensor;
-import org.vast.sensorML.AggregateProcessImpl;
-import org.vast.sensorML.LinkImpl;
-import org.vast.sensorML.SMLUtils;
-import org.vast.sensorML.SimpleProcessImpl;
+import org.vast.cdm.common.DataStreamWriter;
+import org.vast.sensorML.*;
 
 import java.util.UUID;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -30,6 +31,9 @@ public class TestSearchlightDecoderProcess {
     static String NAME_OUTPUT1 = "color";
     static String NAME_INPUT1 = "buttonOne";
     static ModuleRegistry registry;
+    static final double SAMPLING_PERIOD = 0.1;
+    static final int SAMPLE_COUNT = 10;
+    DataStreamWriter writer;
 
     protected static void runProcess(IProcessModule<?> process) throws Exception
     {
@@ -74,7 +78,7 @@ public class TestSearchlightDecoderProcess {
         sensorCfg.autoStart = false;
         sensorCfg.moduleClass = SearchlightSensor.class.getCanonicalName();
         sensorCfg.id = "PI_SEARCHLIGHT";
-        sensorCfg.name = "searchlgiht";
+        sensorCfg.name = "searchlight";
 
         var sensor = registry.loadModule(sensorCfg);
         sensor.init();
@@ -98,109 +102,84 @@ public class TestSearchlightDecoderProcess {
     @Test
     public void testSearchlightProcess() throws Exception
     {
-        SearchlightProcess p = new SearchlightProcess();
-        p.init();
+        SearchlightProcess searchlightProcess= new SearchlightProcess();
+        searchlightProcess.init();
 
         SMLUtils smlHelper = new SMLUtils(SMLUtils.V2_0);
 
         SimpleProcessImpl simple = new SimpleProcessImpl();
-        simple.setExecutableImpl(p);
+        simple.setExecutableImpl(searchlightProcess);
 
         // serialize
-        AggregateProcessImpl wp = new AggregateProcessImpl();
+        AggregateProcessImpl process = new AggregateProcessImpl();
 
         // set type
-        wp.setTypeOf(simple.getTypeOf());
-        smlHelper.makeProcessExecutable(wp,false);
+        process.setTypeOf(simple.getTypeOf());
+        smlHelper.makeProcessExecutable(process,false);
 
         //set uuid
-        wp.setUniqueIdentifier(UUID.randomUUID().toString());
+        process.setUniqueIdentifier(UUID.randomUUID().toString());
 
 
         // set inputs and outputs
-        wp.addOutput("valueOut", p.getOutputList().getComponent(0));
-        wp.addInput("valueIn", p.getInputList().getComponent(0));
+        process.addInput("valueIn", searchlightProcess.getInputList().getComponent(0)); //wii
+        process.addOutput("valueOut", searchlightProcess.getOutputList().getComponent(0)); //searchlight
+
 
         // wiimote Components
-        SimpleProcess buttonSource = new SimpleProcessImpl();
+        SimpleProcessImpl buttonSource = new SimpleProcessImpl();
+        buttonSource.setExecutableImpl(searchlightProcess);
         buttonSource.setUniqueIdentifier("urn:osh:sensor:wii001");
         // wiimote button config
         Settings buttonConfig = new SettingsImpl();
-        buttonConfig.addSetValue("buttonState", "false");
-//        buttonSource.setTypeOf();
+        buttonConfig.addSetValue("parameters/systemUID", "urn:osh:sensor:wii001");
+        buttonConfig.addSetValue("parameters/outputName", "buttonState");
         buttonSource.setConfiguration(buttonConfig);
-        wp.addComponent("source0", buttonSource);
+        process.addComponent("source0", buttonSource);
+
+        //process component
+        SimpleProcessImpl processSource = new SimpleProcessImpl();
+        processSource.setExecutableImpl(searchlightProcess);
+        buttonSource.setUniqueIdentifier("urn:osh:process:pibot:SearchLight");
+        Settings processConfig = new SettingsImpl();
+        processConfig.addSetValue("parameters/button", "false");
+        processConfig.addSetValue("parameters/color", "UNKNOWN");
+
 
         // searchlight component
-        SimpleProcess searchlight = new SimpleProcessImpl();
+        SimpleProcessImpl searchlight = new SimpleProcessImpl();
+        searchlight.setExecutableImpl(searchlightProcess);
         searchlight.setUniqueIdentifier("urn:osh:process:pibot:SearchLight");
-//        searchlight.getTypeOf();
         // searchlight config
         Settings colorConfig = new SettingsImpl();
-        colorConfig.addSetValue("color", "OFF");
+        buttonConfig.addSetValue("parameters/systemUID", "urn:osh:sensor:wii001");
+        buttonConfig.addSetValue("parameters/inputName", "color");
         searchlight.setConfiguration(colorConfig);
-        wp.addComponent("decoder", searchlight);
+        process.addComponent("light", searchlight);
 
         // add connection links
-        LinkImpl buttonLink = new LinkImpl();
-        buttonLink.setSource("components/source0/outputs/button/buttonOne");
-        buttonLink.setDestination("components/inputs/button/one");
-        wp.addConnection(buttonLink);
+        LinkImpl bLink = new LinkImpl(); //link wii output buttons to process input
+        LinkImpl link = new LinkImpl();  // link process input to process output controls?
+        LinkImpl cLink = new LinkImpl(); // link process output to searchlight controls
 
-        LinkImpl colorLink = new LinkImpl();
-        colorLink.setSource("components/decoder/outputs/searchlight/Color");
-        colorLink.setDestination("outputs/valueOut");
-        wp.addConnection(colorLink);
 
-        LinkImpl timeLink = new LinkImpl();
-        timeLink.setSource("components/buttonSRC/inputs/valueIn/time");
-        timeLink.setDestination("components/searchlightSRC/outputs/valueOut/time");
-        wp.addConnection(timeLink);
+        bLink.setSource("components/source0/outputs/Buttons/buttonOne");
+        bLink.setDestination("components/buttonSource/inputs/button1");
 
-        smlHelper.writeProcess(System.out, wp, true);
+        link.setSource("components/source0/outputs/button1"); //connect process to control input (button one state = true then send commands...)
+        link.setDestination("components/light/inputs/cmd1/Color"); //send button output to searchlight control
 
-        p.execute();
-    }
+        cLink.setSource("components/source0/outputs/button1");
+        cLink.setDestination("outputs/valueOut");   //send output to output process
 
-//    @After
-//    public void cleanup()
-//    {
-//        try
-//        {
-//            registry.shutdown(false, false);
-//        }
-//        catch (Exception e)
-//        {
-//            e.printStackTrace();
-//        }
-//    }
 
-    protected ISensorModule<?> createSensor() throws Exception
-    {
-        // create test sensor
-        SensorConfig sensorCfg = new SensorConfig();
-        sensorCfg.autoStart = false;
-        sensorCfg.moduleClass = SearchlightSensor.class.getCanonicalName();
-        sensorCfg.id = SEARCHLIGHT_ID;
-        sensorCfg.name = "Sensor1";
-        IModule<?> sensor = registry.loadModule(sensorCfg);
-        sensor.init();
-        var sensorOutput = new FakeSensorData((FakeSensor)sensor, NAME_OUTPUT1, SAMPLING_PERIOD, SAMPLE_COUNT);
-        ((FakeSensor)sensor).setDataInterfaces(sensorOutput);
-        var controlInput = new FakeSensorControl1((FakeSensor)sensor, NAME_INPUT1);
-        ((FakeSensor)sensor).setControlInterfaces(controlInput);
-        controlInput.registerListener(this);
-        sensor.start();
-        return (FakeSensor)sensor;
-    }
+        process.addConnection(bLink);
+        process.addConnection(link);
+        process.addConnection(cLink);
 
-    @Test
-    public void testSMLSimpleProcess() throws Exception
-    {
-        createSensor();
-        String smlUrl = TestCommandSinkProcess.class.getResource("/test-processchain-controlloop.xml").getFile();
-        IProcessModule<?> process = createSMLProcess(smlUrl);
-        runProcess(process);
+        smlHelper.writeProcess(System.out, process, true);
+
+        searchlightProcess.execute();
     }
 
 }

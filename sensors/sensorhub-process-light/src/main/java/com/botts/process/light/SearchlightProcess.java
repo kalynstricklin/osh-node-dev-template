@@ -33,9 +33,9 @@ public class SearchlightProcess extends ExecutableProcessImpl {
 
     private final Boolean inputButton;
     private final Category outputColor;
-    private final Time inputTimeStamp;
-    private final Time outputTimeStamp;
-    private DataRecord searchlightOutput;
+//    private final Time inputTimeStamp;
+//    private final Time outputTimeStamp;
+
 
     public SearchlightProcess() {
 
@@ -46,30 +46,28 @@ public class SearchlightProcess extends ExecutableProcessImpl {
 
         // Inputs
         inputData.add("button", sweFactory.createRecord()
-                .label("WiiMote Button")
-                .addField("time", inputTimeStamp = sweFactory.createTime()
-                        .definition(SWEHelper.getPropertyUri("SamplingTime"))
-                        .asSamplingTimeIsoUTC()
-                        .build())
+                .name("input")
+//                .addField("time", inputTimeStamp = sweFactory.createTime()
+//                        .definition(SWEHelper.getPropertyUri("SamplingTime"))
+//                        .asSamplingTimeIsoUTC()
+//                        .build())
                 .addField("button1", inputButton = sweFactory.createBoolean()
-                        .id("IN_BUTTON_ONE")
                         .definition(SWEHelper.getPropertyUri("button1"))
-                        .label("Input Button One")
+                        .label("InputButtonOne")
                         .build())
                 .build());
 
 
         // Outputs
         outputData.add("searchlight", sweFactory.createRecord()
-                .label("SearchlightSensor")
-                .addField("time", outputTimeStamp = sweFactory.createTime()
-                        .definition(SWEHelper.getPropertyUri("SamplingTime"))
-                        .asSamplingTimeIsoUTC()
-                        .build())
-                .addField("Color", outputColor = sweFactory.createCategory()
-                        .id("RGB_OUTPUT_COLOR")
+                .name("output")
+//                .addField("time", outputTimeStamp = sweFactory.createTime()
+//                        .definition(SWEHelper.getPropertyUri("SamplingTime"))
+//                        .asSamplingTimeIsoUTC()
+//                        .build())
+                .addField("color", outputColor = sweFactory.createCategory()
                         .definition(SWEHelper.getPropertyUri("Color"))
-                        .label("RBG Color")
+                        .label("RBGColor")
                                 .addAllowedValues(
                                         SearchlightColorsEnum.OFF.name(),
                                         SearchlightColorsEnum.WHITE.name(),
@@ -104,7 +102,7 @@ public class SearchlightProcess extends ExecutableProcessImpl {
 
         logger.debug("Processing event");
 
-        double timeStamp = inputTimeStamp.getValue().getAsDouble() * 1000.0;
+//        double timeStamp = inputTimeStamp.getValue().getAsDouble() * 1000.0;
 
         boolean buttonPressed = inputButton.getData().getBooleanValue();
 
@@ -120,8 +118,8 @@ public class SearchlightProcess extends ExecutableProcessImpl {
             outputColor.getData().setUnderlyingObject(changeColor);
 
             //copy timestamp for when button is pressed and light changes
-            double timestamp = inputTimeStamp.getData().getDoubleValue();
-            outputTimeStamp.getData().setDoubleValue(timeStamp);
+//            double timestamp = inputTimeStamp.getData().getDoubleValue();
+//            outputTimeStamp.getData().setDoubleValue(timeStamp);
 
 
         }

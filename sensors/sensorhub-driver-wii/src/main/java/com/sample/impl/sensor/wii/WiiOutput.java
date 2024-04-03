@@ -117,7 +117,7 @@ public class WiiOutput extends AbstractSensorOutput<WiiDriver> implements Runnab
                                 )
                         )
                 )
-                .addField("WiiButtonData", sweFactory.createRecord()
+                .addField("Buttons", sweFactory.createRecord()
                         .addField("Buttons",sweFactory.createRecord()
                             .addField("D_PAD_UP",sweFactory.createBoolean()
                                     .label("D-Pad Up Button")
