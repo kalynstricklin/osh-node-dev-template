@@ -1,7 +1,7 @@
 package org.sensorhub.impl.process.searchLight;
 
 
-import com.botts.process.light.SearchlightColorProcess;
+import com.botts.process.light.SearchlightProcess;
 import net.opengis.sensorml.v20.Settings;
 import net.opengis.sensorml.v20.impl.SettingsImpl;
 import org.junit.After;
@@ -21,18 +21,17 @@ import org.sensorhub.impl.SensorHub;
 import org.sensorhub.impl.module.ModuleRegistry;
 import org.sensorhub.impl.processing.SMLProcessConfig;
 import org.sensorhub.impl.processing.SMLProcessImpl;
-import org.sensorhub.impl.sensor.pibot.searchlight.SearchlightConfig;
 import org.sensorhub.impl.sensor.pibot.searchlight.SearchlightSensor;
 import org.vast.cdm.common.DataStreamWriter;
 import org.vast.data.TextEncodingImpl;
 import org.vast.sensorML.AggregateProcessImpl;
+import org.vast.sensorML.LinkImpl;
 import org.vast.sensorML.SMLUtils;
 import org.vast.sensorML.SimpleProcessImpl;
 import org.vast.swe.AsciiDataWriter;
 
 import java.io.IOException;
 import java.util.UUID;
-import java.util.concurrent.atomic.AtomicInteger;
 
 
 public class TestSearchlightProcess implements IEventListener
@@ -191,4 +190,87 @@ public class TestSearchlightProcess implements IEventListener
             e.printStackTrace();
         }
     }
+
+
+    @Test
+    public void testSearchlightProcess() throws Exception
+    {
+        SearchlightProcess searchlightProcess= new SearchlightProcess();
+        searchlightProcess.init();
+
+        SMLUtils smlHelper = new SMLUtils(SMLUtils.V2_0);
+
+        SimpleProcessImpl simple = new SimpleProcessImpl();
+        simple.setExecutableImpl(searchlightProcess);
+
+        // serialize
+        AggregateProcessImpl process = new AggregateProcessImpl();
+
+        // set type
+        process.setTypeOf(simple.getTypeOf());
+        smlHelper.makeProcessExecutable(process,false);
+
+        //set uuid
+        process.setUniqueIdentifier(UUID.randomUUID().toString());
+
+
+        // set inputs and outputs
+        process.addInput("valueIn", searchlightProcess.getInputList().getComponent(0)); //wii
+        process.addOutput("valueOut", searchlightProcess.getOutputList().getComponent(0)); //searchlight
+
+
+        // wiimote Components
+        SimpleProcessImpl buttonSource = new SimpleProcessImpl();
+        buttonSource.setExecutableImpl(searchlightProcess);
+        buttonSource.setUniqueIdentifier("urn:osh:sensor:wii001");
+        // wiimote button config
+        Settings buttonConfig = new SettingsImpl();
+        buttonConfig.addSetValue("parameters/systemUID", "urn:osh:sensor:wii001");
+        buttonConfig.addSetValue("parameters/outputName", "buttonState");
+        buttonSource.setConfiguration(buttonConfig);
+        process.addComponent("source0", buttonSource);
+
+        //process component
+        SimpleProcessImpl processSource = new SimpleProcessImpl();
+        processSource.setExecutableImpl(searchlightProcess);
+        buttonSource.setUniqueIdentifier("urn:osh:process:pibot:SearchLight");
+        Settings processConfig = new SettingsImpl();
+        processConfig.addSetValue("parameters/button", "false");
+        processConfig.addSetValue("parameters/color", "UNKNOWN");
+
+
+        // searchlight component
+        SimpleProcessImpl searchlight = new SimpleProcessImpl();
+        searchlight.setExecutableImpl(searchlightProcess);
+        searchlight.setUniqueIdentifier("urn:osh:process:pibot:SearchLight");
+        // searchlight config
+        Settings colorConfig = new SettingsImpl();
+        buttonConfig.addSetValue("parameters/systemUID", "urn:osh:sensor:wii001");
+        buttonConfig.addSetValue("parameters/inputName", "color");
+        searchlight.setConfiguration(colorConfig);
+        process.addComponent("light", searchlight);
+
+        // add connection links
+        LinkImpl bLink = new LinkImpl(); //link wii output buttons to process input
+        LinkImpl link = new LinkImpl();  // link process input to process output controls?
+        LinkImpl cLink = new LinkImpl(); // link process output to searchlight controls
+
+        bLink.setSource("components/source0/outputs/Buttons/buttonOne");
+        bLink.setDestination("components/buttonSource/inputs/button1");
+
+        link.setSource("components/source0/outputs/button1"); //connect process to control input (button one state = true then send commands...)
+        link.setDestination("components/light/inputs/cmd1/Color"); //send button output to searchlight control
+
+        cLink.setSource("components/source0/outputs/button1");
+        cLink.setDestination("outputs/valueOut");   //send output to output process
+
+        process.addConnection(bLink);
+        process.addConnection(link);
+        process.addConnection(cLink);
+
+        smlHelper.writeProcess(System.out, process, true);
+
+        searchlightProcess.execute();
+    }
+
 }

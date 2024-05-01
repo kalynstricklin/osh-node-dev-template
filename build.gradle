@@ -31,9 +31,11 @@ dependencies {
 
   //processing
   implementation project(':sensorhub-process-light')
+  implementation project(':sensorhub-process')
+
+
+//  implementation project(':sensorhub-umbra-tasking')
   implementation project(':my-osh-node.sensorhub-process-vecmath')
-
-
 
 
 //  implementation project(':sensorhub-driver-onvif')

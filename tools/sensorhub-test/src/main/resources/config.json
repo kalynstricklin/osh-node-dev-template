@@ -1,7 +1,7 @@
 [
   {
     "objClass": "org.sensorhub.impl.service.HttpServerConfig",
-    "httpPort": 8282,
+    "httpPort": 8181,
     "httpsPort": 0,
     "staticDocsRootUrl": "/",
     "staticDocsRootDir": "web",
@@ -115,7 +115,7 @@
     "maxObsCount": 100,
     "maxRecordCount": 100000,
     "maxFois": 10,
-    "defaultLiveTimeout": 600.0,
+    "defaultLiveTimeout": 10.0,
     "templateTimeout": 600,
     "security": {
       "objClass": "org.sensorhub.api.security.SecurityConfig",
@@ -168,37 +168,13 @@
     "autoStart": true
   },
   {
-    "objClass": "org.sensorhub.impl.database.system.SystemDriverDatabaseConfig",
-    "dbConfig": {
-      "objClass": "org.sensorhub.impl.datastore.h2.MVObsSystemDatabaseConfig",
-      "indexObsLocation": false,
-      "storagePath": "data.dat",
-      "memoryCacheSize": 5120,
-      "autoCommitBufferSize": 1024,
-      "autoCommitPeriod": 10,
-      "autoCompactFillRate": 40,
-      "idProviderType": "SEQUENTIAL",
-      "useCompression": false,
-      "readOnly": false,
-      "compactOnClose": false,
-      "moduleClass": "org.sensorhub.impl.datastore.h2.MVObsSystemDatabase",
-      "autoStart": false
-    },
-    "systemUIDs": [],
-    "minCommitPeriod": 10000,
-    "databaseNum": 1,
-    "id": "29f2b677-95b1-4499-8e5b-459839ec3eb6",
-    "moduleClass": "org.sensorhub.impl.database.system.SystemDriverDatabase",
-    "name": "System Driver Database",
-    "autoStart": true
-  },
-  {
-    "objClass": "org.sensorhub.impl.service.consys.ConSysApiServiceConfig",
+    "objClass": "org.sensorhub.impl.service.sweapi.SWEApiServiceConfig",
+    "databaseID": "aa7a4b3c-c5db-4119-9422-6fc0a05ce7c1",
     "customFormats": [],
     "security": {
       "objClass": "org.sensorhub.api.security.SecurityConfig",
       "enableAccessControl": false,
-      "requireAuth": false
+      "requireAuth": true
     },
     "enableTransactional": false,
     "maxResponseLimit": 100000,
@@ -218,9 +194,90 @@
     "enableHttpPOST": true,
     "enableSOAP": true,
     "endPoint": "/api",
-    "id": "2659dc3b-f243-477e-b43f-214b75cc8c57",
-    "moduleClass": "org.sensorhub.impl.service.consys.ConSysApiService",
-    "name": "Connected Systems API Service",
+    "id": "a8009d0a-294d-47a5-88fb-6df304f62c5a",
+    "moduleClass": "org.sensorhub.impl.service.sweapi.SWEApiService",
+    "name": "SensorWeb API Service",
     "autoStart": true
+  },
+  {
+    "objClass": "org.sensorhub.impl.database.system.SystemDriverDatabaseConfig",
+    "dbConfig": {
+      "objClass": "org.sensorhub.impl.datastore.h2.MVObsSystemDatabaseConfig",
+      "indexObsLocation": false,
+      "storagePath": "./db/db.dat",
+      "memoryCacheSize": 5120,
+      "autoCommitBufferSize": 1024,
+      "autoCommitPeriod": 10,
+      "autoCompactFillRate": 40,
+      "idProviderType": "SEQUENTIAL",
+      "useCompression": false,
+      "readOnly": false,
+      "compactOnClose": false,
+      "databaseNum": 1,
+      "moduleClass": "org.sensorhub.impl.datastore.h2.MVObsSystemDatabase",
+      "name": "Backing Store",
+      "description": "Implementation of backing store for System Driver Database",
+      "autoStart": false
+    },
+    "systemUIDs": [],
+    "minCommitPeriod": 10000,
+    "databaseNum": 1,
+    "id": "aa7a4b3c-c5db-4119-9422-6fc0a05ce7c1",
+    "moduleClass": "org.sensorhub.impl.database.system.SystemDriverDatabase",
+    "name": "System Driver Database",
+    "description": "Storage Module for Selected Systems by UID",
+    "autoStart": true
+  },
+  {
+    "objClass": "org.sensorhub.impl.sensor.pibot.searchlight.SearchlightConfig",
+    "serialNumber": "rgb-searchlight",
+    "pinConfig": {
+      "objClass": "org.sensorhub.impl.sensor.pibot.searchlight.SearchlightPinConfig",
+      "redLedPin": "PIN_03",
+      "greenLedPin": "PIN_02",
+      "blueLedPin": "PIN_05"
+    },
+    "lastUpdated": "2024-04-22T14:29:29.048-0500",
+    "id": "26a14b66-38a1-40ec-b664-a8cc64a7d490",
+    "moduleClass": "org.sensorhub.impl.sensor.pibot.searchlight.SearchlightSensor",
+    "name": "New PiBot Light Module",
+    "autoStart": false
+  },
+  {
+    "objClass": "org.sensorhub.impl.processing.SMLProcessConfig",
+    "sensorML": "processchain-search-light.xml",
+    "id": "a3539082-ac85-4fe4-9421-4d33c2c88501",
+    "moduleClass": "org.sensorhub.impl.processing.SMLProcessImpl",
+    "name": "New SensorML Stream Process",
+    "autoStart": false
+  },
+  {
+    "objClass": "org.sensorhub.impl.sensor.swe.SWEVirtualSensorConfig",
+    "sensorUID": "urn:osh:sensor:wii001",
+    "sosEndpoint": {
+      "objClass": "org.sensorhub.impl.comm.HTTPConfig",
+      "resourcePath": "sensorhub/sos",
+      "remotePort": 8282,
+      "user": "admin",
+      "password": "admin",
+      "enableTLS": false,
+      "remoteHost": "192.168.1.71",
+      "localAddress": "AUTO"
+    },
+    "observedProperties": [
+      "http://sensorml.com/ont/swe/property/button1"
+    ],
+    "sosUseWebsockets": false,
+    "connectionConfig": {
+      "objClass": "org.sensorhub.impl.module.RobustConnectionConfig",
+      "connectTimeout": 30000,
+      "reconnectPeriod": 1000,
+      "reconnectAttempts": -1
+    },
+    "lastUpdated": "2024-04-23T08:36:36.740-0500",
+    "id": "8b2146af-fd0e-450e-9b63-4b9206253168",
+    "moduleClass": "org.sensorhub.impl.sensor.swe.SWEVirtualSensor",
+    "name": "wii remote sost",
+    "autoStart": false
   }
 ]

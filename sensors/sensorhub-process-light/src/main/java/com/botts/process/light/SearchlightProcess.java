@@ -16,7 +16,7 @@ import org.vast.sensorML.SMLUtils;
 import org.vast.swe.SWEHelper;
 
 /**
- * Process for performing switching between colors of light on pi-bot
+ * Process for performing the switching of colors of the light on pi-bot
  *
  * @author Kalyn Stricklin
  * @since 1.0.0
@@ -33,8 +33,8 @@ public class SearchlightProcess extends ExecutableProcessImpl {
 
     private final Boolean inputButton;
     private final Category outputColor;
-//    private final Time inputTimeStamp;
-//    private final Time outputTimeStamp;
+    private final Time inputTimeStamp;
+    private final Time outputTimeStamp;
 
 
     public SearchlightProcess() {
@@ -45,12 +45,11 @@ public class SearchlightProcess extends ExecutableProcessImpl {
         SWEHelper sweFactory = new SWEHelper();
 
         // Inputs
-        inputData.add("button", sweFactory.createRecord()
-                .name("input")
-//                .addField("time", inputTimeStamp = sweFactory.createTime()
-//                        .definition(SWEHelper.getPropertyUri("SamplingTime"))
-//                        .asSamplingTimeIsoUTC()
-//                        .build())
+        inputData.add("buttons", sweFactory.createRecord()
+                .addField("time", inputTimeStamp = sweFactory.createTime()
+                        .definition(SWEHelper.getPropertyUri("SamplingTime"))
+                        .asSamplingTimeIsoUTC()
+                        .build())
                 .addField("button1", inputButton = sweFactory.createBoolean()
                         .definition(SWEHelper.getPropertyUri("button1"))
                         .label("InputButtonOne")
@@ -59,12 +58,11 @@ public class SearchlightProcess extends ExecutableProcessImpl {
 
 
         // Outputs
-        outputData.add("searchlight", sweFactory.createRecord()
-                .name("output")
-//                .addField("time", outputTimeStamp = sweFactory.createTime()
-//                        .definition(SWEHelper.getPropertyUri("SamplingTime"))
-//                        .asSamplingTimeIsoUTC()
-//                        .build())
+        outputData.add("colors", sweFactory.createRecord()
+                .addField("time", outputTimeStamp = sweFactory.createTime()
+                        .definition(SWEHelper.getPropertyUri("SamplingTime"))
+                        .asSamplingTimeIsoUTC()
+                        .build())
                 .addField("color", outputColor = sweFactory.createCategory()
                         .definition(SWEHelper.getPropertyUri("Color"))
                         .label("RBGColor")
@@ -93,6 +91,7 @@ public class SearchlightProcess extends ExecutableProcessImpl {
         logger.debug("Initializing");
 
         super.init();
+        // read params if necessary
 
         logger.debug("Initialized");
     }
@@ -102,7 +101,7 @@ public class SearchlightProcess extends ExecutableProcessImpl {
 
         logger.debug("Processing event");
 
-//        double timeStamp = inputTimeStamp.getValue().getAsDouble() * 1000.0;
+        double timeStamp = inputTimeStamp.getValue().getAsDouble() * 1000.0;
 
         boolean buttonPressed = inputButton.getData().getBooleanValue();
 
@@ -118,8 +117,8 @@ public class SearchlightProcess extends ExecutableProcessImpl {
             outputColor.getData().setUnderlyingObject(changeColor);
 
             //copy timestamp for when button is pressed and light changes
-//            double timestamp = inputTimeStamp.getData().getDoubleValue();
-//            outputTimeStamp.getData().setDoubleValue(timeStamp);
+            double timestamp = inputTimeStamp.getData().getDoubleValue();
+            outputTimeStamp.getData().setDoubleValue(timeStamp);
 
 
         }

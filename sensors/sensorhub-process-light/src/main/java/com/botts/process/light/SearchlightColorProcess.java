@@ -22,6 +22,7 @@ public class SearchlightColorProcess extends ExecutableProcessImpl implements IS
 
     public static final OSHProcessInfo INFO = new OSHProcessInfo("pibot:searchlight", "Searchlight", null, SearchlightColorProcess.class);
     public static final String SYSTEM_UID_PARAM = "systemUID";
+    public static final String SEARCHLIGHT_PROC_UID = "urn:sensors:pi-bot:searchlight";
     public static final String OUTPUT_NAME_PARAM = "inputName";
     String systemUid;
     final Text systemUidParam;
@@ -34,6 +35,7 @@ public class SearchlightColorProcess extends ExecutableProcessImpl implements IS
         super(INFO);
 
         SWEHelper fac = new SWEHelper();
+
 
         // params
         systemUidParam = fac.createText()
