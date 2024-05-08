@@ -34,15 +34,15 @@ public class SearchlightProcess extends ExecutableProcessImpl {
 
     String newColor;
 
-    enum colors{ OFF,
-            WHITE,
-            RED,
-            MAGENTA,
-            BLUE,
-            CYAN,
-            GREEN,
-            YELLOW,
-            UNKNOWN}
+    enum SearchlightState{
+        OFF,
+        WHITE,
+        RED,
+        MAGENTA,
+        BLUE,
+        CYAN,
+        GREEN,
+        YELLOW}
     boolean isOnePressed = false;
 
     public SearchlightProcess() {
@@ -66,17 +66,17 @@ public class SearchlightProcess extends ExecutableProcessImpl {
         outputData.add("colors", outputColor = sweFactory.createRecord()
                 .addField("color", sweFactory.createCategory()
                         .definition(SWEHelper.getPropertyUri("Color"))
-                        .label("RBGColor")
+                        .label("RBG Color")
                         .addAllowedValues(
-                                colors.OFF.name(),
-                                colors.WHITE.name(),
-                                colors.RED.name(),
-                                colors.MAGENTA.name(),
-                                colors.BLUE.name(),
-                                colors.YELLOW.name(),
-                                colors.CYAN.name(),
-                                colors.GREEN.name(),
-                                colors.UNKNOWN.name())
+                                SearchlightState.OFF.name(),
+                                SearchlightState.WHITE.name(),
+                                SearchlightState.RED.name(),
+                                SearchlightState.MAGENTA.name(),
+                                SearchlightState.BLUE.name(),
+                                SearchlightState.YELLOW.name(),
+                                SearchlightState.CYAN.name(),
+                                SearchlightState.GREEN.name())
+                        .value(SearchlightState.OFF.name())
                         .build())
 
                 .build());
@@ -113,8 +113,9 @@ public class SearchlightProcess extends ExecutableProcessImpl {
                 logger.debug("wii button pressed");
 
 //                newColor = alternateColors(currentColor);
-               outputColor.getData().setStringValue(colors.BLUE.name());
-               newColor= alternateColors(outputColor.getData().getStringValue());
+//               outputColor.getData().setStringValue(SearchlightState.BLUE.name());
+//               newColor = alternateColors(outputColor.getData().getStringValue());
+               newColor = alternateColors(currentColor);
 //               newColor = outputColor.getData().getStringValue();
 
             }
@@ -131,21 +132,21 @@ public class SearchlightProcess extends ExecutableProcessImpl {
     private String alternateColors(String current) {
         switch (current) {
             case "RED":
-                return colors.BLUE.name();
+                return SearchlightState.BLUE.name();
             case "BLUE":
-                return colors.CYAN.name();
+                return SearchlightState.CYAN.name();
             case "CYAN":
-                return colors.GREEN.name();
+                return SearchlightState.GREEN.name();
             case "GREEN":
-                return colors.WHITE.name();
+                return SearchlightState.WHITE.name();
             case "WHITE":
-                return colors.YELLOW.name();
+                return SearchlightState.YELLOW.name();
             case "YELLOW":
-                return colors.MAGENTA.name();
+                return SearchlightState.MAGENTA.name();
             case "MAGENTA":
-                return colors.RED.name();
+                return SearchlightState.RED.name();
             default:
-                return colors.OFF.name(); // Default to OFF if current color is not recognized or chosen!
+                return SearchlightState.OFF.name(); // Default to OFF if current color is not recognized or chosen!
         }
     }
 
