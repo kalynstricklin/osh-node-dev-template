@@ -1,96 +1,198 @@
 <sml:AggregateProcess xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sml="http://www.opengis.net/sensorml/2.0" xmlns:swe="http://www.opengis.net/swe/2.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" gml:id="F1">
-    <gml:identifier codeSpace="uid">1e8fc1b0-a655-44dc-8c2e-9b2cf4f3950c</gml:identifier>
-    <sml:typeOf xlink:href="urn:osh:process:pi-bot:searchlight"/>
+
+    <!-- ============================= -->
+    <!-- Descriptions -->
+    <!-- ============================= -->
+    <gml:description>
+        A simple aggregate process that scales according to linear equation y = 2.3x + 1.76 and then clips if below 15.0
+        In this example all processes are defined inline with no configuration settings. Parameter values are set inline.
+    </gml:description>
+    <gml:identifier codeSpace="uid">urn:myCompany:swe:process:scaleAndClip01</gml:identifier>
+    <gml:name>Scale and Clip Aggregate Process 01</gml:name>
+    <!-- ============================= -->
+    <!-- Aggregate Process Inputs -->
+    <!-- ============================= -->
     <sml:inputs>
         <sml:InputList>
-            <sml:input name="buttons">
-                <sml:ObservableProperty definition="http://sensorml.com/ont/swe/property/Color"/>
+            <sml:input name="valueIn">
+                <swe:Quantity definition="http://sensorml.com/ont/swe/property/DN">
+                    <swe:uom xlink:href="http://sensorml.com/ont/swe/uom/Any" />
+                </swe:Quantity>
             </sml:input>
-            <sml:input name="button1" xlink:href="https://www.nintendo.com/us/store/products/wii-remotee"/>
         </sml:InputList>
     </sml:inputs>
+    <!-- ============================= -->
+    <!-- Aggregate Process Outputs -->
+    <!-- ============================= -->
     <sml:outputs>
         <sml:OutputList>
-            <sml:output name="color">
-                <swe:DataRecord>
-                    <swe:label>Searchlight Data Record</swe:label>
-                    <swe:description>Pi-bot searchlight process</swe:description>
-                    <swe:field name="time">
-                        <swe:Time definition="http://www.opengis.net/def/property/OGC/0/SamplingTime" referenceFrame="http://www.opengis.net/def/trs/BIPM/0/UTC">
-                            <swe:label>Sampling Time</swe:label>
-                            <swe:uom xlink:href="http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"/>
-                        </swe:Time>
-                    </swe:field>
-                    <swe:field name="color">
-                        <swe:Category definition="http://sensorml.com/ont/swe/property/Color">
-                            <swe:label>RGBColor</swe:label>
-                            <swe:constraint>
-                                <swe:AllowedTokens>
-                                    <swe:value>OFF</swe:value>
-                                    <swe:value>WHITE</swe:value>
-                                    <swe:value>RED</swe:value>
-                                    <swe:value>MAGENTA</swe:value>
-                                    <swe:value>BLUE</swe:value>
-                                    <swe:value>CYAN</swe:value>
-                                    <swe:value>GREEN</swe:value>
-                                    <swe:value>YELLOW</swe:value>
-                                    <swe:value>UNKNOWN</swe:value>
-                                </swe:AllowedTokens>
-                            </swe:constraint>
-                        </swe:Category>
-                    </swe:field>
-                </swe:DataRecord>
+            <sml:output name="valueOut">
+                <swe:Quantity definition="http://sensorml.com/ont/swe/property/DN">
+                    <swe:uom xlink:href="http://sensorml.com/ont/swe/uom/Any" />
+                </swe:Quantity>
             </sml:output>
-            <sml:output name="status_info" xlink:href=""/>
         </sml:OutputList>
     </sml:outputs>
-    <sml:parameters>
-        <sml:ParameterList>
-            <sml:parameter name="samplingPeriod">
-                <swe:Quantity definition="http://sensorml.com/ont/swe/property/SamplingPeriod">
-                    <swe:label>Sampling Period</swe:label>
-                    <swe:uom code="s"/>
-                </swe:Quantity>
-            </sml:parameter>
-        </sml:ParameterList>
-    </sml:parameters>
     <sml:components>
         <sml:ComponentList>
-            <sml:component name="searchlight1">
-                <sml:PhysicalComponent gml:id="SEARCHLIGHT01">
-                    <sml:typeOf xlink:href="http://www.yahboom.net/study/G1-T-PI "/>
-                    <sml:configuration>
-                        <sml:Settings>
-                            <sml:setValue ref="parameters/samplingRate">1.0</sml:setValue>
-                            <sml:setMode ref="modes/choice1">highAccuracy</sml:setMode>
-                            <sml:setStatus ref="parameters/active">enabled</sml:setStatus>
-                        </sml:Settings>
-                    </sml:configuration>
+            <sml:component name="scale">
+
+                <!-- Component 1 - 1D Affine Transform -->
+                <sml:SimpleProcess gml:id="linearInterpolator01" definition="http://sensorml/ont/swe/process/LinearInterpolator">
+                    <!-- ============================= -->
+                    <!-- Linear Interpolator Descriptions -->
+                    <!-- ============================= -->
+                    <gml:description>A linear interpolator based on equation y = mx + b </gml:description>
+                    <gml:identifier codeSpace="uid">urn:myCompany:process:8755d73ab</gml:identifier>
+                    <gml:name>Linear Equation 01</gml:name>
+                    <!-- ============================= -->
+                    <!-- Linear Interpolator Inputs -->
+                    <!-- ============================= -->
+                    <sml:inputs>
+                        <sml:InputList>
+                            <sml:input name="x">
+                                <swe:Quantity definition="http://sensorml.com/ont/swe/property/DN">
+                                    <swe:uom xlink:href="http://sensorml.com/ont/swe/uom/Any" />
+                                </swe:Quantity>
+                            </sml:input>
+                        </sml:InputList>
+                    </sml:inputs>
+                    <!-- ============================= -->
+                    <!-- Linear Interpolator Outputs -->
+                    <!-- ============================= -->
                     <sml:outputs>
                         <sml:OutputList>
-                            <sml:output name="colorLight">
-                                <swe:Category/>
+                            <!-- scaled output value -->
+                            <sml:output name="y">
+                                <swe:Quantity definition="http://sensorml.com/ont/swe/property/DN">
+                                    <swe:uom xlink:href="http://sensorml.com/ont/swe/uom/Any" />
+                                </swe:Quantity>
                             </sml:output>
                         </sml:OutputList>
                     </sml:outputs>
-                </sml:PhysicalComponent>
+                    <!-- ============================= -->
+                    <!-- Linear Interpolator Parameters -->
+                    <!-- ============================= -->
+                    <sml:parameters>
+                        <sml:ParameterList>
+                            <sml:parameter name="slope">
+                                <swe:Quantity definition="http://sensorml.com/ont/swe/property/LinearSlope">
+                                    <swe:uom xlink:href="http://sensorml.com/ont/swe/uom/Any" />
+                                    <!-- slope value set inline -->
+                                    <swe:value>2.3</swe:value>
+                                </swe:Quantity>
+                            </sml:parameter>
+                            <sml:parameter name="intercept">
+                                <swe:Quantity definition="http://sensorml.com/ont/swe/property/LinearAxisIntercept">
+                                    <!-- y-intercept value set inline -->
+                                    <swe:uom xlink:href="http://sensorml.com/ont/swe/uom/Any" />
+                                    <swe:value>1.76</swe:value>
+                                </swe:Quantity>
+                            </sml:parameter>
+                        </sml:ParameterList>
+                    </sml:parameters>
+                    <sml:method xlink:href="http://sensors.ws/process/affineTransform1D"/>
+                </sml:SimpleProcess>
             </sml:component>
+
+            <!-- Component 2 - Threshold clipper -->
+            <sml:component name="clip">
+                <sml:SimpleProcess gml:id="thresholdClipper" definition="http://sensorml.com/ont/swe/process/thresholdClipper">
+                    <!-- ============================= -->
+                    <!-- Threshold Clipper Descriptions -->
+                    <!-- ============================= -->
+                    <gml:description>
+                        A process that clips anything below threshold;
+                        values higher than threshold to passValue output;
+                        Values below threshold sent to failValue output
+                    </gml:description>
+                    <gml:identifier codeSpace="uid">urn:myCompany:swe:process:65d74a65c</gml:identifier>
+                    <gml:name>Threshold Clipper 01</gml:name>
+                    <!-- ============================= -->
+                    <!-- Threshold Clipper Inputs -->
+                    <!-- ============================= -->
+                    <sml:inputs>
+                        <sml:InputList>
+                            <sml:input name="valueIn">
+                                <swe:Quantity definition="http://sensorml.com/ont/swe/property/DN">
+                                    <swe:uom xlink:href="http://sensorml.com/ont/swe/uom/Any" />
+                                </swe:Quantity>
+                            </sml:input>
+                        </sml:InputList>
+                    </sml:inputs>
+                    <!-- ============================= -->
+                    <!-- Threshold Clipper Outputs -->
+                    <!-- ============================= -->
+                    <sml:outputs>
+                        <sml:OutputList>
+                            <!-- output for values that pass -->
+                            <sml:output name="passValue">
+                                <swe:Quantity definition="http://sensorml.com/ont/swe/property/PassValue">
+                                    <swe:uom xlink:href="http://sensorml.com/ont/swe/uom/Any" />
+                                </swe:Quantity>
+                            </sml:output>
+                            <!-- output for values that fail -->
+                            <sml:output name="failValue">
+                                <swe:Quantity definition="http://sensorml.com/ont/swe/property/FailValue">
+                                    <swe:uom xlink:href="http://sensorml.com/ont/swe/uom/Any" />
+                                </swe:Quantity>
+                            </sml:output>
+                        </sml:OutputList>
+                    </sml:outputs>
+                    <!-- ============================= -->
+                    <!-- Threshold Clipper Parameters -->
+                    <!-- ============================= -->
+                    <sml:parameters>
+                        <sml:ParameterList>
+                            <sml:parameter name="threshold">
+                                <swe:Quantity definition="http://sensorml.com/ont/swe/property/LowerThreshold">
+                                    <swe:uom xlink:href="http://sensorml.com/ont/swe/uom/Any" />
+                                    <!-- threshold value set inline -->
+                                    <swe:value>15.0</swe:value>
+                                </swe:Quantity>
+                            </sml:parameter>
+                        </sml:ParameterList>
+                    </sml:parameters>
+                    <sml:method xlink:href="http://sensors.ws/process/clip"/>
+                </sml:SimpleProcess>
+            </sml:component>
+
         </sml:ComponentList>
     </sml:components>
+
+    <!-- ======================================= -->
+    <!-- Aggregate process links declared -->
+    <!-- ======================================== -->
     <sml:connections>
         <sml:ConnectionList>
+
+            <!-- Connect AggregateProcess input to LinearInterpolator (scale) input -->
             <sml:connection>
                 <sml:Link>
-                    <sml:source ref="components/sensor1/outputs/colorLight"/>
-                    <sml:destination ref="outputs/color/colorLight"/>
+                    <sml:source ref="inputs/valueIn" />
+                    <sml:destination ref="components/scale/inputs/x" />
                 </sml:Link>
             </sml:connection>
+
+            <!-- Connect LinearInterpolator (scale) output to ThresholdClipper (clip) input -->
             <sml:connection>
                 <sml:Link>
-                    <sml:source ref="components/sensor1/inputs/button1"/>
-                    <sml:destination ref="inputs/buttons/button1"/>
+                    <sml:source ref="components/scale/outputs/y" />
+                    <sml:destination ref="components/clip/inputs/valueIn" />
                 </sml:Link>
             </sml:connection>
+
+            <!-- Connect ThresholdClipper (clip) passValue output to AggregateProcess passValue output -->
+            <sml:connection>
+                <sml:Link>
+                    <sml:source ref="components/clip/outputs/passValue" />
+                    <sml:destination ref="outputs/valueOut" />
+                </sml:Link>
+            </sml:connection>
+
+            <!-- Note: ThresholdClipper (clip) failValue output is ignored in this example -->
+
         </sml:ConnectionList>
     </sml:connections>
+
 </sml:AggregateProcess>

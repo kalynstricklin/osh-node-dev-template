@@ -7,12 +7,10 @@ package com.botts.process.light;
 import net.opengis.swe.v20.*;
 import net.opengis.swe.v20.Boolean;
 import org.sensorhub.api.processing.OSHProcessInfo;
-import org.sensorhub.impl.sensor.pibot.searchlight.SearchlightState;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.vast.process.ExecutableProcessImpl;
 import org.vast.process.ProcessException;
-import org.vast.sensorML.SMLUtils;
 import org.vast.swe.SWEHelper;
 
 /**
@@ -30,12 +28,22 @@ public class SearchlightProcess extends ExecutableProcessImpl {
             SearchlightProcess.class);
 
     protected static final Logger logger = LoggerFactory.getLogger(SearchlightProcess.class);
-
     private final Boolean inputButton;
-    private final Category outputColor;
-    private final Time inputTimeStamp;
-    private final Time outputTimeStamp;
+//    private DataRecord inputButtons;
+    private DataRecord outputColor;
 
+    String newColor;
+
+    enum colors{ OFF,
+            WHITE,
+            RED,
+            MAGENTA,
+            BLUE,
+            CYAN,
+            GREEN,
+            YELLOW,
+            UNKNOWN}
+    boolean isOnePressed = false;
 
     public SearchlightProcess() {
 
@@ -46,10 +54,7 @@ public class SearchlightProcess extends ExecutableProcessImpl {
 
         // Inputs
         inputData.add("buttons", sweFactory.createRecord()
-                .addField("time", inputTimeStamp = sweFactory.createTime()
-                        .definition(SWEHelper.getPropertyUri("SamplingTime"))
-                        .asSamplingTimeIsoUTC()
-                        .build())
+
                 .addField("button1", inputButton = sweFactory.createBoolean()
                         .definition(SWEHelper.getPropertyUri("button1"))
                         .label("InputButtonOne")
@@ -58,24 +63,20 @@ public class SearchlightProcess extends ExecutableProcessImpl {
 
 
         // Outputs
-        outputData.add("colors", sweFactory.createRecord()
-                .addField("time", outputTimeStamp = sweFactory.createTime()
-                        .definition(SWEHelper.getPropertyUri("SamplingTime"))
-                        .asSamplingTimeIsoUTC()
-                        .build())
-                .addField("color", outputColor = sweFactory.createCategory()
+        outputData.add("colors", outputColor = sweFactory.createRecord()
+                .addField("color", sweFactory.createCategory()
                         .definition(SWEHelper.getPropertyUri("Color"))
                         .label("RBGColor")
-                                .addAllowedValues(
-                                        SearchlightColorsEnum.OFF.name(),
-                                        SearchlightColorsEnum.WHITE.name(),
-                                        SearchlightColorsEnum.RED.name(),
-                                        SearchlightColorsEnum.MAGENTA.name(),
-                                        SearchlightColorsEnum.BLUE.name(),
-                                        SearchlightColorsEnum.CYAN.name(),
-                                        SearchlightColorsEnum.GREEN.name(),
-                                        SearchlightColorsEnum.YELLOW.name(),
-                                        SearchlightColorsEnum.UNKNOWN.name())
+                        .addAllowedValues(
+                                colors.OFF.name(),
+                                colors.WHITE.name(),
+                                colors.RED.name(),
+                                colors.MAGENTA.name(),
+                                colors.BLUE.name(),
+                                colors.YELLOW.name(),
+                                colors.CYAN.name(),
+                                colors.GREEN.name(),
+                                colors.UNKNOWN.name())
                         .build())
 
                 .build());
@@ -91,7 +92,6 @@ public class SearchlightProcess extends ExecutableProcessImpl {
         logger.debug("Initializing");
 
         super.init();
-        // read params if necessary
 
         logger.debug("Initialized");
     }
@@ -99,56 +99,54 @@ public class SearchlightProcess extends ExecutableProcessImpl {
     @Override
     public void execute() {
 
-        logger.debug("Processing event");
+        try{
 
-        double timeStamp = inputTimeStamp.getValue().getAsDouble() * 1000.0;
+            // status of wii button
+            isOnePressed = inputButton.getData().getBooleanValue();
 
-        boolean buttonPressed = inputButton.getData().getBooleanValue();
-
-        String colorValue = outputColor.getData().getStringValue();
-        SearchlightColorsEnum searchlightColor = colorValue != null ? SearchlightColorsEnum.valueOf(colorValue) : SearchlightColorsEnum.UNKNOWN;
-
-        if(buttonPressed){
-            logger.info("button pressed, changing color of searchlight");
-            SearchlightColorsEnum changeColor = alternateColors(searchlightColor);
-
-            // update color
-            logger.info("setting output color");
-            outputColor.getData().setUnderlyingObject(changeColor);
-
-            //copy timestamp for when button is pressed and light changes
-            double timestamp = inputTimeStamp.getData().getDoubleValue();
-            outputTimeStamp.getData().setDoubleValue(timeStamp);
+            // searchlight color state
+            String currentColor = outputColor.getData().getStringValue();
 
 
+            //update color if button is pressed!
+            if(isOnePressed) {
+                logger.debug("wii button pressed");
+
+//                newColor = alternateColors(currentColor);
+               outputColor.getData().setStringValue(colors.BLUE.name());
+               newColor= alternateColors(outputColor.getData().getStringValue());
+//               newColor = outputColor.getData().getStringValue();
+
+            }
+            logger.debug("Current Color: {}", outputColor.getData().getStringValue());
+
+            outputColor.getData().setStringValue(newColor);
+
+        }catch (Exception e){
+            logger.debug("Error during execution of process");
         }
-
-
-        logger.debug("Processed event");
     }
 
-    private SearchlightColorsEnum alternateColors(SearchlightColorsEnum current){
-        switch(current){
-            case RED:
-                return SearchlightColorsEnum.BLUE;
-            case BLUE:
-                return SearchlightColorsEnum.CYAN;
-            case CYAN:
-                return SearchlightColorsEnum.GREEN;
-            case GREEN:
-                return SearchlightColorsEnum.WHITE;
-            case WHITE:
-                return SearchlightColorsEnum.YELLOW;
-            case YELLOW:
-                return SearchlightColorsEnum.MAGENTA;
-            case MAGENTA:
-                return SearchlightColorsEnum.RED;
-            case UNKNOWN:
-                return SearchlightColorsEnum.UNKNOWN;
-            default:
-                return SearchlightColorsEnum.OFF;
-        }
 
+    private String alternateColors(String current) {
+        switch (current) {
+            case "RED":
+                return colors.BLUE.name();
+            case "BLUE":
+                return colors.CYAN.name();
+            case "CYAN":
+                return colors.GREEN.name();
+            case "GREEN":
+                return colors.WHITE.name();
+            case "WHITE":
+                return colors.YELLOW.name();
+            case "YELLOW":
+                return colors.MAGENTA.name();
+            case "MAGENTA":
+                return colors.RED.name();
+            default:
+                return colors.OFF.name(); // Default to OFF if current color is not recognized or chosen!
+        }
     }
 
     @Override

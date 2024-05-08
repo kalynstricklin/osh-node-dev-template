@@ -75,10 +75,8 @@ public class WiiDriver extends AbstractSensorModule<WiiConfig> {
             }
             if (!pairWii.motes.isEmpty()){
                 mote = pairWii.motes.get(0);
-//                if(mote != null){
-//                    wiiRemote = WiiRemote.getInstance();
-//                }
             }
+
             output.doStart();
         }
 
