@@ -150,7 +150,7 @@ public class TestSearchlightProcess
 
         LinkImpl outputToCommand = new LinkImpl();
         outputToCommand.setSource("components/process0/outputs/colors/color");
-        outputToCommand.setDestination("outputs/light");
+        outputToCommand.setDestination("outputs/color");
 
 
         // add connections

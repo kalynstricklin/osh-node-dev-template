@@ -29,9 +29,9 @@ public class SearchlightProcess extends ExecutableProcessImpl {
 
     protected static final Logger logger = LoggerFactory.getLogger(SearchlightProcess.class);
     private final Boolean inputButton;
-//    private DataRecord inputButtons;
-    private DataRecord outputColor;
 
+    String updateColor;
+    private DataRecord outputColor;
     String newColor;
 
     enum SearchlightState{
@@ -64,7 +64,7 @@ public class SearchlightProcess extends ExecutableProcessImpl {
 
         // Outputs
         outputData.add("colors", outputColor = sweFactory.createRecord()
-                .addField("color", sweFactory.createCategory()
+                .addField("Color", sweFactory.createCategory()
                         .definition(SWEHelper.getPropertyUri("Color"))
                         .label("RBG Color")
                         .addAllowedValues(
@@ -77,12 +77,8 @@ public class SearchlightProcess extends ExecutableProcessImpl {
                                 SearchlightState.CYAN.name(),
                                 SearchlightState.GREEN.name())
                         .value(SearchlightState.OFF.name())
-                        .build())
-
+                )
                 .build());
-        
-        // set encoding options so that output datablocks are generated correctly
-        BinaryBlock dataEncoding = sweFactory.newBinaryBlock();
 
     }
 
@@ -99,38 +95,39 @@ public class SearchlightProcess extends ExecutableProcessImpl {
     @Override
     public void execute() {
 
+
+
+
         try{
-
-            // status of wii button
+            // color changing = button 1 on wii remote
             isOnePressed = inputButton.getData().getBooleanValue();
+            // make default state off (usually unknown)
+           // outputColor.getData().setStringValue(SearchlightState.OFF.name());
 
-            // searchlight color state
-            String currentColor = outputColor.getData().getStringValue();
-
-
-            //update color if button is pressed!
-            if(isOnePressed) {
-                logger.debug("wii button pressed");
-
-//                newColor = alternateColors(currentColor);
-//               outputColor.getData().setStringValue(SearchlightState.BLUE.name());
-//               newColor = alternateColors(outputColor.getData().getStringValue());
-               newColor = alternateColors(currentColor);
-//               newColor = outputColor.getData().getStringValue();
-
+            // change color if button 1 is pressed
+            if(isOnePressed){
+                newColor = alternateColors(outputColor.getData().getStringValue());
             }
-            logger.debug("Current Color: {}", outputColor.getData().getStringValue());
 
+            logger.debug("New color: {}", newColor);
             outputColor.getData().setStringValue(newColor);
 
         }catch (Exception e){
-            logger.debug("Error during execution of process");
+            logger.debug("Error during execution process");
         }
     }
 
 
-    private String alternateColors(String current) {
-        switch (current) {
+    private String alternateColors(String state) {
+        logger.debug("Alt Color: {}", state);
+
+        if(state == null){
+            state = "OFF";
+        }
+
+        switch (state) {
+            case "OFF":
+                return SearchlightState.RED.name();
             case "RED":
                 return SearchlightState.BLUE.name();
             case "BLUE":
