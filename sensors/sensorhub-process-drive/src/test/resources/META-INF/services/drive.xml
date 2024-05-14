@@ -1,0 +1,164 @@
+<sml:AggregateProcess xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sml="http://www.opengis.net/sensorml/2.0" xmlns:swe="http://www.opengis.net/swe/2.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" gml:id="F1">
+  <gml:identifier codeSpace="uid">9a5cbc9c-cf26-4060-bc60-c1020ba31acb</gml:identifier>
+  <sml:outputs>
+    <sml:OutputList>
+      <sml:output name="speed">
+        <swe:Quantity definition="http://sensorml.com/ont/swe/property/Power">
+          <swe:label>power</swe:label>
+        </swe:Quantity>
+      </sml:output>
+      <sml:output name="direction">
+        <swe:Quantity definition="http://sensorml.com/ont/swe/property/MotorControl">
+          <swe:label>direction</swe:label>
+        </swe:Quantity>
+      </sml:output>
+    </sml:OutputList>
+  </sml:outputs>
+  <sml:components>
+    <sml:ComponentList>
+      <sml:component name="source">
+        <sml:SimpleProcess gml:id="F2">
+          <sml:typeOf xlink:href="urn:osh:process:datasource:stream"/>
+          <sml:configuration>
+            <sml:Settings>
+              <sml:setValue ref="parameters/producerURI">urn:osh:sensor:universalcontroller</sml:setValue>
+            </sml:Settings>
+          </sml:configuration>
+        </sml:SimpleProcess>
+      </sml:component>
+      <sml:component name="process">
+        <sml:SimpleProcess gml:id="F3">
+          <sml:typeOf xlink:href="urn:osh:process:pi-bot:drive"/>
+          <sml:inputs>
+            <sml:InputList>
+              <sml:input name="pov">
+                <swe:Quantity>
+                  <swe:label></swe:label>
+                  <swe:uom xlink:href="http://qudt.org/vocab/unit/UNITLESS"/>
+                </swe:Quantity>
+              </sml:input>
+              <sml:input name="Minus">
+                <swe:Quantity>
+                  <swe:label>Decrease Speed</swe:label>
+                  <swe:uom xlink:href="http://qudt.org/vocab/unit/UNITLESS"/>
+                </swe:Quantity>
+              </sml:input>
+              <sml:input name="Plus">
+                <swe:Quantity>
+                  <swe:label>Increase Speed</swe:label>
+                  <swe:uom xlink:href="http://qudt.org/vocab/unit/UNITLESS"/>
+                </swe:Quantity>
+              </sml:input>
+            </sml:InputList>
+          </sml:inputs>
+          <sml:outputs>
+            <sml:OutputList>
+              <sml:output name="Power">
+                <swe:Quantity definition="http://sensorml.com/ont/swe/property/Power">
+                  <swe:description>Denotes the percentage of power to apply to the drive actuators</swe:description>
+                  <swe:uom code="%"/>
+                </swe:Quantity>
+              </sml:output>
+              <sml:output name="Direction">
+                <swe:DataRecord definition="http://sensorml.com/ont/swe/property/MotorControl">
+                  <swe:description>Controls direction of motion for tracked robotics platform</swe:description>
+                  <swe:field name="forward">
+                    <swe:Quantity definition="http://sensorml.com/ont/swe/property/forward">
+                      <swe:uom xlink:href="http://qudt.org/vocab/unit/UNITLESS"/>
+                    </swe:Quantity>
+                  </swe:field>
+                  <swe:field name="reverse">
+                    <swe:Quantity definition="http://sensorml.com/ont/swe/property/reverse">
+                      <swe:uom xlink:href="http://qudt.org/vocab/unit/UNITLESS"/>
+                    </swe:Quantity>
+                  </swe:field>
+                  <swe:field name="left">
+                    <swe:Quantity definition="http://sensorml.com/ont/swe/property/left">
+                      <swe:uom xlink:href="http://qudt.org/vocab/unit/UNITLESS"/>
+                    </swe:Quantity>
+                  </swe:field>
+                  <swe:field name="right">
+                    <swe:Quantity definition="http://sensorml.com/ont/swe/property/right">
+                      <swe:uom xlink:href="http://qudt.org/vocab/unit/UNITLESS"/>
+                    </swe:Quantity>
+                  </swe:field>
+                  <swe:field name="reverseLeft">
+                    <swe:Quantity definition="http://sensorml.com/ont/swe/property/reverseLeft">
+                      <swe:uom xlink:href="http://qudt.org/vocab/unit/UNITLESS"/>
+                    </swe:Quantity>
+                  </swe:field>
+                  <swe:field name="reverseRight">
+                    <swe:Quantity definition="http://sensorml.com/ont/swe/property/reverseRight">
+                      <swe:uom xlink:href="http://qudt.org/vocab/unit/UNITLESS"/>
+                    </swe:Quantity>
+                  </swe:field>
+                  <swe:field name="forwardLeft">
+                    <swe:Quantity definition="http://sensorml.com/ont/swe/property/forwardLeft">
+                      <swe:uom xlink:href="http://qudt.org/vocab/unit/UNITLESS"/>
+                    </swe:Quantity>
+                  </swe:field>
+                  <swe:field name="forwardRight">
+                    <swe:Quantity definition="http://sensorml.com/ont/swe/property/forwardRight">
+                      <swe:uom xlink:href="http://qudt.org/vocab/unit/UNITLESS"/>
+                    </swe:Quantity>
+                  </swe:field>
+                </swe:DataRecord>
+              </sml:output>
+            </sml:OutputList>
+          </sml:outputs>
+        </sml:SimpleProcess>
+      </sml:component>
+      <sml:component name="sink0">
+        <sml:SimpleProcess gml:id="F4">
+          <sml:typeOf xlink:href="urn:osh:process:datasink:commandstream"/>
+          <sml:configuration>
+            <sml:Settings>
+              <sml:setValue ref="parameters/systemUID">urn:pibot:driver-sensor</sml:setValue>
+              <sml:setValue ref="parameters/inputName">DriveCOntrol</sml:setValue>
+            </sml:Settings>
+          </sml:configuration>
+        </sml:SimpleProcess>
+      </sml:component>
+    </sml:ComponentList>
+  </sml:components>
+  <sml:connections>
+    <sml:ConnectionList>
+      <sml:connection>
+        <sml:Link>
+          <sml:source ref="components/source0/outputs/UniversalControllerOutput/gamepads/gamepad0/Left Thumb"/>
+          <sml:destination ref="components/process0/inputs/Minus"/>
+        </sml:Link>
+      </sml:connection>
+      <sml:connection>
+        <sml:Link>
+          <sml:source ref="components/source0/outputs/UniversalControllerOutput/gamepads/gamepad0/Right Thumb"/>
+          <sml:destination ref="components/process0/inputs/Plus"/>
+        </sml:Link>
+      </sml:connection>
+      <sml:connection>
+        <sml:Link>
+          <sml:source ref="components/speedProcess/outputs/Direction"/>
+          <sml:destination ref="components/sink0/inputs/DriveControl/Command"/>
+        </sml:Link>
+      </sml:connection>
+      <sml:connection>
+        <sml:Link>
+          <sml:source ref="components/speedProcess/outputs/Power"/>
+          <sml:destination ref="components/sink0/inputs/DriveControl/Power"/>
+        </sml:Link>
+      </sml:connection>
+      <sml:connection>
+        <sml:Link>
+          <sml:source ref="components/speedProcess/outputs/Power"/>
+          <sml:destination ref="outputs/speed"/>
+        </sml:Link>
+      </sml:connection>
+      <sml:connection>
+        <sml:Link>
+          <sml:source ref="components/speedProcess/outputs/Direction"/>
+          <sml:destination ref="outputs/direction"/>
+        </sml:Link>
+      </sml:connection>
+    </sml:ConnectionList>
+  </sml:connections>
+</sml:AggregateProcess>

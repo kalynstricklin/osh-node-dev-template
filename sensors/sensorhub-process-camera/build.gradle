@@ -1,5 +1,5 @@
-description = 'Search Light Processing'
-ext.details = 'Search Light Processing'
+description = 'Pi-bot Drive Processing'
+ext.details = 'Pi-bot Drive Processing'
 version = '1.0.0'
 
 dependencies {
@@ -11,7 +11,8 @@ dependencies {
     embeddedImpl 'org.bytedeco:ffmpeg-platform:4.2.1-1.5.2'
     testImplementation('junit:junit:4.13.1')
 
-    implementation project(':pi-bot-pibot-searchlight')
+    implementation project(':pi-bot-pibot-camera')
+
 }
 
 

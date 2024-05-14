@@ -31,7 +31,10 @@ dependencies {
 
   //processing
   implementation project(':sensorhub-process-light')
+  implementation project(':sensorhub-process-searchlight')
   implementation project(':sensorhub-process')
+  implementation project(':sensorhub-process-drive')
+  implementation project(':sensorhub-process-camera')
 
 
 //  implementation project(':sensorhub-umbra-tasking')

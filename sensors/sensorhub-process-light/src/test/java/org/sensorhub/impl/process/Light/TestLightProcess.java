@@ -1,15 +1,13 @@
-package org.sensorhub.impl.process.searchLight;
+package org.sensorhub.impl.process.Light;
 
 
 import com.botts.process.light.SearchlightProcess;
 import net.opengis.gml.v32.Reference;
 import net.opengis.gml.v32.impl.ReferenceImpl;
-import net.opengis.sensorml.v20.ObservableProperty;
 import net.opengis.sensorml.v20.Settings;
 import net.opengis.sensorml.v20.SimpleProcess;
 import net.opengis.sensorml.v20.impl.SettingsImpl;
-import net.opengis.swe.v20.DataRecord;
-import net.opengis.swe.v20.DataStream;
+import net.opengis.swe.v20.Category;
 import org.junit.Assert;
 import org.junit.Test;
 import org.sensorhub.api.data.IStreamingDataInterface;
@@ -17,7 +15,6 @@ import org.sensorhub.api.processing.IProcessModule;
 import org.sensorhub.impl.module.ModuleRegistry;
 import org.sensorhub.impl.processing.SMLProcessConfig;
 import org.sensorhub.impl.processing.SMLProcessImpl;
-import org.vast.process.ExecutableChainImpl;
 import org.vast.sensorML.*;
 import org.vast.swe.SWEHelper;
 
@@ -25,7 +22,7 @@ import java.util.UUID;
 import java.util.concurrent.atomic.AtomicInteger;
 
 
-public class TestSearchlightProcess
+public class TestLightProcess
 {
     static String SENSOR1_ID = "PI-BOT-SEARCHLIGHT";
 
@@ -89,25 +86,18 @@ public class TestSearchlightProcess
 
         //serialize
         AggregateProcessImpl aggregate = new AggregateProcessImpl();
-//        smlHelper.makeProcessExecutable(aggregate, false);
-//        aggregate.setExecutableImpl(simple);
 
         // set type
         aggregate.setUniqueIdentifier(UUID.randomUUID().toString());
-//        aggregate.setTypeOf(simple.getTypeOf());
+
 
        // set output for process :0
+        Category output = swe.createCategory()
+                        .definition(SWEHelper.getPropertyUri("Color"))
+                        .label("searchlight")
+                        .build();
 
-//        DataStream stream = swe.
-//
-//
-//        DataRecord rec = swe.createRecord()
-//                .addField("light", swe.createQuantity()
-//                        .definition("http://sensorml.com/ont/swe/property/DN")
-//                        .uom("http://sensorml.com/ont/swe/uom/Any")
-//                        .build())
-//                .build();
-//        aggregate.addOutput("light", rec);
+        aggregate.addOutput("SearchlightColor", output);
 
 
 
@@ -144,13 +134,13 @@ public class TestSearchlightProcess
         inputToProcess.setDestination("components/process0/inputs/buttons/button1");
 
         LinkImpl process = new LinkImpl();
-        process.setSource("components/process0/outputs/colors/color");
+        process.setSource("components/process0/outputs/process/Color");
         process.setDestination("components/sink0/inputs/SearchlightControl/Color");
 
 
         LinkImpl outputToCommand = new LinkImpl();
-        outputToCommand.setSource("components/process0/outputs/colors/color");
-        outputToCommand.setDestination("outputs/color");
+        outputToCommand.setSource("components/process0/outputs/process/Color");
+        outputToCommand.setDestination("outputs/SearchlightColor");
 
 
         // add connections
