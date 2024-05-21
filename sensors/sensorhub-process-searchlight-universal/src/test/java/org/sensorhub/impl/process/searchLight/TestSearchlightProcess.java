@@ -1,6 +1,7 @@
 package org.sensorhub.impl.process.searchLight;
 
 
+import com.botts.process.searchlight.GamepadProcessChain;
 import com.botts.process.searchlight.SearchlightProcess;
 import net.opengis.gml.v32.Reference;
 import net.opengis.gml.v32.impl.ReferenceImpl;
@@ -8,6 +9,7 @@ import net.opengis.sensorml.v20.Settings;
 import net.opengis.sensorml.v20.SimpleProcess;
 import net.opengis.sensorml.v20.impl.SettingsImpl;
 import net.opengis.swe.v20.Category;
+import net.opengis.swe.v20.Quantity;
 import org.junit.Assert;
 import org.junit.Test;
 import org.sensorhub.api.data.IStreamingDataInterface;
@@ -71,18 +73,29 @@ public class TestSearchlightProcess
     @Test
     public void testSearchProcess() throws Exception{
 
+        //searchlight process
         SearchlightProcess searchlightProcess = new SearchlightProcess();
         searchlightProcess.init();
         System.out.println(searchlightProcess.getProcessInfo().getUri());
+
+        //gamepad process
+        GamepadProcessChain gamePadProcessChain = new GamepadProcessChain();
+        gamePadProcessChain.init();
+        System.out.println(gamePadProcessChain.getProcessInfo().getUri());
 
         SMLUtils smlHelper = new SMLUtils(SMLUtils.V2_0);
         SWEHelper swe = new SWEHelper();
         SMLFactory smlFac = new SMLFactory();
 
-        SimpleProcessImpl simple = new SimpleProcessImpl();
+        SimpleProcessImpl search = new SimpleProcessImpl();
         Reference processRef = new ReferenceImpl();
         processRef.setHref("urn:osh:process:pi-bot:searchlight");
-        simple.setExecutableImpl(searchlightProcess);
+        search.setExecutableImpl(searchlightProcess);
+
+        SimpleProcessImpl gamePad = new SimpleProcessImpl();
+        Reference processReference = new ReferenceImpl();
+        processReference.setHref("urn:osh:process:gamepadchain");
+        gamePad.setExecutableImpl(gamePadProcessChain);
 
         //serialize
         AggregateProcessImpl aggregate = new AggregateProcessImpl();
@@ -90,15 +103,18 @@ public class TestSearchlightProcess
         // set type
         aggregate.setUniqueIdentifier(UUID.randomUUID().toString());
 
-
        // set output for process :0
         Category output = swe.createCategory()
                         .definition(SWEHelper.getPropertyUri("Color"))
                         .label("searchlight")
                         .build();
+        Quantity button = swe.createQuantity()
+                        .definition(SWEHelper.getPropertyUri("A"))
+                        .label("A")
+                        .build();
 
         aggregate.addOutput("SearchlightColor", output);
-
+        aggregate.addOutput("A", button);
 
 
         //COMPONENT LIST
@@ -110,10 +126,12 @@ public class TestSearchlightProcess
         Settings sourceConfig = new SettingsImpl();
         sourceConfig.addSetValue("parameters/producerURI","urn:osh:sensor:universalcontroller");
         remote.setConfiguration(sourceConfig);
-        aggregate.addComponent("source0", remote);
+        aggregate.addComponent("remoteSource", remote);
 
         // process component
-        aggregate.addComponent("process0", simple);
+        aggregate.addComponent("searchlightProcess", search);
+        aggregate.addComponent("buttonProcess", gamePad);
+
         // pi-bot command stream
         SimpleProcess sink = new SimpleProcessImpl();
         Reference sinkRef = new ReferenceImpl();
@@ -128,18 +146,17 @@ public class TestSearchlightProcess
 
         // connections
         LinkImpl inputButton = new LinkImpl();
-//        inputButton.setSource("components/source0/outputs/output1/gamepads/gamepad0/");
-        inputButton.setSource("components/source0/outputs/output1/");
-        inputButton.setDestination("components/process0/inputs/buttons/button1");
+        inputButton.setSource("components/remoteSource/outputs/UniversalControllerOutput/gamepads");
+        inputButton.setDestination("components/process0/inputs/buttonA");
 
 
         LinkImpl process = new LinkImpl();
-        process.setSource("components/process0/outputs/process0/Color");
+        process.setSource("components/process0/outputs/searchlightProcess/Color");
         process.setDestination("components/sink0/inputs/SearchlightControl/Color");
 
 
         LinkImpl outputToCommand = new LinkImpl();
-        outputToCommand.setSource("components/process0/outputs/process/Color");
+        outputToCommand.setSource("components/searchlightProcess/outputs/process/Color");
         outputToCommand.setDestination("outputs/SearchlightColor");
 
 

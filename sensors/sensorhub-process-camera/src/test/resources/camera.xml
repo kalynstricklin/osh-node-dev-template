@@ -1,0 +1,144 @@
+<sml:AggregateProcess xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sml="http://www.opengis.net/sensorml/2.0" xmlns:swe="http://www.opengis.net/swe/2.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" gml:id="F1">
+  <gml:identifier codeSpace="uid">a6263f92-2c79-45b4-8e38-ea5fa5264e56</gml:identifier>
+  <sml:outputs>
+    <sml:OutputList>
+      <sml:output name="tilt">
+        <swe:Quantity definition="http://sensorml.com/ont/swe/property/Tilt">
+          <swe:label>tilt</swe:label>
+          <swe:uom code="deg"/>
+        </swe:Quantity>
+      </sml:output>
+      <sml:output name="pan">
+        <swe:Quantity definition="http://sensorml.com/ont/swe/property/Pan">
+          <swe:label>pan</swe:label>
+          <swe:uom code="deg"/>
+        </swe:Quantity>
+      </sml:output>
+    </sml:OutputList>
+  </sml:outputs>
+  <sml:components>
+    <sml:ComponentList>
+      <sml:component name="source0">
+        <sml:SimpleProcess gml:id="F2">
+          <sml:typeOf xlink:href="urn:osh:process:datasource:stream"/>
+          <sml:configuration>
+            <sml:Settings>
+              <sml:setValue ref="parameters/producerURI">urn:osh:sensor:universalcontroller</sml:setValue>
+            </sml:Settings>
+          </sml:configuration>
+        </sml:SimpleProcess>
+      </sml:component>
+      <sml:component name="process0">
+        <sml:SimpleProcess gml:id="F3">
+          <sml:typeOf xlink:href="urn:osh:process:pi-bot:camera"/>
+          <sml:inputs>
+            <sml:InputList>
+              <sml:input name="pov">
+                <swe:Quantity>
+                  <swe:label>d-pad</swe:label>
+                  <swe:uom xlink:href="http://qudt.org/vocab/unit/UNITLESS"/>
+                </swe:Quantity>
+              </sml:input>
+              <sml:input name="Minus">
+                <swe:Quantity>
+                  <swe:label>Decrease Tilt</swe:label>
+                  <swe:uom xlink:href="http://qudt.org/vocab/unit/UNITLESS"/>
+                </swe:Quantity>
+              </sml:input>
+              <sml:input name="Plus">
+                <swe:Quantity>
+                  <swe:label>Increase Tilt</swe:label>
+                  <swe:uom xlink:href="http://qudt.org/vocab/unit/UNITLESS"/>
+                </swe:Quantity>
+              </sml:input>
+            </sml:InputList>
+          </sml:inputs>
+          <sml:outputs>
+            <sml:OutputList>
+              <sml:output name="Pan">
+                <swe:Quantity definition="http://sensorml.com/ont/swe/property/servo-angle">
+                  <swe:description>The angle in degrees to which the servo is to turn</swe:description>
+                  <swe:uom code="deg"/>
+                </swe:Quantity>
+              </sml:output>
+              <sml:output name="Tilt">
+                <swe:Quantity updatable="true" definition="http://sensorml.com/ont/swe/property/servo-angle">
+                  <swe:description>The angle in degrees to which the servo is to turn</swe:description>
+                  <swe:uom code="deg"/>
+                </swe:Quantity>
+              </sml:output>
+            </sml:OutputList>
+          </sml:outputs>
+        </sml:SimpleProcess>
+      </sml:component>
+      <sml:component name="sinkPan">
+        <sml:SimpleProcess gml:id="F4">
+          <sml:typeOf xlink:href="urn:osh:process:datasink:commandstream"/>
+          <sml:configuration>
+            <sml:Settings>
+              <sml:setValue ref="parameters/systemUID">urn:sentinel:pibot:camera</sml:setValue>
+              <sml:setValue ref="parameters/inputName">CameraControl</sml:setValue>
+            </sml:Settings>
+          </sml:configuration>
+        </sml:SimpleProcess>
+      </sml:component>
+      <sml:component name="sinkTilt">
+        <sml:SimpleProcess gml:id="F5">
+          <sml:typeOf xlink:href="urn:osh:process:datasink:commandstream"/>
+          <sml:configuration>
+            <sml:Settings>
+              <sml:setValue ref="parameters/systemUID">urn:sentinel:pibot:camera</sml:setValue>
+              <sml:setValue ref="parameters/inputName">CameraControl</sml:setValue>
+            </sml:Settings>
+          </sml:configuration>
+        </sml:SimpleProcess>
+      </sml:component>
+    </sml:ComponentList>
+  </sml:components>
+  <sml:connections>
+    <sml:ConnectionList>
+      <sml:connection>
+        <sml:Link>
+          <sml:source ref="components/source0/outputs/output1/gamepads/gamepad0/LeftThumb"/>
+          <sml:destination ref="components/process0/inputs/Minus"/>
+        </sml:Link>
+      </sml:connection>
+      <sml:connection>
+        <sml:Link>
+          <sml:source ref="components/source0/outputs/output2/gamepads/gamepad0/RightThumb"/>
+          <sml:destination ref="components/process0/inputs/Plus"/>
+        </sml:Link>
+      </sml:connection>
+      <sml:connection>
+        <sml:Link>
+          <sml:source ref="components/source0/outputs/output3/gamepads/gamepad0/pov"/>
+          <sml:destination ref="components/process0/inputs/pov"/>
+        </sml:Link>
+      </sml:connection>
+      <sml:connection>
+        <sml:Link>
+          <sml:source ref="components/process0/outputs/Pan"/>
+          <sml:destination ref="components/sinkPan/inputs/CameraControl/pan"/>
+        </sml:Link>
+      </sml:connection>
+      <sml:connection>
+        <sml:Link>
+          <sml:source ref="components/process0/outputs/Tilt"/>
+          <sml:destination ref="components/sinkTilt/inputs/CameraControl/tilt"/>
+        </sml:Link>
+      </sml:connection>
+      <sml:connection>
+        <sml:Link>
+          <sml:source ref="components/process0/outputs/Tilt"/>
+          <sml:destination ref="outputs/tilt"/>
+        </sml:Link>
+      </sml:connection>
+  <sml:connection>
+        <sml:Link>
+          <sml:source ref="components/process0/outputs/Pan"/>
+          <sml:destination ref="outputs/pan"/>
+        </sml:Link>
+      </sml:connection>
+    </sml:ConnectionList>
+  </sml:connections>
+</sml:AggregateProcess>

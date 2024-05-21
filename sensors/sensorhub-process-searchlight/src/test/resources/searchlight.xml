@@ -1,0 +1,86 @@
+<sml:AggregateProcess xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sml="http://www.opengis.net/sensorml/2.0" xmlns:swe="http://www.opengis.net/swe/2.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" gml:id="F1">
+    <gml:identifier codeSpace="uid">6360d446-3772-4864-96d2-cf4eac5eb494</gml:identifier>
+    <sml:outputs>
+        <sml:OutputList>
+            <sml:output name="SearchlightColor">
+                <swe:Category definition="http://sensorml.com/ont/swe/property/Color">
+                    <swe:label>searchlight</swe:label>
+                </swe:Category>
+            </sml:output>
+        </sml:OutputList>
+    </sml:outputs>
+    <sml:components>
+        <sml:ComponentList>
+            <sml:component name="source0">
+                <sml:SimpleProcess gml:id="F2">
+                    <sml:typeOf xlink:href="urn:osh:process:datasource:stream"/>
+                    <sml:configuration>
+                        <sml:Settings>
+                            <sml:setValue ref="parameters/producerURI">urn:osh:sensor:wii001</sml:setValue>
+                        </sml:Settings>
+                    </sml:configuration>
+                </sml:SimpleProcess>
+            </sml:component>
+            <sml:component name="process0">
+                <sml:SimpleProcess gml:id="F3">
+                    <sml:typeOf xlink:href="urn:osh:process:pi-bot:searchlight"/>
+                    <sml:inputs>
+                        <sml:InputList>
+                            <sml:input name="buttons">
+                                <swe:DataRecord>
+                                    <swe:field name="button1">
+                                        <swe:Boolean definition="http://sensorml.com/ont/swe/property/button1">
+                                            <swe:label>InputButtonOne</swe:label>
+                                        </swe:Boolean>
+                                    </swe:field>
+                                </swe:DataRecord>
+                            </sml:input>
+                        </sml:InputList>
+                    </sml:inputs>
+                    <sml:outputs>
+                        <sml:OutputList>
+                            <sml:output name="searchlight">
+                                <swe:Category definition="http://sensorml.com/ont/swe/property/Searchlight">
+                                    <swe:label>Searchlight Color</swe:label>
+                                </swe:Category>
+                            </sml:output>
+                        </sml:OutputList>
+                    </sml:outputs>
+                </sml:SimpleProcess>
+            </sml:component>
+            <sml:component name="sink0">
+                <sml:SimpleProcess gml:id="F4">
+                    <sml:typeOf xlink:href="urn:osh:process:datasink:commandstream"/>
+                    <sml:configuration>
+                        <sml:Settings>
+                            <sml:setValue ref="parameters/systemUID">urn:pibot:searchlight:rgb-searchlight</sml:setValue>
+                            <sml:setValue ref="parameters/inputName">SearchlightControl</sml:setValue>
+                        </sml:Settings>
+                    </sml:configuration>
+                </sml:SimpleProcess>
+            </sml:component>
+        </sml:ComponentList>
+    </sml:components>
+    <sml:connections>
+        <sml:ConnectionList>
+            <sml:connection>
+                <sml:Link>
+                    <sml:source ref="components/source0/outputs/output1/Remote/Buttons/1"/>
+                    <sml:destination ref="components/process0/inputs/buttons/button1"/>
+                </sml:Link>
+            </sml:connection>
+            <sml:connection>
+                <sml:Link>
+                    <sml:source ref="components/process0/outputs/searchlight"/>
+                    <sml:destination ref="components/sink0/inputs/SearchlightControl/Colors"/>
+                </sml:Link>
+            </sml:connection>
+            <sml:connection>
+                <sml:Link>
+                    <sml:source ref="components/process0/outputs/searchlight"/>
+                    <sml:destination ref="outputs/SearchlightColor"/>
+                </sml:Link>
+            </sml:connection>
+        </sml:ConnectionList>
+    </sml:connections>
+</sml:AggregateProcess>
