@@ -471,7 +471,7 @@
                     <sml:typeOf xlink:href="urn:osh:process:datasink:commandstream"/>
                     <sml:configuration>
                         <sml:Settings>
-                            <sml:setValue ref="parameters/systemUID">urn:pibot:camera:camera</sml:setValue>
+                            <sml:setValue ref="parameters/systemUID">urn:pibot:camera</sml:setValue>
                             <sml:setValue ref="parameters/inputName">CameraControl</sml:setValue>
                         </sml:Settings>
                     </sml:configuration>
@@ -482,7 +482,7 @@
                     <sml:typeOf xlink:href="urn:osh:process:datasink:commandstream"/>
                     <sml:configuration>
                         <sml:Settings>
-                            <sml:setValue ref="parameters/systemUID">urn:pibot:camera:camera</sml:setValue>
+                            <sml:setValue ref="parameters/systemUID">urn:pibot:camera</sml:setValue>
                             <sml:setValue ref="parameters/inputName">CameraControl</sml:setValue>
                         </sml:Settings>
                     </sml:configuration>
