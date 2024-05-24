@@ -4,6 +4,9 @@ import org.sensorhub.impl.processing.AbstractProcessProvider;
 
 public class PiBotDriveDescriptor extends AbstractProcessProvider {
     public PiBotDriveDescriptor(){
+
         addImpl(PiBotDriveProcess.INFO);
+        addImpl(PibotDriveUniversal.INFO);
+        addImpl(GamepadProcessChain.INFO);
     }
 }

@@ -4,6 +4,9 @@ import org.sensorhub.impl.processing.AbstractProcessProvider;
 
 public class SearchlightDescriptor extends AbstractProcessProvider {
     public SearchlightDescriptor(){
+
         addImpl(SearchlightProcess.INFO);
+        addImpl(SearchlightProcessUniversal.INFO);
+        addImpl(GamepadProcessChain.INFO);
     }
 }

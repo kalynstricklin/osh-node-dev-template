@@ -1,0 +1,295 @@
+<sml:AggregateProcess xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sml="http://www.opengis.net/sensorml/2.0" xmlns:swe="http://www.opengis.net/swe/2.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" gml:id="F1">
+    <gml:identifier codeSpace="uid">03409b10-db54-4773-8623-f68368e01563</gml:identifier>
+    <sml:outputs>
+        <sml:OutputList>
+            <sml:output name="pov">
+                <swe:Quantity>
+                    <swe:label>Hat Switch</swe:label>
+                    <swe:uom xlink:href="http://qudt.org/vocab/unit/UNITLESS"/>
+                </swe:Quantity>
+            </sml:output>
+            <sml:output name="LeftThumb">
+                <swe:Quantity>
+                    <swe:label>LeftThumb</swe:label>
+                    <swe:uom xlink:href="http://qudt.org/vocab/unit/UNITLESS"/>
+                </swe:Quantity>
+            </sml:output>
+            <sml:output name="RightThumb">
+                <swe:Quantity>
+                    <swe:label>Right Thumb</swe:label>
+                    <swe:uom xlink:href="http://qudt.org/vocab/unit/UNITLESS"/>
+                </swe:Quantity>
+            </sml:output>
+            <sml:output name="tilt">
+                <swe:Quantity definition="http://sensorml.com/ont/swe/property/Tilt">
+                    <swe:label>tilt</swe:label>
+                    <swe:uom code="deg"/>
+                </swe:Quantity>
+            </sml:output>
+            <sml:output name="pan">
+                <swe:Quantity definition="http://sensorml.com/ont/swe/property/Pan">
+                    <swe:label>pan</swe:label>
+                    <swe:uom code="deg"/>
+                </swe:Quantity>
+            </sml:output>
+        </sml:OutputList>
+    </sml:outputs>
+    <sml:components>
+        <sml:ComponentList>
+            <sml:component name="remoteSource">
+                <sml:SimpleProcess gml:id="F2">
+                    <sml:typeOf xlink:href="urn:osh:process:datasource:stream"/>
+                    <sml:configuration>
+                        <sml:Settings>
+                            <sml:setValue ref="parameters/producerURI">urn:osh:sensor:universalcontroller</sml:setValue>
+                        </sml:Settings>
+                    </sml:configuration>
+                </sml:SimpleProcess>
+            </sml:component>
+            <sml:component name="cameraProcess">
+                <sml:SimpleProcess gml:id="F3">
+                    <sml:typeOf xlink:href="urn:osh:process:pi-bot:camera2"/>
+                    <sml:inputs>
+                      <sml:InputList>
+                          <sml:input name="pov">
+                              <swe:Quantity>
+                                  <swe:label>Hat Switch</swe:label>
+                                  <swe:uom xlink:href="http://qudt.org/vocab/unit/UNITLESS"/>
+                              </swe:Quantity>
+                          </sml:input>
+                          <sml:input name="LeftThumb">
+                              <swe:Quantity>
+                                  <swe:label>Hat LeftThumb</swe:label>
+                                  <swe:uom xlink:href="http://qudt.org/vocab/unit/UNITLESS"/>
+                              </swe:Quantity>
+                          </sml:input>
+                          <sml:input name="RightThumb">
+                              <swe:Quantity>
+                                  <swe:label>RightThumb</swe:label>
+                                  <swe:uom xlink:href="http://qudt.org/vocab/unit/UNITLESS"/>
+                              </swe:Quantity>
+                          </sml:input>
+                      </sml:InputList>
+                    </sml:inputs>
+                    <sml:outputs>
+                        <sml:OutputList>
+                            <sml:output name="Pan">
+                                <swe:Quantity definition="http://sensorml.com/ont/swe/property/servo-angle">
+                                    <swe:description>The angle in degrees to which the servo is to turn</swe:description>
+                                    <swe:uom code="deg"/>
+                                </swe:Quantity>
+                            </sml:output>
+                            <sml:output name="Tilt">
+                                <swe:Quantity updatable="true" definition="http://sensorml.com/ont/swe/property/servo-angle">
+                                    <swe:description>The angle in degrees to which the servo is to turn</swe:description>
+                                    <swe:uom code="deg"/>
+                                </swe:Quantity>
+                            </sml:output>
+                        </sml:OutputList>
+                    </sml:outputs>
+                </sml:SimpleProcess>
+            </sml:component>
+            <sml:component name="gamepadProcess">
+                <sml:SimpleProcess gml:id="F4">
+                    <sml:typeOf xlink:href="urn:osh:process:gamepadchain2"/>
+                    <sml:inputs>
+                        <sml:InputList>
+                            <sml:input name="gamepadRecord">
+                                <swe:DataRecord definition="http://sensorml.com/ont/swe/property/GamepadOutputRecord">
+                                    <swe:label>Gamepad Output Record</swe:label>
+                                    <swe:field name="numGamepads">
+                                        <swe:Count id="numGamepads" definition="http://sensorml.com/ont/swe/property/GamepadCount">
+                                            <swe:label>Num Gamepads</swe:label>
+                                            <swe:description>Number of connected gamepads</swe:description>
+                                        </swe:Count>
+                                    </swe:field>
+                                    <swe:field name="gamepads">
+                                        <swe:DataArray definition="http://sensorml.com/ont/swe/property/GamepadArray">
+                                            <swe:label>Gamepads</swe:label>
+                                            <swe:description>List of connected gamepads.</swe:description>
+                                            <swe:elementCount xlink:href="#numGamepads"/>
+                                            <swe:elementType name="gamepad">
+                                                <swe:DataRecord definition="http://sensorml.com/ont/swe/property/Gamepad">
+                                                    <swe:label>Gamepad</swe:label>
+                                                    <swe:description>Gamepad Data</swe:description>
+                                                    <swe:field name="gamepadName">
+                                                        <swe:Text definition="GamepadName">
+                                                            <swe:label>Gamepad Name</swe:label>
+                                                        </swe:Text>
+                                                    </swe:field>
+                                                    <swe:field name="isPrimaryController">
+                                                        <swe:Boolean definition="http://sensorml.com/ont/swe/property/IsPrimaryController">
+                                                            <swe:label>Is Primary Controller</swe:label>
+                                                        </swe:Boolean>
+                                                    </swe:field>
+                                                    <swe:field name="numComponents">
+                                                        <swe:Count id="numComponents" definition="http://sensorml.com/ont/swe/property/NumGamepadComponents">
+                                                            <swe:label>Num Components</swe:label>
+                                                            <swe:description>Number of button and axis components on gamepad</swe:description>
+                                                        </swe:Count>
+                                                    </swe:field>
+                                                    <swe:field name="gamepadComponents">
+                                                        <swe:DataArray definition="http://sensorml.com/ont/swe/property/GamepadComponentArray">
+                                                            <swe:label>Gamepad Components</swe:label>
+                                                            <swe:description>Data of Connected Gamepad Components</swe:description>
+                                                            <swe:elementCount xlink:href="#numComponents"/>
+                                                            <swe:elementType name="component">
+                                                                <swe:DataRecord definition="http://sensorml.com/ont/swe/property/GamepadComponent">
+                                                                    <swe:label>Component</swe:label>
+                                                                    <swe:description>Gamepad Component (A button, B button, X axis, etc.)</swe:description>
+                                                                    <swe:field name="componentName">
+                                                                        <swe:Text definition="http://sensorml.com/ont/swe/property/ComponentName">
+                                                                            <swe:label>Component Name</swe:label>
+                                                                            <swe:description>Name of component</swe:description>
+                                                                        </swe:Text>
+                                                                    </swe:field>
+                                                                    <swe:field name="componentValue">
+                                                                        <swe:Quantity definition="http://sensorml.com/ont/swe/property/ComponentValue">
+                                                                            <swe:label>Component Value</swe:label>
+                                                                            <swe:description>Value of component</swe:description>
+                                                                            <swe:uom xlink:href="http://qudt.org/vocab/unit/UNITLESS"/>
+                                                                            <swe:constraint>
+                                                                                <swe:AllowedValues>
+                                                                                    <swe:interval>-1.0 1.0</swe:interval>
+                                                                                </swe:AllowedValues>
+                                                                            </swe:constraint>
+                                                                        </swe:Quantity>
+                                                                    </swe:field>
+                                                                </swe:DataRecord>
+                                                            </swe:elementType>
+                                                        </swe:DataArray>
+                                                    </swe:field>
+                                                </swe:DataRecord>
+                                            </swe:elementType>
+                                        </swe:DataArray>
+                                    </swe:field>
+                                </swe:DataRecord>
+                            </sml:input>
+                        </sml:InputList>
+                    </sml:inputs>
+                    <sml:outputs>
+                        <sml:OutputList>
+                            <sml:output name="pov">
+                                <swe:Quantity>
+                                    <swe:label>Hat Switch</swe:label>
+                                    <swe:uom xlink:href="http://qudt.org/vocab/unit/UNITLESS"/>
+                                </swe:Quantity>
+                            </sml:output>
+                            <sml:output name="LeftThumb">
+                                <swe:Quantity>
+                                    <swe:label>Left Thumb</swe:label>
+                                    <swe:uom xlink:href="http://qudt.org/vocab/unit/UNITLESS"/>
+                                </swe:Quantity>
+                            </sml:output>
+                            <sml:output name="RightThumb">
+                                <swe:Quantity>
+                                    <swe:label>Right Thumb</swe:label>
+                                    <swe:uom xlink:href="http://qudt.org/vocab/unit/UNITLESS"/>
+                                </swe:Quantity>
+                            </sml:output>
+                        </sml:OutputList>
+                    </sml:outputs>
+                </sml:SimpleProcess>
+            </sml:component>
+            <sml:component name="panCommand">
+                <sml:SimpleProcess gml:id="F5">
+                    <sml:typeOf xlink:href="urn:osh:process:datasink:commandstream"/>
+                    <sml:configuration>
+                        <sml:Settings>
+                            <sml:setValue ref="parameters/systemUID">urn:sentinel:pibot:camera</sml:setValue>
+                            <sml:setValue ref="parameters/inputName">CameraControl</sml:setValue>
+                        </sml:Settings>
+                    </sml:configuration>
+                </sml:SimpleProcess>
+            </sml:component>
+            <sml:component name="tiltCommand">
+                <sml:SimpleProcess gml:id="F6">
+                    <sml:typeOf xlink:href="urn:osh:process:datasink:commandstream"/>
+                    <sml:configuration>
+                        <sml:Settings>
+                            <sml:setValue ref="parameters/systemUID">urn:sentinel:pibot:camera</sml:setValue>
+                            <sml:setValue ref="parameters/inputName">CameraControl</sml:setValue>
+                        </sml:Settings>
+                    </sml:configuration>
+                </sml:SimpleProcess>
+            </sml:component>
+        </sml:ComponentList>
+    </sml:components>
+    <sml:connections>
+        <sml:ConnectionList>
+            <sml:connection>
+                <sml:Link>
+                    <sml:source ref="components/remoteSource/outputs/output1/numGamepads"/>
+                    <sml:destination ref="components/gamepadProcess/inputs/gamepadRecord/numGamepads"/>
+                </sml:Link>
+            </sml:connection>
+            <sml:connection>
+                <sml:Link>
+                    <sml:source ref="components/remoteSource/outputs/output1/gamepads"/>
+                    <sml:destination ref="components/gamepadProcess/inputs/gamepadRecord/gamepads"/>
+                </sml:Link>
+            </sml:connection>
+            <sml:connection>
+                <sml:Link>
+                    <sml:source ref="components/gamepadProcess/outputs/pov"/>
+                    <sml:destination ref="components/cameraProcess/inputs/pov"/>
+                </sml:Link>
+            </sml:connection>
+            <sml:connection>
+                <sml:Link>
+                    <sml:source ref="components/gamepadProcess/outputs/LeftThumb"/>
+                    <sml:destination ref="components/cameraProcess/inputs/LeftThumb"/>
+                </sml:Link>
+            </sml:connection>
+            <sml:connection>
+                <sml:Link>
+                    <sml:source ref="components/gamepadProcess/outputs/RightThumb"/>
+                    <sml:destination ref="components/cameraProcess/inputs/RightThumb"/>
+                </sml:Link>
+            </sml:connection>
+            <sml:connection>
+                <sml:Link>
+                    <sml:source ref="components/cameraProcess/outputs/Pan"/>
+                    <sml:destination ref="components/panCommand/inputs/CameraControl/pan"/>
+                </sml:Link>
+            </sml:connection>
+            <sml:connection>
+                <sml:Link>
+                    <sml:source ref="components/cameraProcess/outputs/Tilt"/>
+                    <sml:destination ref="components/tiltCommand/inputs/CameraControl/tilt"/>
+                </sml:Link>
+            </sml:connection>
+
+            <sml:connection>
+                <sml:Link>
+                    <sml:source ref="components/cameraProcess/outputs/Pan"/>
+                    <sml:destination ref="outputs/pan"/>
+                </sml:Link>
+            </sml:connection>
+            <sml:connection>
+                <sml:Link>
+                    <sml:source ref="components/cameraProcess/outputs/Tilt"/>
+                    <sml:destination ref="outputs/tilt"/>
+                </sml:Link>
+            </sml:connection>
+            <sml:connection>
+                <sml:Link>
+                    <sml:source ref="components/gamepadProcess/outputs/pov"/>
+                    <sml:destination ref="outputs/pov"/>
+                </sml:Link>
+            </sml:connection>
+            <sml:connection>
+                <sml:Link>
+                    <sml:source ref="components/gamepadProcess/outputs/LeftThumb"/>
+                    <sml:destination ref="outputs/LeftThumb"/>
+                </sml:Link>
+            </sml:connection>
+            <sml:connection>
+                <sml:Link>
+                    <sml:source ref="components/gamepadProcess/outputs/RightThumb"/>
+                    <sml:destination ref="outputs/RightThumb"/>
+                </sml:Link>
+            </sml:connection>
+        </sml:ConnectionList>
+    </sml:connections>
+</sml:AggregateProcess>

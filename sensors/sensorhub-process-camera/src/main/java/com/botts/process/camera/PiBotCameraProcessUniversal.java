@@ -4,13 +4,11 @@
  ******************************* END LICENSE BLOCK ***************************/
 package com.botts.process.camera;
 
-import net.opengis.swe.v20.Category;
 import net.opengis.swe.v20.DataType;
 import net.opengis.swe.v20.Quantity;
 import org.sensorhub.api.processing.OSHProcessInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.vast.data.AbstractDataBlock;
 import org.vast.process.ExecutableProcessImpl;
 import org.vast.process.ProcessException;
 import org.vast.swe.SWEConstants;
@@ -22,7 +20,7 @@ import org.vast.swe.SWEHelper;
  * @author Kalyn Stricklin
  * @since 1.0.0
  */
-public class PiBotCameraProcess extends ExecutableProcessImpl {
+public class PiBotCameraProcessUniversal extends ExecutableProcessImpl {
 
     public static final OSHProcessInfo INFO = new OSHProcessInfo(
             "pi-bot:camera",
@@ -45,14 +43,13 @@ public class PiBotCameraProcess extends ExecutableProcessImpl {
 
     private static final double MAX_ANGLE = 160.0;
 
-    public PiBotCameraProcess() {
+    public PiBotCameraProcessUniversal() {
 
         super(INFO);
 
         // Get an instance of SWE Factory suitable to build components
         SWEHelper swe = new SWEHelper();
 
-        //TODO: update this because it is using the old universal controller
         // Inputs
         inputData.add("pov", dpad = swe.createQuantity()
                 .label("d-pad")
@@ -116,7 +113,6 @@ public class PiBotCameraProcess extends ExecutableProcessImpl {
             else if(dpad.getData().getDoubleValue() == 1.0){
                 //left
                 newPan -= 5.0;
-
             }
             else if(dpad.getData().getDoubleValue() == 0.5){
                 //right

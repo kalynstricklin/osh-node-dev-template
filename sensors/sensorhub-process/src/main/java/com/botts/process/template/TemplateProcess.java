@@ -40,9 +40,6 @@ public class TemplateProcess extends ExecutableProcessImpl {
                         .definition(SWEHelper.getPropertyUri("SamplingTime"))
                         .asSamplingTimeIsoUTC()
                         .build())
-                // ADD INPUTS
-                //look at faceDetection, searchlight, for examples
-
                 .build());
 
 

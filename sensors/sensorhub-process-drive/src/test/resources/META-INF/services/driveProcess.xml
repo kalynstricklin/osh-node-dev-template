@@ -219,7 +219,6 @@
                     </sml:configuration>
                 </sml:SimpleProcess>
             </sml:component>
-
         </sml:ComponentList>
     </sml:components>
     <sml:connections>
@@ -296,35 +295,6 @@
                     <sml:destination ref="components/sink1/inputs/DriveControl/REVERSE"/>
                 </sml:Link>
             </sml:connection>
-
-            <!--      <sml:connection>-->
-            <!--        <sml:Link>-->
-            <!--          <sml:source ref="components/process0/outputs/ReverseLeft"/>-->
-            <!--          <sml:destination ref="components/sink0/inputs/DriveControl/REVERSE_TURN_LEFT"/>-->
-            <!--        </sml:Link>-->
-            <!--      </sml:connection>-->
-
-            <!--      <sml:connection>-->
-            <!--        <sml:Link>-->
-            <!--          <sml:source ref="components/process0/outputs/ReverseRight"/>-->
-            <!--          <sml:destination ref="components/sink0/inputs/DriveControl/REVERSE_TURN_RIGHT"/>-->
-            <!--        </sml:Link>-->
-            <!--      </sml:connection>-->
-
-            <!--      <sml:connection>-->
-            <!--        <sml:Link>-->
-            <!--          <sml:source ref="components/process0/outputs/ForwardLeft"/>-->
-            <!--          <sml:destination ref="components/sink0/inputs/DriveControl/FORWARD_TURN_LEFT"/>-->
-            <!--        </sml:Link>-->
-            <!--      </sml:connection>-->
-
-            <!--      <sml:connection>-->
-            <!--        <sml:Link>-->
-            <!--          <sml:source ref="components/process0/outputs/ForwardRight"/>-->
-            <!--          <sml:destination ref="components/sink0/inputs/DriveControl/FORWARD_TURN_RIGHT"/>-->
-            <!--        </sml:Link>-->
-            <!--      </sml:connection>-->
-
             <sml:connection>
                 <sml:Link>
                     <sml:source ref="components/process0/outputs/Stop"/>
@@ -356,30 +326,32 @@
                     <sml:destination ref="outputs/reverse"/>
                 </sml:Link>
             </sml:connection>
-            <!--    <sml:connection>-->
-            <!--      <sml:Link>-->
-            <!--        <sml:source ref="components/process0/outputs/ReverseLeft"/>-->
-            <!--        <sml:destination ref="outputs/reverseLeft"/>-->
-            <!--      </sml:Link>-->
-            <!--    </sml:connection>-->
-            <!--    <sml:connection>-->
-            <!--      <sml:Link>-->
-            <!--        <sml:source ref="components/process0/outputs/ReverseRight"/>-->
-            <!--        <sml:destination ref="outputs/reverseRight"/>-->
-            <!--      </sml:Link>-->
-            <!--    </sml:connection>-->
-            <!--    <sml:connection>-->
-            <!--      <sml:Link>-->
-            <!--        <sml:source ref="components/process0/outputs/ForwardRight"/>-->
-            <!--        <sml:destination ref="outputs/forwardRight"/>-->
-            <!--      </sml:Link>-->
-            <!--    </sml:connection>-->
-            <!--    <sml:connection>-->
-            <!--      <sml:Link>-->
-            <!--        <sml:source ref="components/process0/outputs/ForwardLeft"/>-->
-            <!--        <sml:destination ref="outputs/forwardLeft"/>-->
-            <!--      </sml:Link>-->
-            <!--    </sml:connection>-->
+
+                <sml:connection>
+                  <sml:Link>
+                    <sml:source ref="components/process0/outputs/ReverseLeft"/>
+                    <sml:destination ref="outputs/reverseLeft"/>
+                  </sml:Link>
+                </sml:connection>
+                <sml:connection>
+                  <sml:Link>
+                    <sml:source ref="components/process0/outputs/ReverseRight"/>
+                    <sml:destination ref="outputs/reverseRight"/>
+                  </sml:Link>
+                </sml:connection>
+                <sml:connection>
+                  <sml:Link>
+                    <sml:source ref="components/process0/outputs/ForwardRight"/>
+                    <sml:destination ref="outputs/forwardRight"/>
+                  </sml:Link>
+                </sml:connection>
+                <sml:connection>
+                  <sml:Link>
+                    <sml:source ref="components/process0/outputs/ForwardLeft"/>
+                    <sml:destination ref="outputs/forwardLeft"/>
+                  </sml:Link>
+                </sml:connection>
+
             <sml:connection>
                 <sml:Link>
                     <sml:source ref="components/process0/outputs/Stop"/>

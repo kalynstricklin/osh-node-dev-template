@@ -18,11 +18,12 @@ dependencies {
   implementation 'org.sensorhub:sensorhub-service-sweapi:' + oshCoreVersion
 
   //controllers
-  implementation project(':sensorhub-driver-wii')
+  implementation project(':sensorhub-driver-universalcontroller')
 
 
   // pi-bot
   implementation project(':sensorhub-driver-simulation')
+
   implementation project(':pi-bot-pibot-ultrasonic')
   implementation project(':pi-bot-pibot-searchlight')
   implementation project(':pi-bot-pibot-drive')
@@ -36,9 +37,8 @@ dependencies {
   implementation project(':sensorhub-process-searchlight')
   implementation project(':sensorhub-process-drive')
   implementation project(':sensorhub-process-camera')
-  implementation project(':sensorhub-process-drive-universal')
-  implementation project(':sensorhub-process-camera-universal')
-  implementation project(':sensorhub-process-searchlight-universal')
+  implementation project(':sensorhub-process-pibot')
+
 
 
 //  implementation project(':sensorhub-umbra-tasking')

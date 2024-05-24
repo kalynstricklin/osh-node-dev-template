@@ -4,13 +4,11 @@
  ******************************* END LICENSE BLOCK ***************************/
 package com.botts.process.camera;
 
-import net.opengis.swe.v20.Category;
 import net.opengis.swe.v20.DataType;
 import net.opengis.swe.v20.Quantity;
 import org.sensorhub.api.processing.OSHProcessInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.vast.data.AbstractDataBlock;
 import org.vast.process.ExecutableProcessImpl;
 import org.vast.process.ProcessException;
 import org.vast.swe.SWEConstants;
@@ -22,15 +20,17 @@ import org.vast.swe.SWEHelper;
  * @author Kalyn Stricklin
  * @since 1.0.0
  */
-public class PiBotCameraProcess extends ExecutableProcessImpl {
+
+
+public class PibotCameraUniversal extends ExecutableProcessImpl {
 
     public static final OSHProcessInfo INFO = new OSHProcessInfo(
-            "pi-bot:camera",
-            "Camera PTZ Algorithm",
-            "Control for Pibot Camera PTZ",
-            PiBotCameraProcess.class);
+            "pi-bot:camera2",
+            "Drive Algorithm",
+            "Control for Pibot DriveSensor",
+            PibotCameraUniversal.class);
 
-    protected static final Logger logger = LoggerFactory.getLogger(PiBotCameraProcess.class);
+    protected static final Logger logger = LoggerFactory.getLogger(PibotCameraUniversal.class);
     private Quantity tiltOutput;
     private Quantity panOutput;
     private Quantity tiltDown;
@@ -45,30 +45,30 @@ public class PiBotCameraProcess extends ExecutableProcessImpl {
 
     private static final double MAX_ANGLE = 160.0;
 
-    public PiBotCameraProcess() {
+    public PibotCameraUniversal() {
 
         super(INFO);
 
         // Get an instance of SWE Factory suitable to build components
         SWEHelper swe = new SWEHelper();
 
-        //TODO: update this because it is using the old universal controller
         // Inputs
         inputData.add("pov", dpad = swe.createQuantity()
-                .label("d-pad")
+//                .definition(SWEHelper.getPropertyUri("pov"))
+                .label("Hat Switch")
                 .uomUri(SWEConstants.UOM_UNITLESS)
                 .build());
-        inputData.add("Minus", tiltDown = swe.createQuantity()
-                .label("Decrease Tilt")
+        inputData.add("LeftThumb", tiltDown = swe.createQuantity()
+//                .definition(SWEHelper.getPropertyUri("LeftThumb"))
+                .label("LeftThumb")
                 .uomUri(SWEConstants.UOM_UNITLESS)
                 .build());
-        inputData.add("Plus", tiltUp = swe.createQuantity()
-                .label("Increase Tilt")
+        inputData.add("RightThumb", tiltUp = swe.createQuantity()
+//                .definition(SWEHelper.getPropertyUri("RightThumb"))
+                .label("RightThumb")
                 .uomUri(SWEConstants.UOM_UNITLESS)
                 .build());
-
-
-        //Outputs
+        //outputs
         outputData.add("Pan", panOutput = swe.createQuantity()
                 .definition(SWEHelper.getPropertyUri("servo-angle"))
                 .description("The angle in degrees to which the servo is to turn")
@@ -83,15 +83,6 @@ public class PiBotCameraProcess extends ExecutableProcessImpl {
                 .build());
     }
 
-    @Override
-    public void init() throws ProcessException {
-
-        logger.debug("Initializing");
-
-        super.init();
-
-        logger.debug("Initialized");
-    }
 
     @Override
     public void execute() throws ProcessException{
@@ -140,7 +131,7 @@ public class PiBotCameraProcess extends ExecutableProcessImpl {
 
             // check if tilt is updating
             if(isMinusPressed){
-               //decrease tilt
+                //decrease tilt
                 newTilt -= 5.0;
             }else if(isPlusPressed){
                 //increase tilt
@@ -161,11 +152,9 @@ public class PiBotCameraProcess extends ExecutableProcessImpl {
             panOutput.getData().setDoubleValue(newPan);
 
         }catch(Exception e){
-            throw new ProcessException("error during execution");
+            throw new ProcessException("error during execution {}", e);
         }
     }
-
-
 
     @Override
     public void dispose() {
