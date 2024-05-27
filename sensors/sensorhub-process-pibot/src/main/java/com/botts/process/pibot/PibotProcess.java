@@ -255,8 +255,8 @@ public class PibotProcess extends AbstractControllerTaskingProcess {
 
             /**camera**/
             //TODO: fix the tilt issue and figure out the best way to set these
-            newPan = currentX * 5;
-            newTilt = (currentY * 5);
+            newPan += currentX + 5;
+            newTilt += (currentY + 5);
             logger.debug("new Pan and Tilt: {} {}", newPan, newTilt);
 
             if(newTilt >= MAX_ANGLE || newPan >= MAX_ANGLE) {
@@ -298,8 +298,8 @@ public class PibotProcess extends AbstractControllerTaskingProcess {
             case "YELLOW":
                 return SearchlightState.MAGENTA.name();
             case "MAGENTA":
-                return SearchlightState.RED.name();
             case "OFF":
+                return SearchlightState.RED.name();
             default:
                 return SearchlightState.OFF.name(); // Default to OFF if current color is not recognized or chosen!
         }
