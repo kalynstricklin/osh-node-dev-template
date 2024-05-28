@@ -466,28 +466,28 @@
                     </sml:configuration>
                 </sml:SimpleProcess>
             </sml:component>
-            <sml:component name="panCommand">
-                <sml:SimpleProcess gml:id="F11">
-                    <sml:typeOf xlink:href="urn:osh:process:datasink:commandstream"/>
-                    <sml:configuration>
-                        <sml:Settings>
-                            <sml:setValue ref="parameters/systemUID">urn:pibot:camera</sml:setValue>
-                            <sml:setValue ref="parameters/inputName">CameraControl</sml:setValue>
-                        </sml:Settings>
-                    </sml:configuration>
-                </sml:SimpleProcess>
-            </sml:component>
-            <sml:component name="tiltCommand">
-                <sml:SimpleProcess gml:id="F12">
-                    <sml:typeOf xlink:href="urn:osh:process:datasink:commandstream"/>
-                    <sml:configuration>
-                        <sml:Settings>
-                            <sml:setValue ref="parameters/systemUID">urn:pibot:camera</sml:setValue>
-                            <sml:setValue ref="parameters/inputName">CameraControl</sml:setValue>
-                        </sml:Settings>
-                    </sml:configuration>
-                </sml:SimpleProcess>
-            </sml:component>
+<!--            <sml:component name="panCommand">-->
+<!--                <sml:SimpleProcess gml:id="F11">-->
+<!--                    <sml:typeOf xlink:href="urn:osh:process:datasink:commandstream"/>-->
+<!--                    <sml:configuration>-->
+<!--                        <sml:Settings>-->
+<!--                            <sml:setValue ref="parameters/systemUID">urn:pibot:camera</sml:setValue>-->
+<!--                            <sml:setValue ref="parameters/inputName">CameraControl</sml:setValue>-->
+<!--                        </sml:Settings>-->
+<!--                    </sml:configuration>-->
+<!--                </sml:SimpleProcess>-->
+<!--            </sml:component>-->
+<!--            <sml:component name="tiltCommand">-->
+<!--                <sml:SimpleProcess gml:id="F12">-->
+<!--                    <sml:typeOf xlink:href="urn:osh:process:datasink:commandstream"/>-->
+<!--                    <sml:configuration>-->
+<!--                        <sml:Settings>-->
+<!--                            <sml:setValue ref="parameters/systemUID">urn:pibot:camera</sml:setValue>-->
+<!--                            <sml:setValue ref="parameters/inputName">CameraControl</sml:setValue>-->
+<!--                        </sml:Settings>-->
+<!--                    </sml:configuration>-->
+<!--                </sml:SimpleProcess>-->
+<!--            </sml:component>-->
             <sml:component name="searchlightCommand">
                 <sml:SimpleProcess gml:id="F13">
                     <sml:typeOf xlink:href="urn:osh:process:datasink:commandstream"/>
@@ -506,7 +506,7 @@
             <sml:connection>
                 <sml:Link>
                     <sml:source ref="components/remoteSource/outputs/output1/primaryControllerIndex"/>
-                    <sml:destination ref="components/primaryselector/inputs/gamepadRecord/primaryControlStreamIndex"/>
+                    <sml:destination ref="components/primaryselector/inputs/gamepadRecord/primaryControllerIndex"/>
                 </sml:Link>
             </sml:connection>
             <sml:connection>

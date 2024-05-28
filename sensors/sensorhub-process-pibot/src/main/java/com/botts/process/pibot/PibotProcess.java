@@ -174,6 +174,7 @@ public class PibotProcess extends AbstractControllerTaskingProcess {
                 reverseOutput.getData().setFloatValue(0.0f);
                 reverseLeftOutput.getData().setFloatValue(0.0f);
                 leftOutput.getData().setFloatValue(0.0f);
+                stopOutput.getData().setFloatValue(0.0f);
             }else if(fac.getComponentValueInput("pov") == 0.125){
                 forwardLeftOutput.getData().setFloatValue(newSpeed);
                 forwardOutput.getData().setFloatValue(0.0f);
@@ -183,6 +184,7 @@ public class PibotProcess extends AbstractControllerTaskingProcess {
                 reverseOutput.getData().setFloatValue(0.0f);
                 reverseLeftOutput.getData().setFloatValue(0.0f);
                 leftOutput.getData().setFloatValue(0.0f);
+                stopOutput.getData().setFloatValue(0.0f);
             }else if(fac.getComponentValueInput("pov") == 0.375){
                 forwardRightOutput.getData().setFloatValue(newSpeed);
                 forwardLeftOutput.getData().setFloatValue(0.0f);
@@ -192,6 +194,7 @@ public class PibotProcess extends AbstractControllerTaskingProcess {
                 reverseOutput.getData().setFloatValue(0.0f);
                 reverseLeftOutput.getData().setFloatValue(0.0f);
                 leftOutput.getData().setFloatValue(0.0f);
+                stopOutput.getData().setFloatValue(0.0f);
             } else if (fac.getComponentValueInput("pov") == 0.5) {
                 rightOutput.getData().setFloatValue(newSpeed);
                 forwardRightOutput.getData().setFloatValue(0.0f);
@@ -201,6 +204,7 @@ public class PibotProcess extends AbstractControllerTaskingProcess {
                 reverseOutput.getData().setFloatValue(0.0f);
                 reverseLeftOutput.getData().setFloatValue(0.0f);
                 leftOutput.getData().setFloatValue(0.0f);
+                stopOutput.getData().setFloatValue(0.0f);
             }else if(fac.getComponentValueInput("pov") == 0.625){
                 reverseRightOutput.getData().setFloatValue(newSpeed);
                 rightOutput.getData().setFloatValue(0.0f);
@@ -210,6 +214,7 @@ public class PibotProcess extends AbstractControllerTaskingProcess {
                 reverseOutput.getData().setFloatValue(0.0f);
                 reverseLeftOutput.getData().setFloatValue(0.0f);
                 leftOutput.getData().setFloatValue(0.0f);
+                stopOutput.getData().setFloatValue(0.0f);
             }else if(fac.getComponentValueInput("pov") == 0.75){
                 reverseOutput.getData().setFloatValue(newSpeed);
                 reverseRightOutput.getData().setFloatValue(0.0f);
@@ -228,6 +233,7 @@ public class PibotProcess extends AbstractControllerTaskingProcess {
                 forwardLeftOutput.getData().setFloatValue(0.0f);
                 forwardOutput.getData().setFloatValue(0.0f);
                 leftOutput.getData().setFloatValue(0.0f);
+                stopOutput.getData().setFloatValue(0.0f);
             }else if(fac.getComponentValueInput("pov") == 1.0){
                 leftOutput.getData().setFloatValue(newSpeed);
                 reverseLeftOutput.getData().setFloatValue(0.0f);
@@ -237,6 +243,7 @@ public class PibotProcess extends AbstractControllerTaskingProcess {
                 forwardRightOutput.getData().setFloatValue(0.0f);
                 forwardLeftOutput.getData().setFloatValue(0.0f);
                 forwardOutput.getData().setFloatValue(0.0f);
+                stopOutput.getData().setFloatValue(0.0f);
             }
             //stop robot and turn searchlight off!
             if(isBPressed){
@@ -255,16 +262,19 @@ public class PibotProcess extends AbstractControllerTaskingProcess {
 
             /**camera**/
             //TODO: fix the tilt issue and figure out the best way to set these
-            newPan += currentX + 5;
-            newTilt += (currentY + 5);
+            newPan += currentX * 5;
+            newTilt += -(currentY * 5);
             logger.debug("new Pan and Tilt: {} {}", newPan, newTilt);
 
-            if(newTilt >= MAX_ANGLE || newPan >= MAX_ANGLE) {
+            if(newTilt >= MAX_ANGLE) {
                 newTilt= Math.min(newTilt, MAX_ANGLE);
+            }
+            else if(newPan >= MAX_ANGLE){
                 newPan= Math.min(newPan, MAX_ANGLE);
             }
-            else if(newTilt <= MIN_ANGLE || newPan <= MIN_ANGLE){
+            else if(newTilt <= MIN_ANGLE ){
                 newTilt = MIN_ANGLE;
+            }else if(newPan <= MIN_ANGLE){
                 newPan = MIN_ANGLE;
             }
 
